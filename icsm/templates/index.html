@@ -28,18 +28,18 @@
     <gn-extend-mainctrl></gn-extend-mainctrl>
 
     <div data-gn-saved-selections="">
-      <div data-ng-include="'../../catalog/views/default/templates/home.html'"
+      <div data-ng-include="'../../catalog/views/icsm/templates/home.html'"
            data-ng-show="activeTab == '/home'"/>
-      <div data-ng-include="'../../catalog/views/default/templates/results.html'"
+      <div data-ng-include="'../../catalog/views/icsm/templates/results.html'"
            data-ng-show="activeTab == '/search'"/>
       <div data-ng-if="isMapViewerEnabled && !isExternalViewerEnabled"
-           data-ng-include="'../../catalog/views/default/templates/map.html'"
+           data-ng-include="'../../catalog/views/icsm/templates/map.html'"
            data-ng-show="activeTab == '/map'"/>
-      <div data-ng-include="'../../catalog/views/default/templates/recordView.html'"
+      <div data-ng-include="'../../catalog/views/icsm/templates/recordView.html'"
            data-ng-show="activeTab == '/metadata'" class="gn-view-approved"/>
-      <div data-ng-include="'../../catalog/views/default/templates/recordView.html'"
+      <div data-ng-include="'../../catalog/views/icsm/templates/recordView.html'"
            data-ng-show="activeTab == '/metadraf'" class="gn-view-not-approved"/>
-      <div data-ng-include="'../../catalog/views/default/templates/page.html'"
+      <div data-ng-include="'../../catalog/views/icsm/templates/page.html'"
            data-ng-if="activeTab == '/page'"/>
     </div>
   </div>
@@ -48,5 +48,5 @@
 
 <footer class="navbar navbar-default gn-bottom-bar" role="navigation"
      data-ng-show="gnCfg.mods.footer.enabled"
-     data-ng-include="'../../catalog/views/default/templates/footer.html'">
+     data-ng-include="'../../catalog/views/icsm/templates/footer.html'">
 </footer>
