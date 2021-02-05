@@ -3974,7 +3974,7 @@
     </description>
   </element>
   <element name="mco:reference" id="102.0">
-    <label>Référence</label>
+    <label>Reference</label>
     <description iso="true">citation for the limitation or constraint EXAMPLE
       Copyright statement,licence agreement, etc.
     </description>
