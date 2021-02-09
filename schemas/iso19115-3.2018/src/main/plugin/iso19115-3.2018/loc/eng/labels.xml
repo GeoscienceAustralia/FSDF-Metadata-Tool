@@ -4760,8 +4760,12 @@
     <label>Operation Name</label>
     <description>A unique identifier for this interface</description>
   </element>
-  <element name="srv:SV_OperationMetadata">
+  <element name="srv:operation">
     <label>Operation</label>
+    <description>Operation Metadata</description>
+  </element>
+  <element name="srv:SV_OperationMetadata">
+    <label>Operation Details</label>
     <description>Operation Metadata</description>
   </element>
   <element name="srv:DCP">
@@ -4848,6 +4852,10 @@
     <label>Coupled resource</label>
     <description>Details of services coupled with this one</description>
   </element>
+  <element name="srv:resourceReference">
+    <label>Resource Reference</label>
+    <description>Details of resource coupled with this one</description>
+  </element>
   <element name="srv:identifier">
     <label>Identifier</label>
     <description>Identifier of resource to which the operation applies
@@ -4856,6 +4864,14 @@
   <element name="srv:couplingType">
     <label>Coupling Type</label>
     <description>Type of Coupling</description>
+  </element>
+  <element name="srv:SV_CouplingType">
+    <label>Coupling Type</label>
+    <description>Type of Coupling</description>
+  </element>
+  <element name="srv:scopedName">
+    <label>Name of Coupled Resource</label>
+    <description>Name used by the service to describe the resource</description>
   </element>
   <element name="gex:extent">
     <label>Extent</label>
@@ -4868,6 +4884,10 @@
   <element name="srv:operatedDataset">
     <label>Operated dataset</label>
     <description>Provides a reference to the resource on which the service operates. Note: For one resource either operated dataset or operates on may be used (not both).</description>
+  </element>
+  <element name="srv:resource">
+    <label>Resource metadata</label>
+    <description>Full identifaction metadata for coupled resource</description>
   </element>
   <element name="srv:profile">
     <label>Profile</label>
