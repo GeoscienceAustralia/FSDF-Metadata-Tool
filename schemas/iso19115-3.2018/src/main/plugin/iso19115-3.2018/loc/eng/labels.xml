@@ -1477,7 +1477,7 @@
     <_condition>Use obligation/condition from referencing object</_condition>
   </element>
   <element name="cit:CI_OnlineResource" id="405.0">
-    <label>OnLine resource</label>
+    <label>Online resource</label>
     <description>Information about on-line sources from which the dataset,
       specification, or
       community profile name and extended metadata elements can be obtained
@@ -3584,14 +3584,14 @@
     </description>
   </element>
   <element name="mrd:onLine" id="277.0">
-    <label>OnLine resource</label>
+    <label>Online resource</label>
     <description>Information about online sources from which the resource can be
       obtained
     </description>
   </element>
   <element name="cit:onlineResource" id="390.0">
     <help>Define URL to access the website</help>
-    <label>Website</label>
+    <label>Online Linkage</label>
     <description>On-line information that can be used to contact the individual
       or organisation
     </description>
@@ -4870,7 +4870,7 @@
     <description>Type of Coupling</description>
   </element>
   <element name="srv:scopedName">
-    <label>Name of Coupled Resource</label>
+    <label>Scoped Name</label>
     <description>Name used by the service to describe the resource</description>
   </element>
   <element name="gex:extent">
