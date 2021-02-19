@@ -1275,13 +1275,14 @@
                     if (!angular.isUndefined(scope.stateObj.selectRecords) &&
                         scope.stateObj.selectRecords.length > 0) {
                       var md = new Metadata(scope.stateObj.selectRecords[0]);
-                      scope.currentMdTitle = md.title || md.defaultTitle;
+                      scope.currentMdTitle = gnCurrentEdit.mdTitle || gnCurrentEdit.mdDefaultTitle;
                       if (scope.mode === 'service') {
                         var links = [];
                         scope.layers = [];
                         scope.srcParams.selectedLayers = [];
 
                         links = links.concat(md.getLinksByType('ogc', 'atom'));
+
                         scope.srcParams.uuidSrv = md.getUuid();
                         scope.srcParams.identifier =
                           (gnCurrentEdit.metadata.identifier && gnCurrentEdit.metadata.identifier[0]) ?
