@@ -91,12 +91,13 @@ a coupledResource reference.
                       <srv:resourceReference>
                         <cit:CI_Citation>
                           <cit:title>
-                            <xsl:value-of select="."/>
+                            <gco:CharacterString><xsl:value-of select="."/></gco:CharacterString>
+
                           </cit:title>
                           <cit:onlineResource>
                             <cit:CI_OnlineResource>
                               <cit:linkage>
-                                <gco:CharacterString><xsl:value-of select="$siteUrl"/>/api/records/<xsl:value-of select="$uuidref"/></gco:CharacterString>
+                                <gco:CharacterString><xsl:value-of select="substring($siteUrl, 1, string-length($siteUrl)-4)"/>/api/records/<xsl:value-of select="$uuidref"/></gco:CharacterString>
                               </cit:linkage>
                               <cit:protocol gco:nilReason="missing">
                                 <gco:CharacterString/>
@@ -128,10 +129,10 @@ a coupledResource reference.
                 mdb:identificationInfo/*/srv:containsOperations|
                 mdb:identificationInfo/*/srv:operatesOn[@uuidref != $uuidref]"/>
 
-              <!--<xsl:if test="$uuidref">
+              <xsl:if test="$uuidref">
                 <srv:operatesOn uuidref="{$uuidref}"
                   xlink:href="{$siteUrl}/csw?service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id={$uuidref}"/>
-              </xsl:if>-->
+              </xsl:if>
 
               <xsl:copy-of
                 select="mdb:identificationInfo/*/srv:containsChain"/>

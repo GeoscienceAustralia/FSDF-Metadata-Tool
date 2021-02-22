@@ -1275,8 +1275,12 @@
                     if (!angular.isUndefined(scope.stateObj.selectRecords) &&
                         scope.stateObj.selectRecords.length > 0) {
                       var md = new Metadata(scope.stateObj.selectRecords[0]);
-                      scope.currentMdTitle = gnCurrentEdit.mdTitle || gnCurrentEdit.mdDefaultTitle;
+                      console.log (md.title);
+                      console.log (gnCurrentEdit.mdTitle);
+                      console.log (scope.mode);
+                      scope.currentMdTitle = md.title || md.defaultTitle;
                       if (scope.mode === 'service') {
+                        scope.currentMdTitle = gnCurrentEdit.mdTitle || gnCurrentEdit.mdDefaultTitle; //BC - test this
                         var links = [];
                         scope.layers = [];
                         scope.srcParams.selectedLayers = [];
