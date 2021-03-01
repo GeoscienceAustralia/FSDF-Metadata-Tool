@@ -313,6 +313,34 @@
         </cit:CI_Citation>
       </mri:thesaurusName>
     </xsl:if>
+
+      <!-- BC Mod 28-2-21 - Gives the name of the Thesaurus when it shold give a class name? -->
+    <!--<xsl:if test="test="$keywordClassInfo">-->
+      <mri:MD_KeywordClass>
+        <mri:className>
+          <gco:CharacterString>
+            <xsl:value-of select="$thesauri/thesaurus[key = $currentThesaurus]/title"/>
+          </gco:CharacterString>
+        </mri:className>
+        <mri:conceptIdentifier>
+          <mcc:URI><xsl:value-of select="$thesauri/thesaurus[key = $currentThesaurus]/defaultNamespace"/></mcc:URI>
+        </mri:conceptIdentifier>
+        <mri:ontology>
+          <cit:CI_Citation>
+            <cit:title>
+                  <gco:CharacterString>
+                    <xsl:value-of select="tokenize($thesauri/thesaurus[key = $currentThesaurus]/defaultNamespace, '/')[last()]"/>
+                  </gco:CharacterString>
+            </cit:title>
+            <cit:onlineResource>
+              <cit:linkage>
+                <gco:CharacterString><xsl:value-of select="$thesauri/thesaurus[key = $currentThesaurus]/defaultNamespace"/></gco:CharacterString>
+              </cit:linkage>
+            </cit:onlineResource>
+          </cit:CI_Citation>
+        </mri:ontology>
+      </mri:MD_KeywordClass>
+
   </xsl:function>
 
 

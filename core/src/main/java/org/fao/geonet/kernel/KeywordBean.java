@@ -60,6 +60,7 @@ public class KeywordBean {
     private String keywordUrl;
     private IsoLanguagesMapper isoLanguageMapper;
     private String defaultLang;
+    private String kwdClass;
 
     public KeywordBean(IsoLanguagesMapper isoLangMapper) {
         this.isoLanguageMapper = isoLangMapper;
@@ -111,6 +112,10 @@ public class KeywordBean {
 
         Element type = null;
         Element thesaurusName = null;
+        Element keywordClass = null;
+        Element MD_KeywordClass = null;
+        Element conceptIdentifier = null;
+
 
         for (KeywordBean kb : kbList) {
             Element keyword = new Element("keyword", Namespaces.GMD);
@@ -127,6 +132,9 @@ public class KeywordBean {
                 type = KeywordBean.createKeywordTypeElt(kb);
             if (thesaurusName == null)
                 thesaurusName = KeywordBean.createThesaurusNameElt(kb);
+            if (keywordClass == null)
+                keywordClass = KeywordBean.createKeywordClassElt(kb);
+
         }
 
         // Add elements to the root MD_Keywords element.
@@ -210,6 +218,20 @@ public class KeywordBean {
         thesaurusName.addContent(citation);
 
         return thesaurusName;
+    }
+
+    /**
+     * Creates keyword class element. BC 2-26-21
+     */
+    private static Element createKeywordClassElt(KeywordBean kb) {
+        Element keywordClass = new Element("keywordClass", Namespaces.MRI);
+        Element mdKeywordClass = new Element("MD_KeywordClass", Namespaces.MRI);
+        Element cs = new Element("CharacterString", Namespaces.GCO);
+        Element conceptIdentifier = new Element("conceptIdentifier", Namespaces.MRI);
+        Element URI = new Element("URI", Namespaces.MCC);
+        System.out.println("keywordClass" );
+        keywordClass.addContent((Content) cs.clone());
+        return keywordClass;
     }
 
     public KeywordBean setThesaurusInfo(Thesaurus thesaurus) {
