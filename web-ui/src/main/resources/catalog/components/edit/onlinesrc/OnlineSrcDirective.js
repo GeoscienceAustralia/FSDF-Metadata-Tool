@@ -1275,9 +1275,6 @@
                     if (!angular.isUndefined(scope.stateObj.selectRecords) &&
                         scope.stateObj.selectRecords.length > 0) {
                       var md = new Metadata(scope.stateObj.selectRecords[0]);
-                      console.log (md.title);
-                      console.log (gnCurrentEdit.mdTitle);
-                      console.log (scope.mode);
                       scope.currentMdTitle = md.title || md.defaultTitle;
                       if (scope.mode === 'service') {
                         scope.currentMdTitle = gnCurrentEdit.mdTitle || gnCurrentEdit.mdDefaultTitle; //BC - test this
@@ -1313,8 +1310,8 @@
                         }
                       } else {
                         scope.srcParams.uuidDS = md.getUuid();
-                        scope.srcParams.name = gnCurrentEdit.mdTitle;
-                        scope.srcParams.desc = gnCurrentEdit.mdTitle;
+                        scope.srcParams.name = md.title;
+                        scope.srcParams.desc = md.title;
                         scope.srcParams.protocol = "WWW:LINK-1.0-http--link";
                         scope.srcParams.url = scope.onlineSrcLink;
                         scope.srcParams.identifier = (md.identifier && md.identifier[0]) ? md.identifier[0] : '';
