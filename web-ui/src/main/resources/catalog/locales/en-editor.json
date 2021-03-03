@@ -135,6 +135,7 @@
     "geopublisher": "Publish as WMS, WFS, WCS",
     "gmd:CI_ResponsibleParty": "Organizations & contacts",
     "cit:CI_Responsibility": "Organizations & contacts (ISO19115-3)",
+    "mco:MD_LegalConstraints": "Legal Constraints",
     "mrd:MD_Format": "Formats",
     "gmd:MD_Format": "Formats",
     "gmd:EX_Extent": "Extents",
