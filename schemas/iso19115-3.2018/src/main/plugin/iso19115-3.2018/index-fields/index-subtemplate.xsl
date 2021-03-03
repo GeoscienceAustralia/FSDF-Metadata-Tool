@@ -159,7 +159,21 @@
     <xsl:call-template name="subtemplate-common-fields"/>
   </xsl:template>
 
+  <!-- Indexing Metadata Standards and Profiles -->
+  <xsl:template mode="index"
+                match="mdb:metadataStandard">
 
+    <xsl:variable name="type" select="local-name(.)"/>
+    <xsl:variable name="name"
+                  select="string-join(cit:CI_Citation/cit:title/gco:CharacterString, ', ')"/>
+    <Field name="_title"
+           string="{if ($name != '')
+                    then $name
+                    else $type}"
+           store="true" index="true"/>
+
+    <xsl:call-template name="subtemplate-common-fields"/>
+  </xsl:template>
 
   <xsl:template name="subtemplate-common-fields">
     <Field name="any" string="{normalize-space(string(.))}" store="false" index="true"/>
