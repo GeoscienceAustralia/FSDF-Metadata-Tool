@@ -31,8 +31,7 @@ import org.geotools.referencing.ReferencingFactoryFinder;
 import org.opengis.metadata.Identifier;
 import org.opengis.referencing.FactoryException;
 import org.opengis.referencing.IdentifiedObject;
-import org.opengis.referencing.crs.CRSAuthorityFactory;
-import org.opengis.referencing.crs.CoordinateReferenceSystem;
+import org.opengis.referencing.crs.*;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -97,10 +96,23 @@ public class CrsUtils {
                     description += " (" + authorityCodeSpace + ":" + code + ")";
 
                     if (matchesFilter(description, filters)) {
+
+                        CoordinateReferenceSystem instance = factory.createCoordinateReferenceSystem(code);
+                        String type;
+                        if (instance instanceof EngineeringCRS) type = "Engineering";
+                        else if (instance instanceof GeocentricCRS) type = "GeodeticGeocentric";
+                        else if (instance instanceof GeodeticCRS) type = "GeodeticGeographic2D";
+                        else if (instance instanceof GeographicCRS) type = "GeodeticGeographic3D";
+                        else if (instance instanceof ImageCRS) type = "EngineeringImage";
+                        else if (instance instanceof ProjectedCRS) type = "Projected";
+                        else if (instance instanceof TemporalCRS) type = "Temporal";
+                        else if (instance instanceof VerticalCRS) type = "Vertical";
+                        else type = "";
+
                         crsList.add(
                             new Crs(code, authorityTitle,
                                 authorityEdition, authorityCodeSpace,
-                                description));
+                                description, type));
                         if (++i >= rows)
                             return crsList;
                     }
@@ -148,9 +160,21 @@ public class CrsUtils {
                         description += " (" + authorityCodeSpace + ":" + code
                             + ")";
 
+                        CoordinateReferenceSystem instance = factory.createCoordinateReferenceSystem(code);
+                        String type;
+                        if (instance instanceof EngineeringCRS) type = "Engineering";
+                        else if (instance instanceof GeocentricCRS) type = "GeodeticGeocentric";
+                        else if (instance instanceof GeodeticCRS) type = "GeodeticGeographic2D";
+                        else if (instance instanceof GeographicCRS) type = "GeodeticGeographic3D";
+                        else if (instance instanceof ImageCRS) type = "EngineeringImage";
+                        else if (instance instanceof ProjectedCRS) type = "Projected";
+                        else if (instance instanceof TemporalCRS) type = "Temporal";
+                        else if (instance instanceof VerticalCRS) type = "Vertical";
+                        else type = "";
+
                         return new Crs(code, authorityTitle,
                             authorityEdition, authorityCodeSpace,
-                            description);
+                            description, type);
                     }
                 }
             } catch (FactoryException e) {
