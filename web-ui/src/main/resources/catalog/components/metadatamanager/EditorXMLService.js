@@ -46,25 +46,57 @@
           '</gmd:referenceSystemIdentifier>' +
           '</gmd:MD_ReferenceSystem>' +
           '</gmd:referenceSystemInfo>',
-      'iso19115-3':
-          '  <mrs:referenceSystemIdentifier ' +
-          "xmlns:mrs='http://standards.iso.org/iso/19115/-3/mrs/1.0' " +
+      'iso19115-3.2018': '<mrs:MD_ReferenceSystem ' +
+          "xmlns:mdb='http://standards.iso.org/iso/19115/-3/mdb/2.0' " +
           "xmlns:mcc='http://standards.iso.org/iso/19115/-3/mcc/1.0' " +
-          "xmlns:gcx='http://standards.iso.org/iso/19115/-3/gcx/1.0' " +
+          "xmlns:mrs='http://standards.iso.org/iso/19115/-3/mrs/1.0' " +
+          "xmlns:cit='http://standards.iso.org/iso/19115/-3/cit/2.0' " +
           "xmlns:gco='http://standards.iso.org/iso/19115/-3/gco/1.0' " +
+          "xmlns:gmx='http://www.isotc211.org/2005/gmx' " +
           "xmlns:xlink='http://www.w3.org/1999/xlink'>" +
-          '    <mcc:MD_Identifier>' +
-          '     <mcc:code>' +
-          '       <gcx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/{{code}}">' +
-          'EPSG:{{code}}' +
-          '</gcx:Anchor>' +
-          '     </mcc:code>' +
-          '     <mcc:description>' +
-          '       <gco:CharacterString>{{description}}</gco:CharacterString>' +
-          '     </mcc:description>' +
-          '   </mcc:MD_Identifier>' +
-          ' </mrs:referenceSystemIdentifier>'
-    }});
+          '<mrs:referenceSystemIdentifier>' +
+          '<mcc:MD_Identifier>' +
+          '<mcc:authority>' +
+          '<cit:CI_Citation>' +
+          '<cit:title>' +
+          '<gco:CharacterString>European Petroleum Survey Group</gco:CharacterString>' +
+          '</cit:title>' +
+          '<cit:onlineResource>' +
+          '<cit:CI_OnlineResource>' +
+          '<cit:linkage>' +
+          '<gco:CharacterString>https://epsg.org/</gco:CharacterString>' +
+          '</cit:linkage>' +
+          '<cit:protocol>' +
+          '<gco:CharacterString>https</gco:CharacterString>' +
+          '</cit:protocol>' +
+          '<cit:name gco:nilReason="missing"><gco:CharacterString /></cit:name>' +
+          '<cit:description gco:nilReason="missing"><gco:CharacterString /></cit:description>' +
+          '<cit:function>' +
+          '<cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/at/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />' +
+          '</cit:function>' +
+          '</cit:CI_OnlineResource>' +
+          '</cit:onlineResource>' +
+          '</cit:CI_Citation>' +
+          '</mcc:authority>' +
+          '<mcc:code>' +
+          '<gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/{{code}}">EPSG:{{code}}</gmx:Anchor>' +
+          '</mcc:code>' +
+          '<mcc:codeSpace>' +
+          '<gco:CharacterString>{{codeSpace}}</gco:CharacterString>' + /* NOTE: Elsewhere we're assuming EPSG... */
+          '</mcc:codeSpace>' +
+          '<mcc:version>' +
+          '<gco:CharacterString>{{version}}</gco:CharacterString>' +
+          '</mcc:version>' +
+          '<mcc:description>' +
+          '<gco:CharacterString>{{description}}</gco:CharacterString>' +
+          '</mcc:description>' +
+          '</mcc:MD_Identifier>' +
+          '</mrs:referenceSystemIdentifier>' +
+          '<mrs:referenceSystemType>' +
+          '<mrs:MD_ReferenceSystemTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="{{type}}"/>' +
+          '</mrs:referenceSystemType>' +
+          '</mrs:MD_ReferenceSystem>'
+      }});
 
   module.factory('gnEditorXMLService',
       ['gnSchemaManagerService',
@@ -88,7 +120,7 @@
            */
            buildCRSXML: function(crs, schema, xmlSnippet) {
              var replacement = ['description', 'codeSpace',
-               'authority', 'code', 'version'];
+               'authority', 'code', 'version', 'type'];
              var xml = undefined;
              if (xmlSnippet) {
                xml = xmlSnippet
