@@ -179,6 +179,15 @@
               data-filter='{"_root": "mco:MD_*"}'/>
     </for>
 
+    <for name="srv:serviceStandard" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+              data-template-add-action="true"
+              data-search-action="true"
+              data-popup-action="false"
+              data-template-type="standard"
+              data-filter='{"_root": "srv:serviceStandard"}' />
+    </for>
+
     <for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
       <directiveAttributes
               data-transformation="to-iso19115-3.2018-keyword"/>

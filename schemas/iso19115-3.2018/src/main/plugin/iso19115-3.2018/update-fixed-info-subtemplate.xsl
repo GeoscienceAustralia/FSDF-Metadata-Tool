@@ -55,7 +55,7 @@
                 select="count(/root/gex:EX_Extent) = 1"/>
 
   <xsl:template match="/root">
-    <xsl:apply-templates select="gex:*|mdb:*|cit:*|dqm:*|cit:*|mcc:*|mrc:*|mrd:*|mco:*"/>
+    <xsl:apply-templates select="gex:*|mdb:*|cit:*|dqm:*|cit:*|mcc:*|mrc:*|mrd:*|mco:*|srv:*"/>
   </xsl:template>
 
 

@@ -175,6 +175,13 @@
     <xsl:call-template name="subtemplate-common-fields"/>
   </xsl:template>
 
+  <xsl:template mode="index"
+                match="srv:serviceStandard">
+    <Field name="_title"
+           string="{cit:CI_Citation/cit:title/gco:CharacterString/text()}"
+           store="true" index="true" />
+  </xsl:template>
+
   <xsl:template name="subtemplate-common-fields">
     <Field name="any" string="{normalize-space(string(.))}" store="false" index="true"/>
     <Field name="_root" string="{name(.)}" store="true" index="true"/>
