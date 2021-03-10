@@ -55,7 +55,7 @@
           "xmlns:xlink='http://www.w3.org/1999/xlink'>" +
           '    <mcc:MD_Identifier>' +
           '     <mcc:code>' +
-          '       <gcx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/{{code}}">' +
+          '       <gcx:Anchor xlink:href="https://api.epsg.org/def/crs/epsg/0/{{code}}">' +
           'EPSG:{{code}}' +
           '</gcx:Anchor>' +
           '     </mcc:code>' +

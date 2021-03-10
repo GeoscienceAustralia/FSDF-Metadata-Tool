@@ -99,20 +99,27 @@
       </xsl:if>
     </xsl:for-each>
   </xsl:template>
-  
+
   <xsl:template mode="iso19115-3.2018-subtemplate" match="mrd:MD_Distribution">
     <xsl:value-of
       select="string-join(mrd:transferOptions/mrd:MD_DigitalTransferOptions/mrd:onLine/cit:CI_OnlineResource/cit:linkage/*, ' ,')"
     />
   </xsl:template>
-  
+
   <xsl:template mode="iso19115-3.2018-subtemplate" match="mco:MD_LegalConstraints">
     <xsl:value-of
       select="if (mco:useLimitation) then mco:useLimitation/* else mco:otherConstraints/*"
     />
   </xsl:template>
-  
-  
+
+
+  <xsl:template mode="iso19115-3.2018-subtemplate" match="srv:serviceStandard">
+    <xsl:value-of
+      select="srv:serviceStandard/*"
+    />
+  </xsl:template>
+
+
   <xsl:template mode="iso19115-3.2018-subtemplate" match="*"/>
-  
+
 </xsl:stylesheet>
