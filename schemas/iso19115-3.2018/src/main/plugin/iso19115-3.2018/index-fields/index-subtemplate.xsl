@@ -186,6 +186,7 @@
                     else $type}"
            store="true" index="true"/>
     <xsl:call-template name="subtemplate-common-fields"/>
+
   </xsl:template>
 
   <xsl:template name="subtemplate-common-fields">
