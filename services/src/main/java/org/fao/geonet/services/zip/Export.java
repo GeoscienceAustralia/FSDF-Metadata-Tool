@@ -42,9 +42,7 @@ public class Export implements Service {
         FileSystem zipFs = ZipUtil.createZipFs(file);
 
         for (String uuid : uuids) {
-            System.out.println(uuid);
             AbstractMetadata md = context.getBean(IMetadataUtils.class).findOneByUuid(uuid);
-            System.out.println(md.getData().length());
             Files.write(zipFs.getPath("/" + uuid + ".xml"), md.getData().getBytes(Constants.CHARSET));
         }
 
