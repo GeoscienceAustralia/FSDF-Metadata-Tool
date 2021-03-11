@@ -294,6 +294,7 @@
     mdGetPDFSelection: 'pdf.selection.search', // TODO: CHANGE
     mdGetRDF: 'rdf.metadata.get',
     mdGetMEF: 'mef.export', // Deprecated service
+    mdGetZIP: 'zip.export',
     mdGetXML19139: 'xml_iso19139',
     csv: 'csv.search',
 

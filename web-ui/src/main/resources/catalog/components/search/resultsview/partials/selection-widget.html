@@ -36,6 +36,12 @@
       <span class="caret"></span>
     </button>
     <ul class="dropdown-menu" role="menu" data-ng-if="!operationOnSelectionInProgress">
+      <li data-ng-show="!excludePattern.test('download')">
+        <a href="" data-ng-disabled="operationOnSelectionInProgress"
+           data-ng-click="mdService.metadataZIP(searchResults.selectionBucket)">
+          <i class="fa fa-fw-fa-file-zip-o"></i>&nbsp;<span translate>exportMEF</span>
+        </a>
+      </li>
       <li data-ng-show="!excludePattern.test('exportMEF')">
         <a href="" data-ng-disabled="operationOnSelectionInProgress"
            data-ng-click="mdService.metadataMEF(undefined, searchResults.selectionBucket)">

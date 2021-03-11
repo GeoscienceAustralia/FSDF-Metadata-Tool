@@ -153,6 +153,12 @@
         location.replace(url);
       };
 
+      this.metadataZIP = function(bucket) {
+        var url = gnHttp.getService('mdGetZIP');
+        url += angular.isDefined(bucket) ? '?bucket=' + bucket : '';
+        location.replace(url);
+      }
+
       this.exportCSV = function(bucket) {
         window.open(gnHttp.getService('csv') +
             '?bucket=' + bucket, windowName, windowOption);

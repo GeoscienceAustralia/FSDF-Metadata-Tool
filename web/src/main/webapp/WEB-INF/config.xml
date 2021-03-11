@@ -213,6 +213,12 @@
       <error sheet="xml-error.xsl" contentType="application/xml; charset=UTF-8"/>
     </service>
 
+    <service name="zip.export">
+      <class name=".services.zip.Export" />
+      <output file="true"/>
+      <error sheet="xml-error.xsl" contentType="application/xml; charset=UTF-8"/>
+    </service>
+
 
     <service name="crs.types" deprecated="true">
       <!-- Still used by ExtJS editor -->
