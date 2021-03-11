@@ -43,6 +43,7 @@ public class Export implements Service {
 
         for (String uuid : uuids) {
             AbstractMetadata md = context.getBean(IMetadataUtils.class).findOneByUuid(uuid);
+            if (md == null) continue;
             Files.write(zipFs.getPath("/" + uuid + ".xml"), md.getData().getBytes(Constants.CHARSET));
         }
 
