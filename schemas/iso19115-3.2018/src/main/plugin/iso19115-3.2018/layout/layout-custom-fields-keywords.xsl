@@ -96,6 +96,8 @@
                           then $thesaurusList/thesaurus[@key=substring-after($thesaurusIdentifier, 'geonetwork.thesaurus.')]
                           else $listOfThesaurus/thesaurus[title=$thesaurusTitle]"/>
 
+    <xsl:variable name="generalTitle" select="gn-fn-metadata:getLabel($schema, name(), $labels, name(..), $isoType, $xpath)/label" />
+
 
     <xsl:choose>
       <xsl:when test="($isFlatMode and not($thesaurusConfig/@fieldset)) or $thesaurusConfig/@fieldset = 'false'">
@@ -109,8 +111,8 @@
         <xsl:call-template name="render-boxed-element">
           <xsl:with-param name="label"
             select="if ($thesaurusTitle != '')
-                    then $thesaurusTitle
-                    else gn-fn-metadata:getLabel($schema, name(), $labels, name(..), $isoType, $xpath)/label"/>
+                    then concat($generalTitle, ' - ', $thesaurusTitle)
+                    else $generalTitle"/>
           <xsl:with-param name="editInfo" select="gn:element"/>
           <xsl:with-param name="cls" select="local-name()"/>
           <xsl:with-param name="xpath" select="$xpath"/>
