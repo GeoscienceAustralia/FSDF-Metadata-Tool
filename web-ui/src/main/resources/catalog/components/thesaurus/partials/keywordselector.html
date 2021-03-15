@@ -1,4 +1,4 @@
-<div>
+<div class="gn-field">
   <div data-ng-show="invalidKeywordMatch" class="alert alert-danger">
     <p data-translate="notFoundInThesaurus"
        data-translate-values="{keywords: initialKeywords}"></p>
@@ -9,9 +9,7 @@
 
   <span data-ng-show="!invalidKeywordMatch">
     <div class="row">
-      <label class="col-sm-2 control-label">
-        {{thesaurusTitle}}
-      </label>
+      <label class="col-sm-2 control-label" data-translate="">keywords</label>
       <div class="col-sm-9"
            data-ng-class="maxTags && selected.length == maxTags ? 'gn-maxtags' : ''"
            title="{{selected.length}}/{{maxTagsLabel}} {{'tagsAllowed' | translate}}">
@@ -41,8 +39,11 @@
 
 		<div class="row" ng-show="concept && thesaurusKey != 'external.none.allThesaurus'">
       <div class="col-sm-9 col-md-offset-2">
-        <skos-browser class="tmpl-border" concept="concept" add-concept="addThesaurusConcept"
-                      language="langs"></skos-browser>
+        <details style="width:100%" class="tmpl-border">
+          <summary>{{thesaurusTitle}}</summary>
+          <skos-browser concept="concept" add-concept="addThesaurusConcept"
+                        language="langs"></skos-browser>
+        </details>
       </div>
     </div>
 
