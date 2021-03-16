@@ -150,7 +150,7 @@
                           else $listOfThesaurus/thesaurus[title=$thesaurusTitle]"/>
 
     <xsl:choose>
-      <xsl:when test="$thesaurusConfig">
+      <xsl:when test="$isFlatMode and $thesaurusConfig">
 
         <!-- The thesaurus key may be contained in the MD_Identifier field or
           get it from the list of thesaurus based on its title.
@@ -251,9 +251,6 @@
             <xsl:with-param name="process-params">{"replace": true}</xsl:with-param>
           </xsl:call-template>
         </xsl:if>
-        <details>
-          <xsl:apply-templates mode="mode-iso19115-3.2018" select="*"/>
-        </details>
       </xsl:when>
       <xsl:otherwise>
         <xsl:apply-templates mode="mode-iso19115-3.2018" select="*"/>
