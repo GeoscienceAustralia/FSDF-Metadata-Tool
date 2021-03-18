@@ -4147,6 +4147,23 @@
     <description>Name of the data transfer format(s)</description>
     <help>File or link format name</help>
     <helper>
+      <option value="ArcGIS GP Server">ArcGIS GP Server</option>
+      <option value="ArcGIS Image Server">ArcGIS Image Server</option>
+      <option value="ArcGIS Map Server">ArcGIS Map Server</option>
+      <option value="ArcIMS Service">ArcIMS Service</option>
+      <option value="Catalogue Service for the Web">CSW</option>
+      <option value="OGC Web Map Service">WMS</option>
+      <option value="Sensor Observation Service">Sensor Observation Service</option>
+      <option value="Web Coverage Service">WCS</option>
+      <option value="Web Feature Service">WFS</option>
+      <option value="Web Map Tile Service">WMTS</option>
+      <option value="Web Processing Service">WPS</option>
+      <option value="OPeNDAP root URL">OPeNDAP root URL</option>
+      <option value="REST service">REST service</option>
+      <option value="SPARQL service">SPARQL service</option>
+      <option value="Download">Download</option>
+      <option value="HTML information">HTML information</option>
+
       <option value="Text">Text</option>
       <option value="XLS">XLS</option>
       <option value="ESRI Shapefile">ESRI Shapefile</option>
@@ -4164,8 +4181,6 @@
       <option value="PDF">PDF</option>
       <option value="PNG">PNG</option>
       <option value="JPEG">JPEG</option>
-      <option value="OGC:WMC">OGC:WMC</option>
-      <option value="OGC:OWS-C">OGC OWS Context</option>
     </helper>
   </element>
 
