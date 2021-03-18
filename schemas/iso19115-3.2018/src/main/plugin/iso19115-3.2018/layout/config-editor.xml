@@ -126,7 +126,7 @@
               data-variables="gmd:role/gmd:CI_RoleCode/@codeListValue~{role}"
               data-transformation="contact-from-iso19139-to-iso19115-3.2018"/>-->
     </for>
-    <for name="mrd:distributor" addDirective="data-gn-directory-entry-selector">
+    <for name="mrd:distributorContact" addDirective="data-gn-directory-entry-selector">
       <directiveAttributes
         data-template-add-action="true"
         data-template-type="contact"
