@@ -34,6 +34,7 @@
              data-ng-model="time"
              data-ng-show="mode === ''"/>
       <div class="input-group-btn">
+        <a href="" class="btn btn-default" data-translate="" data-ng-click="setNow()">now</a>
         <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
           <i class="fa fa-clock-o"></i>&nbsp;<span class="caret"></span>
         </button>
@@ -70,6 +71,7 @@
                           data-on-set-time="formatFromDatePicker"
                           data-datetimepicker-config="{minView: 'day', dropdownSelector: '#dropdown2' }"/>
         </ul>
+        <a href="" class="btn btn-default" data-translate="" data-ng-click="setNowForDatePicker()">now</a>
       </div>
     </div>
   </div>
