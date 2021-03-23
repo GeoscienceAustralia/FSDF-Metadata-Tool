@@ -617,7 +617,7 @@ public class BaseMetadataManager implements IMetadataManager {
         if (updateFixedInfo && newMetadata.getDataInfo().getType() == MetadataType.METADATA) {
             String parentUuid = null;
             metadataXml = updateFixedInfo(schema, Optional.absent(), newMetadata.getUuid(), metadataXml, parentUuid,
-                updateDatestamp, context);
+                updateDatestamp, updateDatestamp, context);
         }
 
         // --- store metadata
@@ -944,6 +944,11 @@ public class BaseMetadataManager implements IMetadataManager {
     @Override
     public Element updateFixedInfo(String schema, Optional<Integer> metadataId, String uuid, Element md, String parentUuid,
         UpdateDatestamp updateDatestamp, ServiceContext context) throws Exception {
+        return updateFixedInfo(schema, metadataId, uuid, md, parentUuid, updateDatestamp, UpdateDatestamp.NO, context);
+    }
+
+    public Element updateFixedInfo(String schema, Optional<Integer> metadataId, String uuid, Element md, String parentUuid,
+                                   UpdateDatestamp updateDatestamp, UpdateDatestamp creationDatestamp, ServiceContext context) throws Exception {
         boolean autoFixing = settingManager.getValueAsBool(Settings.SYSTEM_AUTOFIXING_ENABLE, true);
         if (autoFixing) {
             LOGGER_DATA_MANAGER.debug("Autofixing is enabled, trying update-fixed-info (updateDatestamp: {})", updateDatestamp.name());
@@ -970,6 +975,9 @@ public class BaseMetadataManager implements IMetadataManager {
 
             if (updateDatestamp == UpdateDatestamp.YES) {
                 env.addContent(new Element("changeDate").setText(new ISODate().toString()));
+            }
+            if (creationDatestamp == UpdateDatestamp.YES) {
+                env.addContent(new Element("creationDate").setText(new ISODate().toString()));
             }
             if (parentUuid != null) {
                 env.addContent(new Element("parentUuid").setText(parentUuid));

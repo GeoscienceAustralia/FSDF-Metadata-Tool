@@ -150,6 +150,18 @@
               </cit:CI_Date>
             </mdb:dateInfo>
           </xsl:when>
+          <xsl:when test="$currentDateType = 'creation' and /root/env/creationDate">
+            <mdb:dateInfo>
+              <cit:CI_Date>
+                <cit:date>
+                  <gco:DateTime><xsl:value-of select="/root/env/creationDate"/></gco:DateTime>
+                </cit:date>
+                <cit:dateType>
+                  <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision"/>
+                </cit:dateType>
+              </cit:CI_Date>
+            </mdb:dateInfo>
+          </xsl:when>
           <xsl:otherwise>
             <xsl:copy-of select="."/>
           </xsl:otherwise>
@@ -230,6 +242,26 @@
             </cit:date>
             <cit:dateType>
               <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="lastUpdate"/>
+            </cit:dateType>
+          </cit:CI_Date>
+        </xsl:when>
+        <xsl:otherwise>
+          <xsl:apply-templates select="node()|@*"/>
+        </xsl:otherwise>
+      </xsl:choose>
+    </xsl:copy>
+  </xsl:template>
+
+  <xsl:template match="mdb:dateInfo[cit:CI_Date/cit:dateType/cit:CI_DateTypeCode/@codeListValue='creation']">
+    <xsl:copy>
+      <xsl:choose>
+        <xsl:when test="/root/env/creationDate">
+          <cit:CI_Date>
+            <cit:date>
+              <gco:DateTime><xsl:value-of select="/root/env/creationDate"/></gco:DateTime>
+            </cit:date>
+            <cit:dateType>
+              <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="creation"/>
             </cit:dateType>
           </cit:CI_Date>
         </xsl:when>
