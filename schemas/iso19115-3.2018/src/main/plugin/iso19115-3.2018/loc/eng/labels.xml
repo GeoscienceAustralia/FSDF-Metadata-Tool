@@ -403,7 +403,7 @@
     </description>
     <condition></condition>
   </element>
-  <element name="mdb:MD_MetadataScoperd" id="39.0">
+  <element name="mdb:MD_MetadataScoped" id="39.0">
     <label>Resource scope</label>
     <description iso="true">Information about the scope of the resource.
     </description>
@@ -415,9 +415,9 @@
     <condition>mandatory</condition>
   </element>
   <element name="mdb:name" id="41.0">
-    <label>Name</label>
-    <description iso="true">Description of the scope.</description>
-    <condition>optional</condition>
+    <label>Descriptor</label>
+    <description iso="true">Name or description of the scope. (Mandatory for scope other than dataset)</description>
+    <condition>conditional</condition>
   </element>
   <element name="msr:MD_GridSpatialRepresentation" id="148.0">
     <label>Grid spatial representation</label>
