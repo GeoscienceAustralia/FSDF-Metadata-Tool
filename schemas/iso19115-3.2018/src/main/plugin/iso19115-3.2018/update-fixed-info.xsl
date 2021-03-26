@@ -157,7 +157,7 @@
                   <gco:DateTime><xsl:value-of select="/root/env/creationDate"/></gco:DateTime>
                 </cit:date>
                 <cit:dateType>
-                  <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision"/>
+                  <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="creation"/>
                 </cit:dateType>
               </cit:CI_Date>
             </mdb:dateInfo>
