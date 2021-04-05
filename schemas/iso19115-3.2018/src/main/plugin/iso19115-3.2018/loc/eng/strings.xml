@@ -30,15 +30,28 @@
   </xml_iso19139Tooai_dc>
   <resourceLineageTab>Lineage</resourceLineageTab>
 
-  <advanced>Full</advanced>
-  <default>Simple</default>
-  <simple>Simple</simple>
+  <advanced>Advanced</advanced>
+  <icsm>ICSM</icsm>
+  <default>Basic</default>
+  <simple>Basic</simple>
   <inspire>INSPIRE</inspire>
   <inspireTheme>INSPIRE themes</inspireTheme>
   <inspireThemeMandatory>INSPIRE themes*</inspireThemeMandatory>
   <resource>Resource</resource>
   <xml>XML</xml>
   <metadata>Metadata</metadata>
+  <identificationInfoIcsm>Identification</identificationInfoIcsm>
+  <metadataIcsm>Metadata</metadataIcsm>
+  <contentInfoIcsm>Content</contentInfoIcsm>
+  <acquisitionInformationIcsm>Acquisition Info</acquisitionInformationIcsm>
+  <distributionInfoIcsm>Distribution</distributionInfoIcsm>
+  <qualityLineageIcsm>Quality/Lineage</qualityLineageIcsm>
+  <descriptiveKeywordsIcsm>Keywords</descriptiveKeywordsIcsm>
+  <spatialInfoIcsm>Spatial</spatialInfoIcsm>
+  <portrayalCatalogueInfoIcsm>Portrayal</portrayalCatalogueInfoIcsm>
+  <metadataConstraintsIcsm>Md. Constraints</metadataConstraintsIcsm>
+  <metadataMaintenanceIcsm>Md. Maintenance</metadataMaintenanceIcsm>
+  <applicationSchemaInfoIcsm>Schema Info</applicationSchemaInfoIcsm>
   <identificationInfo>Identification</identificationInfo>
   <distributionInfo>Distribution</distributionInfo>
   <dataQualityInfo>Quality</dataQualityInfo>

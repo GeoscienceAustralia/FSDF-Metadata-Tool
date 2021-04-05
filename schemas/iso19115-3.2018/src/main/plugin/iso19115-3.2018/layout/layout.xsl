@@ -64,7 +64,7 @@
 
     <xsl:variable name="name" select="concat(@prefix, ':', @name)"/>
     <xsl:variable name="flatModeException"
-                  select="gn-fn-metadata:isFieldFlatModeException($viewConfig, $name, name())"/>
+                  select="false()"/>
 
     <xsl:if test="$isEditing and
                   (not($isFlatMode) or $flatModeException)">

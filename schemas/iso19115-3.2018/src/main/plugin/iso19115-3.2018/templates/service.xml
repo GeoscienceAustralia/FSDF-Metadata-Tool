@@ -92,10 +92,23 @@
   <mdb:metadataStandard>
     <cit:CI_Citation>
       <cit:title>
-        <gco:CharacterString>ISO 19115-3</gco:CharacterString>
+        <gco:CharacterString>ISO 19115-1</gco:CharacterString>
       </cit:title>
+      <cit:edition>
+        <gco:CharacterString>2018</gco:CharacterString>
+      </cit:edition>
     </cit:CI_Citation>
   </mdb:metadataStandard>
+  <mdb:metadataProfile>
+    <cit:CI_Citation>
+      <cit:title>
+        <gco:CharacterString>ICSM</gco:CharacterString>
+      </cit:title>
+      <cit:edition>
+        <gco:CharacterString>2020</gco:CharacterString>
+      </cit:edition>
+    </cit:CI_Citation>
+  </mdb:metadataProfile>
   <mdb:referenceSystemInfo>
     <mrs:MD_ReferenceSystem>
       <mrs:referenceSystemIdentifier>

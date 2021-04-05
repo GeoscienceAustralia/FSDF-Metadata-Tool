@@ -453,6 +453,90 @@
       </thesaurusList>
     </view>
 
+    <view name="icsm">
+      <tab id="metadataIcsm" default="true">
+        <section name="metadata">
+          <field xpath="/mdb:MD_Metadata/mdb:metadataIdentifier"/>
+          <field xpath="/mdb:MD_Metadata/mdb:defaultLocale" or="defaultLocale"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:otherLocale" or="otherLocale"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:metadataScope" or="metadataScope"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:alternativeMetadataReference" or="alternativeMetadataReference"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:metadataLinkage" or="metadataLinkage"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo"
+                 in="/mdb:MD_Metadata"/>
+          <field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>
+          <field xpath="/mdb:MD_Metadata/mdb:metadataProfile"/>
+        </section>
+      </tab>
+      <tab id="identificationInfoIcsm">
+        <section name="identification">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo" or="identificationInfo"
+                 in="/mdb:MD_Metadata"/>
+        </section>
+      </tab>
+      <tab id="descriptiveKeywordsIcsm" mode="flat">
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/(mri:MD_DataIdentification | srv:ServiceIdentification)/mri:descriptiveKeywords"
+                 or="identificationInfo/mri:MD_DataIdentification" in="/mdb:MD_Metadata/mdb:identificationInfo/(mri:MD_DataIdentification | srv:ServiceIdentification)"/>
+      </tab>
+      <tab id="contentInfoIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:contentInfo" or="contentInfo" in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="distributionInfoIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="qualityLineageIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
+                 in="/mdb:MD_Metadata"/>
+        <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+
+      <tab id="spatialInfoIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:spatialRepresentationInfo"
+                 or="spatialRepresentationInfo" in="/mdb:MD_Metadata"/>
+        <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="acquisitionInformationIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:acquisitionInformation" or="acquisitionInformation"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+
+      <tab id="portrayalCatalogueInfoIcsm" toggle="true">
+        <section xpath="/mdb:MD_Metadata/mdb:portrayalCatalogueInfo" or="portrayalCatalogueInfo"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="metadataConstraintsIcsm" toggle="true">
+        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="metadataMaintenanceIcsm" toggle="true">
+        <section xpath="/mdb:MD_Metadata/mdb:metadataMaintenance" or="metadataMaintenance"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="applicationSchemaInfoIcsm" toggle="true">
+        <section xpath="/mdb:MD_Metadata/mdb:applicationSchemaInfo" or="applicationSchemaInfo"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+
+      <!-- <tab id="qualityMeasures">
+          <section>
+            <xsl xpath="/mdb:MD_Metadata/mdb:dataQualityInfo"
+                 or="report"
+                 mode="iso19115-3.2018-qm"/>
+          </section>
+        </tab>-->
+    </view>
 
     <view name="advanced">
       <sidePanel>
