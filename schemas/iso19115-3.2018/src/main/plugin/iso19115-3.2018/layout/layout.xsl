@@ -64,7 +64,7 @@
 
     <xsl:variable name="name" select="concat(@prefix, ':', @name)"/>
     <xsl:variable name="flatModeException"
-                  select="false()"/>
+                  select="gn-fn-metadata:isFieldFlatModeException($viewConfig, $name, name())"/>
 
     <xsl:if test="$isEditing and
                   (not($isFlatMode) or $flatModeException)">
@@ -110,7 +110,7 @@
             <xsl:with-param name="directive" select="$directive"/>
             <xsl:with-param name="childEditInfo" select="."/>
             <xsl:with-param name="parentEditInfo" select="../gn:element"/>
-            <xsl:with-param name="isFirst" select="count(preceding-sibling::*[name() = $name]) = 0"/>
+            <xsl:with-param name="isFirst" select="true()"/>
           </xsl:call-template>
         </xsl:when>
         <xsl:otherwise>
@@ -122,7 +122,7 @@
             <xsl:with-param name="directive" select="$directive"/>
             <xsl:with-param name="childEditInfo" select="."/>
             <xsl:with-param name="parentEditInfo" select="../gn:element"/>
-            <xsl:with-param name="isFirst" select="count(preceding-sibling::*[name() = $name]) = 0"/>
+            <xsl:with-param name="isFirst" select="true()"/>
           </xsl:call-template>
         </xsl:otherwise>
       </xsl:choose>

@@ -9,6 +9,8 @@
                 xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1"
                 xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0"
                 xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0"
+                xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0"
+
                 version="2.0" exclude-result-prefixes="#all">
 
   <xsl:import href="process-utility.xsl"/>
@@ -127,7 +129,8 @@
           <xsl:for-each select="mri:extent">
             <xsl:if
                     test="gex:EX_Extent/mri:temporalElement or gex:EX_Extent/mri:verticalElement
-                            or gex:EX_Extent/mri:geographicElement[mri:EX_BoundingPolygon]">
+                            or gex:EX_Extent/mri:geographicElement[mri:EX_BoundingPolygon] or
+                            gex:EX_Extent/mri:geographicElement[mri:EX_BoundingBox]">
               <xsl:copy>
                 <xsl:copy-of select="gex:EX_Extent"/>
               </xsl:copy>
@@ -205,7 +208,7 @@
   </xsl:template>
 
 
-  <!-- Create an ISO 19139 extent fragment -->
+  <!-- Create an ISO 19115-3 extent fragment -->
   <xsl:function name="geonet:make-iso19115-3-extent" as="node()">
     <xsl:param name="w" as="xs:string"/>
     <xsl:param name="s" as="xs:string"/>

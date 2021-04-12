@@ -178,6 +178,14 @@
               data-template-type="resourceConstraints"
               data-filter='{"_root": "mco:MD_*"}'/>
     </for>
+    <for name="mdb:metadataConstraints" addDirective="data-gn-directory-entry-selector">
+      <directiveAttributes
+        data-template-add-action="true"
+        data-search-action="true"
+        data-popup-action="false"
+        data-template-type="resourceConstraints"
+        data-filter='{"_root": "mco:MD_*"}'/>
+    </for>
 
     <for name="srv:serviceStandard" addDirective="data-gn-directory-entry-selector">
       <directiveAttributes
@@ -453,8 +461,70 @@
       </thesaurusList>
     </view>
 
-    <view name="icsm">
-      <tab id="metadataIcsm" default="true">
+    <view name="icsm" >
+      <tab id="generalIcsm" default="true" mode="flat">
+        <section name="titleIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:title" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:alternateTitle"
+              or="alternateTitle" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:otherCitationDetails"
+              or="otherCitationDetails" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
+        </section>
+        <section name="datesIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo" in="/mdb:MD_Metadata" />
+        </section>
+        <section name="abstractPurposeIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:abstract" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:purpose" />
+        </section>
+        <section name="contactsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact" in="/mdb:MD_Metadata"/>
+        </section>
+        <section name="identificationIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:status" or="status"
+                   in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceMaintenance/mmi:MD_MaintenanceInformation" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:topicCategory" />
+        </section>
+      </tab>
+      <flatModeExceptions>
+        <for name="mdb:contact"></for>
+        <for name="cit:alternateTitle"/>
+        <for name="cit:otherCitationDetails"/>
+        <for name="mdb:dateInfo"/>
+      </flatModeExceptions>
+      <tab id="qualityLineageIcsm" mode="flat">
+        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
+                 in="/mdb:MD_Metadata"/>
+        <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="descriptiveKeywordsIcsm" mode="flat">
+        <section name="descriptiveKeywordsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:descriptiveKeywords"
+                 or="descriptiveKeywords" in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+        </section>
+        <section name="extentIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:extent" or="extent"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+        </section>
+      </tab>
+      <tab id="spatialInfoIcsm" mode="flat">
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:spatialResolution/mri:MD_Resolution" />
+        <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo" in="/mdb:MD_Metadata" />
+      </tab>
+      <tab id="distributionInfoIcsm">
+        <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
+                 in="/mdb:MD_Metadata"/>
+      </tab>
+      <tab id="constraintsIcsm" mode="flat">
+        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
+                 in="/mdb:MD_Metadata" />
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+      </tab>
+
+      <tab id="metadataIcsm" mode="flat">
         <section name="metadata">
           <field xpath="/mdb:MD_Metadata/mdb:metadataIdentifier"/>
           <field xpath="/mdb:MD_Metadata/mdb:defaultLocale" or="defaultLocale"
@@ -477,27 +547,11 @@
           <field xpath="/mdb:MD_Metadata/mdb:metadataProfile"/>
         </section>
       </tab>
-      <tab id="identificationInfoIcsm">
-        <section name="identification">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo" or="identificationInfo"
-                 in="/mdb:MD_Metadata"/>
-        </section>
-      </tab>
-      <tab id="descriptiveKeywordsIcsm" mode="flat">
-        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/(mri:MD_DataIdentification | srv:ServiceIdentification)/mri:descriptiveKeywords"
-                 or="identificationInfo/mri:MD_DataIdentification" in="/mdb:MD_Metadata/mdb:identificationInfo/(mri:MD_DataIdentification | srv:ServiceIdentification)"/>
-      </tab>
-      <tab id="contentInfoIcsm">
+      <!--<tab id="contentInfoIcsm">
         <section xpath="/mdb:MD_Metadata/mdb:contentInfo" or="contentInfo" in="/mdb:MD_Metadata"/>
       </tab>
       <tab id="distributionInfoIcsm">
         <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="qualityLineageIcsm">
-        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
-                 in="/mdb:MD_Metadata"/>
-        <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
                  in="/mdb:MD_Metadata"/>
       </tab>
 
@@ -527,7 +581,7 @@
       <tab id="applicationSchemaInfoIcsm" toggle="true">
         <section xpath="/mdb:MD_Metadata/mdb:applicationSchemaInfo" or="applicationSchemaInfo"
                  in="/mdb:MD_Metadata"/>
-      </tab>
+      </tab> -->
 
       <!-- <tab id="qualityMeasures">
           <section>
@@ -536,6 +590,37 @@
                  mode="iso19115-3.2018-qm"/>
           </section>
         </tab>-->
+      <flatModeExceptions>
+        <for name="mri:descriptiveKeywords"/>
+        <for name="mri:extent" />
+        <for name="gex:EX_Extent" />
+        <for name="gex:geographicElement" />
+        <for name="gex:description" />
+        <for name="gex:temporalElement" />
+        <for name="gex:verticalElement" />
+        <for name="mcc:code" />
+        <for name="mrs:referenceSystemType" />
+        <for name="mcc:description" />
+        <for name="mcc:codeSpace" />
+        <for name="mdb:referenceSystemInfo" />
+
+        <for name="mri:MD_Resolution" />
+        <for name="mri:angularDistance" />
+        <for name="mri:equivalentScale" />
+        <for name="mri:levelOfDetail" />
+        <for name="mri:distance" />
+        <for name="mri:vertical" />
+        <for name="mri:spatialResolution" />
+
+        <for name="mdb:metadataConstraints" />
+        <for name="mri:resourceConstraints" />
+      </flatModeExceptions>
+      <thesaurusList>
+        <thesaurus key="external.theme.httpinspireeceuropaeutheme-theme" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
+        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialScope-SpatialScope" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
+        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistPriorityDataset-PriorityDataset" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
+        <thesaurus key="external.theme.httpinspireeceuropaeufeatureconcept-featureconcept" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
+      </thesaurusList>
     </view>
 
     <view name="advanced">

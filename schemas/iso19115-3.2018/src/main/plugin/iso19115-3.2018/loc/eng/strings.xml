@@ -40,18 +40,26 @@
   <resource>Resource</resource>
   <xml>XML</xml>
   <metadata>Metadata</metadata>
-  <identificationInfoIcsm>Identification</identificationInfoIcsm>
   <metadataIcsm>Metadata</metadataIcsm>
   <contentInfoIcsm>Content</contentInfoIcsm>
   <acquisitionInformationIcsm>Acquisition Info</acquisitionInformationIcsm>
   <distributionInfoIcsm>Distribution</distributionInfoIcsm>
   <qualityLineageIcsm>Quality/Lineage</qualityLineageIcsm>
   <descriptiveKeywordsIcsm>Keywords</descriptiveKeywordsIcsm>
+  <extentIcsm>Extents</extentIcsm>
   <spatialInfoIcsm>Spatial</spatialInfoIcsm>
   <portrayalCatalogueInfoIcsm>Portrayal</portrayalCatalogueInfoIcsm>
   <metadataConstraintsIcsm>Md. Constraints</metadataConstraintsIcsm>
   <metadataMaintenanceIcsm>Md. Maintenance</metadataMaintenanceIcsm>
   <applicationSchemaInfoIcsm>Schema Info</applicationSchemaInfoIcsm>
+  <generalIcsm>General</generalIcsm>
+  <titleIcsm>Title</titleIcsm>
+  <datesIcsm>Key Dates</datesIcsm>
+  <abstractPurposeIcsm>Abstract &amp; Purpose</abstractPurposeIcsm>
+  <contactsIcsm>Contacts Recognition</contactsIcsm>
+  <identificationIcsm>Other</identificationIcsm>
+  <constraintsIcsm>Constraints</constraintsIcsm>
+
   <identificationInfo>Identification</identificationInfo>
   <distributionInfo>Distribution</distributionInfo>
   <dataQualityInfo>Quality</dataQualityInfo>

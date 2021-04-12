@@ -403,6 +403,15 @@
     </description>
     <condition></condition>
   </element>
+  <element name="mdb:metadataProfile" id="21.5">
+    <label>Metadata profile</label>
+    <description iso="true">Citation for the profile(s) of the metadata
+      standard to which the metadata
+      conforms. NOTE Metadata profile citations
+      should include an identifier.
+    </description>
+    <condition></condition>
+  </element>
   <element name="mdb:MD_MetadataScoped" id="39.0">
     <label>Resource scope</label>
     <description iso="true">Information about the scope of the resource.
@@ -2840,7 +2849,7 @@
     </description>
   </element>
   <element name="gex:geographicElement" id="336.0">
-    <label>Geographic element</label>
+    <label>Geographic extent</label>
     <description>Provides geographic component of the extent of the referring
       object
     </description>
@@ -4125,7 +4134,7 @@
     </description>
   </element>
   <element name="gex:temporalElement" id="337.0">
-    <label>Temporal element</label>
+    <label>Temporal extent</label>
     <description>Provides temporal component of the extent of the referring
       object
     </description>
@@ -4482,7 +4491,7 @@
     <condition>mandatory</condition>
   </element>
   <element name="gex:verticalElement" id="338.0">
-    <label>Vertical element</label>
+    <label>Vertical extent</label>
     <description>Provides vertical component of the extent of the referring
       object
     </description>
