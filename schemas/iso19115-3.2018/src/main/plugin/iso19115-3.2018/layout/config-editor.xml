@@ -174,7 +174,7 @@
       <directiveAttributes
               data-template-add-action="true"
               data-search-action="true"
-              data-popup-action="false"
+              data-popup-action="true"
               data-template-type="resourceConstraints"
               data-filter='{"_root": "mco:MD_*"}'/>
     </for>
@@ -182,7 +182,7 @@
       <directiveAttributes
         data-template-add-action="true"
         data-search-action="true"
-        data-popup-action="false"
+        data-popup-action="true"
         data-template-type="resourceConstraints"
         data-filter='{"_root": "mco:MD_*"}'/>
     </for>
