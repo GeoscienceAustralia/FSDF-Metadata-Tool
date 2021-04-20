@@ -462,6 +462,17 @@
     </view>
 
     <view name="icsm" >
+      <sidePanel>
+        <directive data-gn-validation-report=""/>
+        <directive data-gn-onlinesrc-list=""/>
+        <directive gn-geo-publisher=""
+                   data-ng-if="gnCurrentEdit.geoPublisherConfig"
+                   data-config="{{gnCurrentEdit.geoPublisherConfig}}"
+                   data-lang="lang"/>
+        <directive data-gn-suggestion-list=""/>
+        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
+      </sidePanel>
+
       <tab id="generalIcsm" default="true" mode="flat">
         <section name="titleIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:title" />
@@ -487,11 +498,44 @@
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:topicCategory" />
         </section>
       </tab>
+      <tab id="serviceIcsm" mode="flat" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) > 0">
+        <section name="serviceIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion" or="serviceTypeVersion"
+              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+        </section>
+        <section name="couplingIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:couplingType" or="couplingType"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:coupledResource" or="coupledResource"
+              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+        </section>
+        <section name="serviceStandardIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceStandard" or="serviceStandard"
+              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+        </section>
+        <section name="serviceOperationsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations" or="containsOperations"
+              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+        </section>
+      </tab>
       <flatModeExceptions>
         <for name="mdb:contact"></for>
         <for name="cit:alternateTitle"/>
         <for name="cit:otherCitationDetails"/>
         <for name="mdb:dateInfo"/>
+
+        <for name="srv:serviceType"/>
+        <for name="srv:serviceTypeVersion"/>
+        <for name="srv:coupledResource"/>
+        <for name="srv:coupledResource"/>
+        <for name="srv:couplingType"/>
+        <for name="srv:serviceStandard"/>
+        <for name="srv:containsOperations"/>
+        <for name="srv:SV_CoupledResource"/>
+        <for name="srv:scopedName"/>
+        <for name="srv:resourceReference"/>
+        <for name="srv:SV_OperationMetadata"/>
       </flatModeExceptions>
       <tab id="qualityLineageIcsm" mode="flat">
         <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
@@ -504,16 +548,16 @@
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:descriptiveKeywords"
                  or="descriptiveKeywords" in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
         </section>
+      </tab>
+      <tab id="spatialInfoIcsm" mode="flat">
         <section name="extentIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:extent" or="extent"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
         </section>
-      </tab>
-      <tab id="spatialInfoIcsm" mode="flat">
         <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:spatialResolution/mri:MD_Resolution" />
         <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo" in="/mdb:MD_Metadata" />
       </tab>
-      <tab id="distributionInfoIcsm">
+      <tab id="distributionInfoIcsm" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) = 0">
         <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
                  in="/mdb:MD_Metadata"/>
       </tab>

@@ -59,6 +59,10 @@
   <contactsIcsm>Contacts Recognition</contactsIcsm>
   <identificationIcsm>Other</identificationIcsm>
   <constraintsIcsm>Constraints</constraintsIcsm>
+  <serviceIcsm>Service</serviceIcsm>
+  <couplingIcsm>Coupling</couplingIcsm>
+  <serviceStandardIcsm>Standard</serviceStandardIcsm>
+  <serviceOperationsIcsm>Operations</serviceOperationsIcsm>
 
   <identificationInfo>Identification</identificationInfo>
   <distributionInfo>Distribution</distributionInfo>
