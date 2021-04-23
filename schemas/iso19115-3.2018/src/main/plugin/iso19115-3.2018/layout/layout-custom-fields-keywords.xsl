@@ -244,13 +244,13 @@
              data-textgroup-only="false">
         </div>
 
-        <xsl:variable name="isTypePlace" select="count(mri:type/mri:MD_KeywordTypeCode[@codeListValue='place']) > 0"/>
+        <!--<xsl:variable name="isTypePlace" select="count(mri:type/mri:MD_KeywordTypeCode[@codeListValue='place']) > 0"/>
         <xsl:if test="$isTypePlace">
           <xsl:call-template name="render-batch-process-button">
             <xsl:with-param name="process-name" select="'add-extent-from-geokeywords'"/>
             <xsl:with-param name="process-params">{"replace": true}</xsl:with-param>
           </xsl:call-template>
-        </xsl:if>
+        </xsl:if>-->
       </xsl:when>
       <xsl:otherwise>
         <xsl:apply-templates mode="mode-iso19115-3.2018" select="*"/>

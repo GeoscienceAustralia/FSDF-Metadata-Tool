@@ -395,8 +395,8 @@
 
   <!-- View configuration -->
   <views>
-    <view name="default">
 
+    <view name="icsm" class="gn-label-above-input" displayTooltips="true" hideTimeInCalendar="true" >
       <sidePanel>
         <directive data-gn-validation-report=""/>
         <directive data-gn-onlinesrc-list=""/>
@@ -409,93 +409,28 @@
       </sidePanel>
 
       <tab id="default" default="true" mode="flat">
-        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:contentInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:distributionInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:resourceLineage"/>
-        <section xpath="/mdb:MD_Metadata/mdb:spatialRepresentationInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:acquisitionInformation"/>
-        <section xpath="/mdb:MD_Metadata/mdb:portrayalCatalogueInfo"/>
-        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints"/>
-        <section xpath="/mdb:MD_Metadata/mdb:metadataMaintenance"/>
-        <section xpath="/mdb:MD_Metadata/mdb:applicationSchemaInfo"/>
-        <section name="metadata">
-          <field xpath="/mdb:MD_Metadata/mdb:metadataIdentifier"/>
-          <field xpath="/mdb:MD_Metadata/mdb:defaultLocale" or="defaultLocale"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:otherLocale" or="otherLocale"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact" in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataScope" or="metadataScope"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:alternativeMetadataReference" or="alternativeMetadataReference"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataLinkage" or="metadataLinkage"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:dateInfo"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataProfile"/>
-        </section>
-      </tab>
-
-      <!-- Elements that should not use the "flat" mode -->
-      <flatModeExceptions>
-        <for name="mri:descriptiveKeywords"/>
-        <for name="mri:pointOfContact"/>
-        <for name="mrd:distributor"/>
-        <for name="mdb:contact"/>
-        <for name="mcc:processor"/>
-        <for name="cit:party"/>
-        <for name="cit:CI_Individual"/>
-        <for name="cit:CI_Organisation"/>
-      </flatModeExceptions>
-      <thesaurusList>
-        <thesaurus key="external.theme.httpinspireeceuropaeutheme-theme" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
-        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistSpatialScope-SpatialScope" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
-        <thesaurus key="external.theme.httpinspireeceuropaeumetadatacodelistPriorityDataset-PriorityDataset" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
-        <thesaurus key="external.theme.httpinspireeceuropaeufeatureconcept-featureconcept" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
-      </thesaurusList>
-    </view>
-
-    <view name="icsm" >
-      <sidePanel>
-        <directive data-gn-validation-report=""/>
-        <directive data-gn-onlinesrc-list=""/>
-        <directive gn-geo-publisher=""
-                   data-ng-if="gnCurrentEdit.geoPublisherConfig"
-                   data-config="{{gnCurrentEdit.geoPublisherConfig}}"
-                   data-lang="lang"/>
-        <directive data-gn-suggestion-list=""/>
-        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
-      </sidePanel>
-
-      <tab id="generalIcsm" default="true" mode="flat">
-        <section name="titleIcsm">
+        <section name="generalIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:title" />
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:alternateTitle"
-              or="alternateTitle" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:otherCitationDetails"
-              or="otherCitationDetails" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
-        </section>
-        <section name="datesIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo" in="/mdb:MD_Metadata" />
-        </section>
-        <section name="abstractPurposeIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:abstract" />
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:purpose" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:topicCategory" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceMaintenance/mmi:MD_MaintenanceInformation" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:status" or="status"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+        </section>
+        <section name="datesIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:date"
+                 or="date" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
+        </section>
+        <section name="dataIdentifierIcsm" >
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:identifier"
+                 or="identifier" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
         </section>
         <section name="contactsIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact" in="/mdb:MD_Metadata"/>
-        </section>
-        <section name="identificationIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:status" or="status"
-                   in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceMaintenance/mmi:MD_MaintenanceInformation" />
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:topicCategory" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:pointOfContact" or="pointOfContact"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*"/>
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:citedResponsibleParty" or="citedResponsibleParty"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation"/>
         </section>
       </tab>
       <tab id="serviceIcsm" mode="flat" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) > 0">
@@ -519,29 +454,12 @@
               in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
         </section>
       </tab>
-      <flatModeExceptions>
-        <for name="mdb:contact"></for>
-        <for name="cit:alternateTitle"/>
-        <for name="cit:otherCitationDetails"/>
-        <for name="mdb:dateInfo"/>
-
-        <for name="srv:serviceType"/>
-        <for name="srv:serviceTypeVersion"/>
-        <for name="srv:coupledResource"/>
-        <for name="srv:coupledResource"/>
-        <for name="srv:couplingType"/>
-        <for name="srv:serviceStandard"/>
-        <for name="srv:containsOperations"/>
-        <for name="srv:SV_CoupledResource"/>
-        <for name="srv:scopedName"/>
-        <for name="srv:resourceReference"/>
-        <for name="srv:SV_OperationMetadata"/>
-      </flatModeExceptions>
       <tab id="qualityLineageIcsm" mode="flat">
-        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
-                 in="/mdb:MD_Metadata"/>
+        <!--<section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
+                 in="/mdb:MD_Metadata"/>-->
         <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
                  in="/mdb:MD_Metadata"/>
+        <section name="lineageIcsm"></section>
       </tab>
       <tab id="descriptiveKeywordsIcsm" mode="flat">
         <section name="descriptiveKeywordsIcsm">
@@ -551,90 +469,63 @@
       </tab>
       <tab id="spatialInfoIcsm" mode="flat">
         <section name="extentIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:extent" or="extent"
-                 in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:extent" />
         </section>
-        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:spatialResolution/mri:MD_Resolution" />
-        <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo" in="/mdb:MD_Metadata" />
+        <section name="resolutionIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:spatialResolution/mri:MD_Resolution" />
+        </section>
+        <section name="referenceSystemInfoIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo" in="/mdb:MD_Metadata"/>
+        </section>
       </tab>
       <tab id="distributionInfoIcsm" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) = 0">
         <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
                  in="/mdb:MD_Metadata"/>
       </tab>
       <tab id="constraintsIcsm" mode="flat">
-        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
-                 in="/mdb:MD_Metadata" />
         <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
+        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
+                 in="/mdb:MD_Metadata" />
       </tab>
 
       <tab id="metadataIcsm" mode="flat">
-        <section name="metadata">
-          <field xpath="/mdb:MD_Metadata/mdb:metadataIdentifier"/>
-          <field xpath="/mdb:MD_Metadata/mdb:defaultLocale" or="defaultLocale"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:otherLocale" or="otherLocale"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataScope" or="metadataScope"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:alternativeMetadataReference" or="alternativeMetadataReference"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataLinkage" or="metadataLinkage"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo"
-                 in="/mdb:MD_Metadata"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>
-          <field xpath="/mdb:MD_Metadata/mdb:metadataProfile"/>
-        </section>
-      </tab>
-      <!--<tab id="contentInfoIcsm">
-        <section xpath="/mdb:MD_Metadata/mdb:contentInfo" or="contentInfo" in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="distributionInfoIcsm">
-        <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-
-      <tab id="spatialInfoIcsm">
-        <section xpath="/mdb:MD_Metadata/mdb:spatialRepresentationInfo"
-                 or="spatialRepresentationInfo" in="/mdb:MD_Metadata"/>
-        <section xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="acquisitionInformationIcsm">
-        <section xpath="/mdb:MD_Metadata/mdb:acquisitionInformation" or="acquisitionInformation"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-
-      <tab id="portrayalCatalogueInfoIcsm" toggle="true">
-        <section xpath="/mdb:MD_Metadata/mdb:portrayalCatalogueInfo" or="portrayalCatalogueInfo"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="metadataConstraintsIcsm" toggle="true">
-        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="metadataMaintenanceIcsm" toggle="true">
-        <section xpath="/mdb:MD_Metadata/mdb:metadataMaintenance" or="metadataMaintenance"
-                 in="/mdb:MD_Metadata"/>
-      </tab>
-      <tab id="applicationSchemaInfoIcsm" toggle="true">
-        <section xpath="/mdb:MD_Metadata/mdb:applicationSchemaInfo" or="applicationSchemaInfo"
-                 in="/mdb:MD_Metadata"/>
-      </tab> -->
-
-      <!-- <tab id="qualityMeasures">
-          <section>
-            <xsl xpath="/mdb:MD_Metadata/mdb:dataQualityInfo"
-                 or="report"
-                 mode="iso19115-3.2018-qm"/>
+          <section name="metadataContactsIcsm">
+            <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
+                   in="/mdb:MD_Metadata"/>
           </section>
-        </tab>-->
+          <section xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
+                 in="/mdb:MD_Metadata"/>
+          <section xpath="/mdb:MD_Metadata/mdb:metadataScope" or="metadataScope"
+                 in="/mdb:MD_Metadata"/>
+          <section xpath="/mdb:MD_Metadata/mdb:alternativeMetadataReference" or="alternativeMetadataReference"
+                 in="/mdb:MD_Metadata"/>
+          <section name="dateInfoIcsm">
+            <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo"
+                   in="/mdb:MD_Metadata"/>
+          </section>
+          <!--<field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>-->
+      </tab>
+
       <flatModeExceptions>
+        <for name="mdb:contact"/>
+        <for name="mri:pointOfContact"/>
+        <for name="cit:citedResponsibleParty"/>
+        <for name="cit:otherCitationDetails"/>
+        <for name="cit:date"/>
+        <for name="mdb:dateInfo"/>
+        <for name="cit:identifier"/>
+        <for name="srv:serviceType"/>
+        <for name="srv:serviceTypeVersion"/>
+        <for name="srv:coupledResource"/>
+        <for name="srv:couplingType"/>
+        <for name="srv:serviceStandard"/>
+        <for name="srv:containsOperations"/>
+        <for name="srv:SV_CoupledResource"/>
+        <for name="srv:scopedName"/>
+        <for name="srv:resourceReference"/>
+        <for name="srv:SV_OperationMetadata"/>
+
         <for name="mri:descriptiveKeywords"/>
         <for name="mri:extent" />
         <for name="gex:EX_Extent" />
@@ -647,7 +538,7 @@
         <for name="mcc:description" />
         <for name="mcc:codeSpace" />
         <for name="mdb:referenceSystemInfo" />
-
+        <for name="mco:useLimitation"/>
         <for name="mri:MD_Resolution" />
         <for name="mri:angularDistance" />
         <for name="mri:equivalentScale" />
@@ -655,6 +546,8 @@
         <for name="mri:distance" />
         <for name="mri:vertical" />
         <for name="mri:spatialResolution" />
+        <for name="mdb:dataQualityInfo" />
+        <for name="mdb:resourceLineage" />
 
         <for name="mdb:metadataConstraints" />
         <for name="mri:resourceConstraints" />

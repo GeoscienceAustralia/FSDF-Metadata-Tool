@@ -32,7 +32,7 @@
 
   <advanced>Advanced</advanced>
   <icsm>ICSM</icsm>
-  <default>Basic</default>
+  <default>General</default>
   <simple>Basic</simple>
   <inspire>INSPIRE</inspire>
   <inspireTheme>INSPIRE themes</inspireTheme>
@@ -44,7 +44,8 @@
   <contentInfoIcsm>Content</contentInfoIcsm>
   <acquisitionInformationIcsm>Acquisition Info</acquisitionInformationIcsm>
   <distributionInfoIcsm>Distribution</distributionInfoIcsm>
-  <qualityLineageIcsm>Quality/Lineage</qualityLineageIcsm>
+  <qualityLineageIcsm>Lineage/Quality</qualityLineageIcsm>
+  <lineageIcsm>Lineage</lineageIcsm>
   <descriptiveKeywordsIcsm>Keywords</descriptiveKeywordsIcsm>
   <extentIcsm>Extents</extentIcsm>
   <spatialInfoIcsm>Spatial</spatialInfoIcsm>
@@ -53,7 +54,6 @@
   <metadataMaintenanceIcsm>Md. Maintenance</metadataMaintenanceIcsm>
   <applicationSchemaInfoIcsm>Schema Info</applicationSchemaInfoIcsm>
   <generalIcsm>General</generalIcsm>
-  <titleIcsm>Title</titleIcsm>
   <datesIcsm>Key Dates</datesIcsm>
   <abstractPurposeIcsm>Abstract &amp; Purpose</abstractPurposeIcsm>
   <contactsIcsm>Contacts Recognition</contactsIcsm>
@@ -63,6 +63,11 @@
   <couplingIcsm>Coupling</couplingIcsm>
   <serviceStandardIcsm>Standard</serviceStandardIcsm>
   <serviceOperationsIcsm>Operations</serviceOperationsIcsm>
+  <dataIdentifierIcsm>Identification</dataIdentifierIcsm>
+  <resolutionIcsm>Resolution</resolutionIcsm>
+  <referenceSystemInfoIcsm>Reference System</referenceSystemInfoIcsm>
+  <dateInfoIcsm>Dates</dateInfoIcsm>
+  <metadataContactsIcsm>Metadata Contacts</metadataContactsIcsm>
 
   <identificationInfo>Identification</identificationInfo>
   <distributionInfo>Distribution</distributionInfo>

@@ -412,7 +412,7 @@
     </description>
     <condition></condition>
   </element>
-  <element name="mdb:MD_MetadataScoped" id="39.0">
+  <element name="mdb:MD_MetadataScope" id="39.0">
     <label>Resource scope</label>
     <description iso="true">Information about the scope of the resource.
     </description>
@@ -1921,6 +1921,11 @@
     <description>Brief narrative summary of the content of the resource(s)
     </description>
     <condition>mandatory</condition>
+  </element>
+  <element name="cit:identifier" id="25.5">
+    <label>Data identifier</label>
+    <description>A uri identifing the resource
+    </description>
   </element>
   <element name="mco:accessConstraints" id="70.0">
     <label>Access constraints</label>
@@ -4408,7 +4413,7 @@
   </element>
   <element name="mco:useLimitation" id="99.0"
            context="/mdb:MD_Metadata/mdb:identificationInfo/mri:MD_DataIdentification/mri:resourceConstraints/mco:MD_Constraints/mco:useLimitation">
-    <label>Challenge expert score</label>
+    <label>Resource use limitation</label>
     <description>Assign an overall product quality score with respect to the objectives and explain why.</description>
   </element>
   <element name="mco:useLimitation" id="99.0">
