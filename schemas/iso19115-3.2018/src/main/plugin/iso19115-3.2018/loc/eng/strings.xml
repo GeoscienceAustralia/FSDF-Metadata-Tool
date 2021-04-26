@@ -45,7 +45,7 @@
   <acquisitionInformationIcsm>Acquisition Info</acquisitionInformationIcsm>
   <distributionInfoIcsm>Distribution</distributionInfoIcsm>
   <qualityLineageIcsm>Lineage/Quality</qualityLineageIcsm>
-  <lineageIcsm>Lineage</lineageIcsm>
+  <qualityIcsm>Quality</qualityIcsm>
   <descriptiveKeywordsIcsm>Keywords</descriptiveKeywordsIcsm>
   <extentIcsm>Extents</extentIcsm>
   <spatialInfoIcsm>Spatial</spatialInfoIcsm>

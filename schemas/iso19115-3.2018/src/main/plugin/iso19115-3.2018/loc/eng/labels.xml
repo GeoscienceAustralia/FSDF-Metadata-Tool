@@ -4735,7 +4735,9 @@
       values of the nameSpace and name attributes of GeneralName may be 'OGC' and 'catalogue'
     </description>
     <helper>
+      <option value="OGC:CSW">OGC Catalogue Services for the Web</option>
       <option value="OGC:WMS">OGC Web Map Service</option>
+      <option value="OGC:SOS">OGC Sensor Observation Service</option>
       <option value="OGC:WMTS">OGC Web Map Tile Service</option>
       <option value="OGC:WFS">OGC Web Feature Service</option>
       <option value="OGC:WCS">OGC Web Coverage Service</option>
@@ -4751,10 +4753,19 @@
       <option value="OGC:WCS">OGC Web Coverage Service (OGC:WCS)</option>
       <option value="W3C:HTML:DOWNLOAD">Download (W3C:HTML:DOWNLOAD)</option>
       <option value="W3C:HTML:LINK">Information (W3C:HTML:LINK)</option>-->
+      <option value="arcgis:GP">ArcGIS GP Server</option>
+      <option value="arcgis:Image">ArcGIS Image Server</option>
+      <option value="arcgis:Map">ArcGIS Map Server</option>
+      <option value="arcgis:IMS">ArcIMS Service</option>
+      <option value="opendap">OPeNDAP Root URL</option>
+      <option value="W3C:ReST">REST Service</option>
+      <option value="W3C:SPARQL">SPARQL Service</option>
+      <option value="W3C:download">Download</option>
+      <option value="W3C:HTML">HTML Information</option>
     </helper>
   </element>
   <element name="srv:serviceTypeVersion">
-    <label>Service Version</label>
+    <label>Service Type Version</label>
     <description>Provides for searching based on the version of serviceType. For
       example, we may only be interested in OGC Catalogue V1.1 services. If version is
       maintained as a separate attribute, users can easily search for all services of a type

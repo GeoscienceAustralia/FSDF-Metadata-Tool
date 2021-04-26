@@ -113,6 +113,7 @@
               data-template-add-action="true"
               data-template-type="contact"
               data-search-action="true"
+              data-popup-action="true"
               data-filter='{"_root": "cit:CI_Responsibility"}'
               data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
       <!-- To use an ISO19139 contact directory in an ISO19115-3 record
@@ -147,6 +148,7 @@
         data-template-add-action="true"
         data-template-type="contact"
         data-search-action="true"
+        data-popup-action="true"
         data-filter='{"_root": "cit:CI_Responsibility"}'
         data-variables="cit:role/cit:CI_RoleCode/@codeListValue~{role}"/>
     </for>
@@ -191,7 +193,7 @@
       <directiveAttributes
         data-template-add-action="true"
         data-search-action="true"
-        data-popup-action="false"
+        data-popup-action="true"
         data-template-type="serviceStandard"
         data-filter='{"_root": "srv:serviceStandard"}'/>
     </for>
@@ -253,7 +255,6 @@
     <name>mrd:MD_Distributor</name>
     <name>mrd:onLine</name>
     <name>mri:associatedResource</name>
-    <name>mri:descriptiveKeywords</name>
     <name>mri:resourceSpecificUsage</name>
     <name>mri:identifiedIssues</name>
     <name>mri:equivalentScale</name>
@@ -267,6 +268,11 @@
     <name>msr:projection</name>
     <name>srv:containsOperations</name>
     <name>srv:SV_CoupledResource</name>
+    <name>cit:onlineResource</name>
+    <name>mco:MD_Constraints</name>
+    <name>mco:MD_LegalConstraints</name>
+    <name>mco:MD_SecurityConstraints</name>
+    <name>mmi:MD_MaintenanceInformation</name>
   </fieldsWithFieldset>
 
   <multilingualFields>
@@ -413,11 +419,12 @@
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:title" />
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:abstract" />
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:purpose" />
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:supplementalInformation" />
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:topicCategory" />
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceMaintenance/mmi:MD_MaintenanceInformation" />
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:status" or="status"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
         </section>
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceMaintenance/mmi:MD_MaintenanceInformation" />
         <section name="datesIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:date"
                  or="date" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
@@ -455,11 +462,10 @@
         </section>
       </tab>
       <tab id="qualityLineageIcsm" mode="flat">
-        <!--<section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
-                 in="/mdb:MD_Metadata"/>-->
         <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
                  in="/mdb:MD_Metadata"/>
-        <section name="lineageIcsm"></section>
+        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
+                 in="/mdb:MD_Metadata"/>
       </tab>
       <tab id="descriptiveKeywordsIcsm" mode="flat">
         <section name="descriptiveKeywordsIcsm">
@@ -521,7 +527,8 @@
         <for name="srv:couplingType"/>
         <for name="srv:serviceStandard"/>
         <for name="srv:containsOperations"/>
-        <for name="srv:SV_CoupledResource"/>
+        <for name="srv:coupledResource" />
+        <!--<for name="srv:SV_CoupledResource"/>-->
         <for name="srv:scopedName"/>
         <for name="srv:resourceReference"/>
         <for name="srv:SV_OperationMetadata"/>
@@ -551,6 +558,8 @@
 
         <for name="mdb:metadataConstraints" />
         <for name="mri:resourceConstraints" />
+        <for name="srv:resourceReference" />
+        <for name="cit:onlineResource" />
       </flatModeExceptions>
       <thesaurusList>
         <thesaurus key="external.theme.httpinspireeceuropaeutheme-theme" transformations="to-iso19115-3.2018-keyword-with-anchor"/>

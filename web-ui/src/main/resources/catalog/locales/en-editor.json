@@ -294,6 +294,8 @@
     "searchAcontact": "Search for a contact ...",
     "searchAnOrganisation": "Search for an organisation ...",
     "searchAformat": "Search for a format ...",
+    "searchAserviceStandard": "Search for a service standard ...",
+    "searchArefsys": "Search for a reference system ...",
     "setAndReplaceExtent": "Replace existing extent",
     "setCRS": "Set coordinate reference system",
     "setDynamicGraphicOverview": "Set graphic overview (using GetMap request URL)",
