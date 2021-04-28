@@ -524,8 +524,6 @@
       <tab id="constraintsIcsm" mode="flat">
         <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
-        <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
-                 in="/mdb:MD_Metadata" />
       </tab>
 
       <tab id="metadataIcsm" mode="flat">
@@ -544,6 +542,8 @@
                    in="/mdb:MD_Metadata"/>
           </section>
           <!--<field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>-->
+          <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
+                   in="/mdb:MD_Metadata" />
       </tab>
 
       <flatModeExceptions>
