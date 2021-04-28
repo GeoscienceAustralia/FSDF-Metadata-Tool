@@ -1350,7 +1350,7 @@
     <condition/>
   </element>
   <element name="cit:onlineResource" id="398.0" context="cit:CI_Contact">
-    <label>Online resource</label>
+    <label>Web Address</label>
     <description iso="true">On-line information that can be used to contact the
       individual or organisation
     </description>
@@ -3046,7 +3046,7 @@
     <_condition>Conditional / report not provided?</_condition>
   </element>
   <element name="cit:linkage" id="406.0">
-    <label>Linkage</label>
+    <label>URL</label>
     <description>Location (address) for on-line access using a Uniform Resource
       Locator address or similar addressing scheme such as http://www.statkart.no/isotc211
     </description>
@@ -3605,7 +3605,7 @@
   </element>
   <element name="cit:onlineResource" id="390.0">
     <help>Define URL to access the website</help>
-    <label>Online Linkage</label>
+    <label>Web Address</label>
     <description>On-line information that can be used to contact the individual
       or organisation
     </description>

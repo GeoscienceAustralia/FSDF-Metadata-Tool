@@ -273,6 +273,9 @@
     <name>mco:MD_LegalConstraints</name>
     <name>mco:MD_SecurityConstraints</name>
     <name>mmi:MD_MaintenanceInformation</name>
+    <name>mri:descriptiveKeywords</name>
+    <name>srv:serviceStandard</name>
+    <name>mrl:source</name>
   </fieldsWithFieldset>
 
   <multilingualFields>
@@ -396,6 +399,36 @@
         <col del=".."/>
       </row>
     </table>
+
+    <table for="srv:serviceStandard">
+      <header>
+        <col label="cit:title"/>
+        <col label="cit:onlineResource"/>
+        <col/>
+      </header>
+      <row>
+        <col xpath="cit:CI_Citation/cit:title"/>
+        <col xpath="cit:CI_Citation/cit:onlineResource/cit:CI_OnlineResource/cit:linkage"/>
+        <col del=".." />
+      </row>
+    </table>
+
+    <table for="mrs:MD_ReferenceSystem">
+      <header>
+        <col label="mrs:referenceSystemType" />
+        <col label="mcc:authority" />
+        <col label="mcc:code" />
+        <col label="mcc:description" />
+        <col />
+      </header>
+      <row>
+        <col xpath="mrs:referenceSystemType" />
+        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:authority/cit:CI_Citation/cit:title" />
+        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:code" />
+        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:description" />
+        <col del=".." />
+      </row>
+    </table>
   </tableFields>
 
 
@@ -410,7 +443,7 @@
                    data-ng-if="gnCurrentEdit.geoPublisherConfig"
                    data-config="{{gnCurrentEdit.geoPublisherConfig}}"
                    data-lang="lang"/>
-        <directive data-gn-suggestion-list=""/>
+        <!--<directive data-gn-suggestion-list=""/>-->
         <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
       </sidePanel>
 
@@ -443,29 +476,29 @@
       <tab id="serviceIcsm" mode="flat" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) > 0">
         <section name="serviceIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion" or="serviceTypeVersion"
-              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
-        </section>
-        <section name="couplingIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceTypeVersion" />
+        <!--</section>
+        <section name="couplingIcsm">-->
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:couplingType" or="couplingType"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:coupledResource" or="coupledResource"
-              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/mri:citation/cit:CI_Citation/cit:onlineResource/cit:CI_OnlineResource/cit:linkage" />
+          <!--<field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:coupledResource" or="coupledResource"
+              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>-->
         </section>
         <section name="serviceStandardIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceStandard" or="serviceStandard"
               in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
         </section>
-        <section name="serviceOperationsIcsm">
+        <!--<section name="serviceOperationsIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations" or="containsOperations"
               in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
-        </section>
+        </section>-->
       </tab>
       <tab id="qualityLineageIcsm" mode="flat">
         <section xpath="/mdb:MD_Metadata/mdb:resourceLineage" or="resourceLineage"
                  in="/mdb:MD_Metadata"/>
-        <section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
-                 in="/mdb:MD_Metadata"/>
+        <!--<section xpath="/mdb:MD_Metadata/mdb:dataQualityInfo" or="dataQualityInfo"
+                 in="/mdb:MD_Metadata"/>-->
       </tab>
       <tab id="descriptiveKeywordsIcsm" mode="flat">
         <section name="descriptiveKeywordsIcsm">
@@ -484,10 +517,10 @@
           <field xpath="/mdb:MD_Metadata/mdb:referenceSystemInfo" or="referenceSystemInfo" in="/mdb:MD_Metadata"/>
         </section>
       </tab>
-      <tab id="distributionInfoIcsm" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) = 0">
+      <!--<tab id="distributionInfoIcsm" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) = 0">
         <section xpath="/mdb:MD_Metadata/mdb:distributionInfo" or="distributionInfo"
                  in="/mdb:MD_Metadata"/>
-      </tab>
+      </tab>-->
       <tab id="constraintsIcsm" mode="flat">
         <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
@@ -560,6 +593,18 @@
         <for name="mri:resourceConstraints" />
         <for name="srv:resourceReference" />
         <for name="cit:onlineResource" />
+
+        <for name="mrl:statement" />
+        <for name="mrl:description" />
+        <for name="mrl:source" />
+
+        <for name="gex:EX_SpatialTemporalExtent" />
+        <for name="gex:EX_TemporalExtent" />
+        <for name="gex:extent" />
+        <for name="gml:TimePeriod" />
+        <for name="gml:begin" />
+        <for name="gml:TimeInstant" />
+        <for name="gml:timePosition" />
       </flatModeExceptions>
       <thesaurusList>
         <thesaurus key="external.theme.httpinspireeceuropaeutheme-theme" transformations="to-iso19115-3.2018-keyword-with-anchor"/>
