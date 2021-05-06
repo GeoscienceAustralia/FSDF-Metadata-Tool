@@ -68,6 +68,7 @@
   <referenceSystemInfoIcsm>Reference System</referenceSystemInfoIcsm>
   <dateInfoIcsm>Dates</dateInfoIcsm>
   <metadataContactsIcsm>Metadata Contacts</metadataContactsIcsm>
+  <resourceLineageIcsm>Resource Lineage</resourceLineageIcsm>
 
   <identificationInfo>Identification</identificationInfo>
   <distributionInfo>Distribution</distributionInfo>

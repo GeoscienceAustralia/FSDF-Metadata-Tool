@@ -96,23 +96,10 @@ public class CrsUtils {
                     description += " (" + authorityCodeSpace + ":" + code + ")";
 
                     if (matchesFilter(description, filters)) {
-
-                        CoordinateReferenceSystem instance = factory.createCoordinateReferenceSystem(code);
-                        String type;
-                        if (instance instanceof EngineeringCRS) type = "Engineering";
-                        else if (instance instanceof GeocentricCRS) type = "GeodeticGeocentric";
-                        else if (instance instanceof GeodeticCRS) type = "GeodeticGeographic2D";
-                        else if (instance instanceof GeographicCRS) type = "GeodeticGeographic3D";
-                        else if (instance instanceof ImageCRS) type = "EngineeringImage";
-                        else if (instance instanceof ProjectedCRS) type = "Projected";
-                        else if (instance instanceof TemporalCRS) type = "Temporal";
-                        else if (instance instanceof VerticalCRS) type = "Vertical";
-                        else type = "";
-
                         crsList.add(
                             new Crs(code, authorityTitle,
                                 authorityEdition, authorityCodeSpace,
-                                description, type));
+                                description));
                         if (++i >= rows)
                             return crsList;
                     }
@@ -160,21 +147,9 @@ public class CrsUtils {
                         description += " (" + authorityCodeSpace + ":" + code
                             + ")";
 
-                        CoordinateReferenceSystem instance = factory.createCoordinateReferenceSystem(code);
-                        String type;
-                        if (instance instanceof EngineeringCRS) type = "Engineering";
-                        else if (instance instanceof GeocentricCRS) type = "GeodeticGeocentric";
-                        else if (instance instanceof GeodeticCRS) type = "GeodeticGeographic2D";
-                        else if (instance instanceof GeographicCRS) type = "GeodeticGeographic3D";
-                        else if (instance instanceof ImageCRS) type = "EngineeringImage";
-                        else if (instance instanceof ProjectedCRS) type = "Projected";
-                        else if (instance instanceof TemporalCRS) type = "Temporal";
-                        else if (instance instanceof VerticalCRS) type = "Vertical";
-                        else type = "";
-
                         return new Crs(code, authorityTitle,
                             authorityEdition, authorityCodeSpace,
-                            description, type);
+                            description);
                     }
                 }
             } catch (FactoryException e) {

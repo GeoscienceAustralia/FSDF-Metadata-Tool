@@ -36,19 +36,18 @@ public class Crs {
     private String codeSpace;
     private String description;
 
-    private String type;
+    //private String type;
     public Crs() {
     }
 
     public Crs(String code, String authority,
                String version, String codeSpace,
-               String description, String type) {
+               String description) {
         this.code = code;
         this.authority = authority;
         this.version = version;
         this.codeSpace = codeSpace;
         this.description = description;
-        this.type = type;
     }
 
     public String getDescription() {
@@ -89,13 +88,5 @@ public class Crs {
 
     public void setCodeSpace(String codeSpace) {
         this.codeSpace = codeSpace;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
     }
 }
