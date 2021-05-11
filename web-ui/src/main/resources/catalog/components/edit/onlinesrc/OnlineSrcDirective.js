@@ -211,6 +211,7 @@
               scope.allowEdits = true;
               scope.lang = scope.$parent.lang;
               scope.readonly = attrs['readonly'] || false;
+              scope.hasMenu = attrs['menu'] || true;
               scope.gnCurrentEdit.associatedPanelConfigId = attrs['configId'] || 'default';
               scope.relations = {};
               scope.gnCurrentEdit.codelistFilter  = attrs['codelistFilter'];

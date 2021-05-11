@@ -11,7 +11,7 @@
   <div class="panel-body">
     <div class="btn-toolbar">
       <div class="btn-group"
-           data-ng-if="readonly !== true">
+           data-ng-if="readonly !== true && hasMenu === true">
         <button type="button"
                 class="btn btn-default btn-xs dropdown-toggle"
                 data-toggle="dropdown">
@@ -80,6 +80,15 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="btn-group"
+           data-ng-if="readonly !== true && hasMenu !== true">
+        <button type="button"
+                class="btn btn-default btn-xs"
+                data-ng-click="onlinesrcService.onOpenPopup('onlinesrc')">
+          <i class="fa fa-fw fa-plus"></i>
+          <span data-translate="">add</span>
+        </button>
       </div>
     </div>
     <!-- /.btn-toolbar -->

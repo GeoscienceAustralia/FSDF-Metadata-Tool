@@ -1,0 +1,91 @@
+{
+  "config": {
+    "display": "radio",
+    "types": [
+      {
+        "group": "onlineDiscover",
+        "label": "addOnlinesrc",
+        "copyLabel": "name",
+        "sources": {
+          "filestore": true
+        },
+        "icon": "fa gn-icon-onlinesrc",
+        "process": "onlinesrc-add",
+        "fields": {
+          "url": {
+            "isMultilingual": false
+          },
+          "protocol": {
+            "value": "WWW:LINK",
+            "hidden": true,
+            "isMultilingual": false
+          },
+          "name": {},
+          "desc": {},
+          "function": {
+            "value": "browsing",
+            "hidden": true,
+            "isMultilingual": false
+          }
+        }
+      },
+      {
+        "group": "onlineDiscover",
+        "label": "addThumbnail",
+        "sources": {
+          "filestore": true,
+          "thumbnailMaker": true
+        },
+        "icon": "fa gn-icon-thumbnail",
+        "fileStoreFilter": "*.{jpg,JPG,jpeg,JPEG,png,PNG,gif,GIF}",
+        "process": "thumbnail-add",
+        "fields": {
+          "url": {
+            "isMultilingual": false,
+            "param": "thumbnail_url"
+          },
+          "protocol": {
+            "value": "WWW:LINK",
+            "hidden": true,
+            "isMultilingual": false
+          },
+          "name": {
+            "param": "thumbnail_desc"
+          }
+        }
+      },
+      {
+        "group": "onlineDiscover",
+        "label": "onlineDiscoverInApp",
+        "copyLabel": "name",
+        "sources": {
+          "metadataStore": {
+            "label": "searchAnApplication",
+            "params": {
+              "type": "application"
+            }
+          }
+        },
+        "icon": "fa gn-icon-map",
+        "process": "onlinesrc-add",
+        "fields": {
+          "url": {
+            "isMultilingual": false
+          },
+          "protocol": {
+            "value": "WWW:LINK",
+            "hidden": true,
+            "isMultilingual": false
+          },
+          "name": {},
+          "desc": {},
+          "function": {
+            "value": "browsing",
+            "hidden": true,
+            "isMultilingual": false
+          }
+        }
+      }
+    ]
+  }
+}
