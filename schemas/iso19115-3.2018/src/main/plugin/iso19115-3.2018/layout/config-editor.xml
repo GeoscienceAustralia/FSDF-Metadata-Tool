@@ -422,7 +422,7 @@
       </row>
     </table>
 
-    <!--<table for="mrs:MD_ReferenceSystem">
+    <table for="mrs:MD_ReferenceSystem">
       <header>
         <col label="mrs:referenceSystemType" />
         <col label="mcc:authority" />
@@ -437,7 +437,7 @@
         <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:description" />
         <col del=".." />
       </row>
-    </table>-->
+    </table>
 
     <!--<table for="mco:MD_SecurityConstraints">
       <header>
