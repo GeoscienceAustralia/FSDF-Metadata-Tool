@@ -105,7 +105,7 @@
         data-search-action="true"
         data-popup-action="true"
         data-template-type="contact"
-        data-filter='{"_root": "mdb:referenceSystemInfo"}' />
+        data-filter='{"_root": "mrs:MD_ReferenceSystem"}' />
     </for>
 
     <for name="mdb:contact" addDirective="data-gn-directory-entry-selector">
@@ -425,21 +425,17 @@
     <table for="mrs:MD_ReferenceSystem">
       <header>
         <col label="mrs:referenceSystemType" />
-        <col label="mcc:authority" />
-        <col label="mcc:code" />
         <col label="mcc:description" />
         <col />
       </header>
       <row>
         <col xpath="mrs:referenceSystemType" />
-        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:authority/cit:CI_Citation/cit:title" />
-        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:code" />
         <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:description" />
         <col del=".." />
       </row>
     </table>
 
-    <!--<table for="mco:MD_SecurityConstraints">
+   <table for="mco:MD_SecurityConstraints">
       <header>
         <col label="mco:reference" />
         <col />
@@ -448,8 +444,8 @@
         <col xpath="mco:reference/cit:CI_Citation/cit:title" />
         <col del=".." />
       </row>
-    </table>-->
-   <!-- <table for="mco:MD_Constraints">
+    </table>
+   <table for="mco:MD_Constraints">
       <header>
         <col label="mco:useLimitation" />
         <col />
@@ -470,8 +466,8 @@
         <col xpath="mco:reference/cit:CI_Citation/cit:title" />
         <col del=".." />
       </row>
-    </table>-->
-    <table for="mri:resourceConstraints">
+    </table>
+    <!--<table for="mri:resourceConstraints">
       <header>
         <col label="mco:reference" />
         <col label="mco:useLimitation" />
@@ -482,7 +478,7 @@
         <col xpath="*/mco:useLimitation" />
         <col del=".." />
       </row>
-    </table>
+    </table>-->
   </tableFields>
 
 

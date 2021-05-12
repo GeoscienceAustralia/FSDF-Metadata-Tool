@@ -178,10 +178,10 @@
   <!-- Indexing Reference Systems -->
 
   <xsl:template mode="index"
-                match="mrs:MD_ReferenceSystem[count(ancestor::node()) =  1]">
+                match="mrs:MD_ReferenceSystem">
     <xsl:variable name="type" select="local-name(.)"/>
     <xsl:variable name="name"
-                  select="mrs:referenceSystemIdentifier/mcc:description/gco:CharacterString"/>
+                  select="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:description/gco:CharacterString"/>
     <Field name="_title"
            string="{if ($name != '')
                     then $name
