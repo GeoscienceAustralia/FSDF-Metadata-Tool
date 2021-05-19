@@ -285,6 +285,8 @@
     <name>mri:descriptiveKeywords</name>
     <name>srv:serviceStandard</name>
     <name>mrl:source</name>
+    <name>cit:CI_OnlineResource</name>
+    <name>srv:connectPoint</name>
   </fieldsWithFieldset>
 
   <multilingualFields>
@@ -437,7 +439,7 @@
 
    <table for="mco:MD_SecurityConstraints">
       <header>
-        <col label="mco:reference" />
+        <col label="mco:MD_SecurityConstraints" />
         <col />
       </header>
       <row>
@@ -458,7 +460,7 @@
     <table for="mco:MD_LegalConstraints">
       <header>
         <col label="mco:constraintApplicationScope" />
-        <col label="mco:reference" />
+        <col label="mco:MD_LegalConstraints" />
         <col />
       </header>
       <row>
@@ -467,18 +469,21 @@
         <col del=".." />
       </row>
     </table>
-    <!--<table for="mri:resourceConstraints">
+
+    <table for="cit:CI_OnlineResource">
       <header>
-        <col label="mco:reference" />
-        <col label="mco:useLimitation" />
+        <col label="cit:linkage" />
+        <col label="cit:protocol" />
+        <col label="cit:function" />
         <col />
       </header>
       <row>
-        <col xpath="*/mco:reference/cit:CI_Citation/cit:title" />
-        <col xpath="*/mco:useLimitation" />
+        <col xpath="cit:linkage" />
+        <col xpath="cit:protocol" />
+        <col xpath="cit:function" />
         <col del=".." />
       </row>
-    </table>-->
+    </table>
   </tableFields>
 
 
@@ -487,13 +492,13 @@
 
     <view name="icsm" class="gn-label-above-input" displayTooltips="true" hideTimeInCalendar="true" >
       <sidePanel>
-        <directive data-gn-validation-report=""/>
         <directive data-gn-onlinesrc-list="" data-config-id="icsm" data-menu="false" />
         <directive gn-geo-publisher=""
                    data-ng-if="gnCurrentEdit.geoPublisherConfig"
                    data-config="{{gnCurrentEdit.geoPublisherConfig}}"
                    data-lang="lang"/>
         <!--<directive data-gn-suggestion-list=""/>-->
+        <directive data-gn-validation-report=""/>
         <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
       </sidePanel>
 
@@ -516,11 +521,17 @@
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:identifier"
                  or="identifier" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
         </section>
-        <section name="contactsIcsm">
+      </tab>
+      <tab id="contactsIcsm" mode="flat">
+        <section name="resourceContactsIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:pointOfContact" or="pointOfContact"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*"/>
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:citedResponsibleParty" or="citedResponsibleParty"
                  in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation"/>
+        </section>
+        <section name="metadataContactsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
+                 in="/mdb:MD_Metadata"/>
         </section>
       </tab>
       <tab id="serviceIcsm" mode="flat" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) > 0">
@@ -578,18 +589,16 @@
                  in="/mdb:MD_Metadata"/>
       </tab>-->
       <tab id="constraintsIcsm" mode="flat">
-        <section name="resourceConstraintsIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:resourceConstraints" or="resourceConstraints"
                in="/mdb:MD_Metadata/mdb:identificationInfo/*" />
-        </section>
       </tab>
 
-      <tab id="metadataIcsm" mode="flat">
+      <!--<tab id="metadataIcsm" mode="flat">
           <section name="metadataContactsIcsm">
             <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
                    in="/mdb:MD_Metadata"/>
           </section>
-          <!--section xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
+          <section xpath="/mdb:MD_Metadata/mdb:parentMetadata" or="parentMetadata"
                  in="/mdb:MD_Metadata"/>
           <section xpath="/mdb:MD_Metadata/mdb:metadataScope" or="metadataScope"
                  in="/mdb:MD_Metadata"/>
@@ -598,13 +607,13 @@
           <section name="dateInfoIcsm">
             <field xpath="/mdb:MD_Metadata/mdb:dateInfo" or="dateInfo"
                    in="/mdb:MD_Metadata"/>
-          </section-->
-          <!--<field xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>-->
-          <!--<section name="constraintsIcsm">
+          </section>
+          <section xpath="/mdb:MD_Metadata/mdb:metadataStandard"/>
+          <section name="constraintsIcsm">
             <section xpath="/mdb:MD_Metadata/mdb:metadataConstraints" or="metadataConstraints"
                      in="/mdb:MD_Metadata" />
-          </section>-->
-      </tab>
+          </section>
+      </tab>-->
 
       <flatModeExceptions>
         <for name="mdb:contact"/>
@@ -665,6 +674,9 @@
         <for name="gml:begin" />
         <for name="gml:TimeInstant" />
         <for name="gml:timePosition" />
+
+        <for name="srv:connectPoint" />
+        <for name="srv:operationDescription" />
       </flatModeExceptions>
       <thesaurusList>
         <thesaurus key="external.theme.httpinspireeceuropaeutheme-theme" transformations="to-iso19115-3.2018-keyword-with-anchor"/>

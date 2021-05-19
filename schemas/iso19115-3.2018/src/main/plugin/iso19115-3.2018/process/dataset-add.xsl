@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--  
-Stylesheet used to link a dataset to a service 
-metadata record by adding a operatesOn and 
+<!--
+Stylesheet used to link a dataset to a service
+metadata record by adding a operatesOn and
 a coupledResource reference.
 -->
 <xsl:stylesheet version="2.0"
@@ -23,7 +23,7 @@ a coupledResource reference.
 
   <!-- UUID of the dataset metadata -->
   <xsl:param name="uuidref"/>
-  
+
   <!-- List of layers -->
   <xsl:param name="scopedName" select="''"/>
   <xsl:param name="protocol" select="'OGC:WMS'"/>
@@ -43,7 +43,7 @@ a coupledResource reference.
   <xsl:template match="/mdb:MD_Metadata">
     <xsl:copy>
       <xsl:copy-of select="@*"/>
-      
+
       <xsl:apply-templates select="mdb:metadataIdentifier"/>
       <xsl:apply-templates select="mdb:defaultLocale"/>
       <xsl:apply-templates select="mdb:parentMetadata"/>
@@ -58,8 +58,8 @@ a coupledResource reference.
       <xsl:apply-templates select="mdb:spatialRepresentationInfo"/>
       <xsl:apply-templates select="mdb:referenceSystemInfo"/>
       <xsl:apply-templates select="mdb:metadataExtensionInfo"/>
-      
-      
+
+
       <!-- Check current metadata is a service metadata record
         And add the link to the dataset -->
       <xsl:choose>
@@ -69,15 +69,15 @@ a coupledResource reference.
             <srv:SV_ServiceIdentification>
               <xsl:copy-of
                 select="mdb:identificationInfo/*/mri:*"/>
-              
+
               <xsl:copy-of
                 select="mdb:identificationInfo/*/srv:serviceType|
                 mdb:identificationInfo/*/srv:serviceTypeVersion|
                 mdb:identificationInfo/*/srv:accessProperties|
                 mdb:identificationInfo/*/srv:couplingType|
                 mdb:identificationInfo/*/srv:coupledResource[*/srv:resourceReference/@uuidref != $uuidref]"/>
-              
-              
+
+
               <!-- Handle SV_CoupledResource -->
               <xsl:variable name="coupledResource">
                 <xsl:for-each select="tokenize($scopedName, ',')">
@@ -144,7 +144,7 @@ a coupledResource reference.
           <xsl:copy-of select="mdb:identificationInfo"/>
         </xsl:otherwise>
       </xsl:choose>
-      
+
       <xsl:apply-templates select="mdb:contentInfo"/>
 
 
@@ -245,7 +245,7 @@ a coupledResource reference.
       <xsl:apply-templates select="@*|node()"/>
     </xsl:copy>
   </xsl:template>
-  
+
   <!-- Remove geonet:* elements. -->
   <xsl:template match="gn:*"
     priority="2"/>

@@ -81,14 +81,32 @@
           </li>
         </ul>
       </div>
-      <div class="btn-group"
-           data-ng-if="readonly !== true && hasMenu !== true">
-        <button type="button"
-                class="btn btn-default btn-xs"
+      <div data-ng-if="readonly !== true && hasMenu !== true">
+        <div class="btn-group">
+          <button type="button"
+                class="btn btn-default"
                 data-ng-click="onlinesrcService.onOpenPopup('onlinesrc')">
-          <i class="fa fa-fw fa-plus"></i>
-          <span data-translate="">add</span>
-        </button>
+            <i class="fa fa-fw fa-plus"></i>
+            <span data-translate="">addOnlinesrcTitle</span>
+          </button>
+        </div>
+
+        <div class="btn-group">
+          <button type="button" class="btn btn-default"
+                  data-ng-click="onlinesrcService.onOpenPopup('service')"
+                  data-ng-show="::isCategoryEnable('service') && !gnCurrentEdit.isService">
+            <i class="fa gn-icon-service"></i>
+            <i class="icon-external-link"></i>&nbsp;
+            <span data-translate="">linkToService</span>
+          </button>
+          <button type="button" class="btn btn-default"
+                  data-ng-click="onlinesrcService.onOpenPopup('dataset')"
+                  data-ng-show="::isCategoryEnable('dataset') && gnCurrentEdit.isService">
+            <i class="fa gn-icon-dataset"></i>
+            <i class="icon-external-link"></i>&nbsp;
+            <span data-translate="">linkToDataset</span>
+          </button>
+        </div>
       </div>
     </div>
     <!-- /.btn-toolbar -->

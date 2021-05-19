@@ -56,18 +56,19 @@
   <generalIcsm>General</generalIcsm>
   <datesIcsm>Key Dates</datesIcsm>
   <abstractPurposeIcsm>Abstract &amp; Purpose</abstractPurposeIcsm>
-  <contactsIcsm>Contacts Recognition</contactsIcsm>
+  <contactsIcsm>Contacts</contactsIcsm>
   <identificationIcsm>Other</identificationIcsm>
   <constraintsIcsm>Constraints</constraintsIcsm>
   <serviceIcsm>Service</serviceIcsm>
   <couplingIcsm>Coupling</couplingIcsm>
   <serviceStandardIcsm>Standard</serviceStandardIcsm>
   <serviceOperationsIcsm>Operations</serviceOperationsIcsm>
-  <dataIdentifierIcsm>Identification</dataIdentifierIcsm>
+  <dataIdentifierIcsm>Resource Identification</dataIdentifierIcsm>
   <resolutionIcsm>Resolution</resolutionIcsm>
   <referenceSystemInfoIcsm>Reference System</referenceSystemInfoIcsm>
   <dateInfoIcsm>Dates</dateInfoIcsm>
   <metadataContactsIcsm>Metadata Contacts</metadataContactsIcsm>
+  <resourceContactsIcsm>Resource Contacts</resourceContactsIcsm>
   <resourceLineageIcsm>Resource Lineage</resourceLineageIcsm>
 
   <identificationInfo>Identification</identificationInfo>

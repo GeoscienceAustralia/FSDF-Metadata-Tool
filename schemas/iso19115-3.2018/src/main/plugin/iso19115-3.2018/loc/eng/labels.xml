@@ -2111,7 +2111,7 @@
     <description>Citation data for the resource(s)</description>
   </element>
   <element name="cit:citedResponsibleParty" id="367.0">
-    <label>Cited responsible party</label>
+    <label>Responsible party</label>
     <description>Name and position information for an individual or organization
       that is responsible for the resource
     </description>
@@ -2401,15 +2401,15 @@
     <description>The number below the line in a vulgar fraction</description>
     <condition>add either a denominator or a distance</condition>
     <helper>
-      <option value="5000">1:5´000</option>
-      <option value="10000">1:10´000</option>
-      <option value="25000">1:25´000</option>
-      <option value="50000">1:50´000</option>
-      <option value="100000">1:100´000</option>
-      <option value="200000">1:200´000</option>
-      <option value="300000">1:300´000</option>
-      <option value="500000">1:500´000</option>
-      <option value="1000000">1:1´000´000</option>
+      <option value="5000">1:5,000</option>
+      <option value="10000">1:10,000</option>
+      <option value="25000">1:25,000</option>
+      <option value="50000">1:50,000</option>
+      <option value="100000">1:100,000</option>
+      <option value="200000">1:200,000</option>
+      <option value="300000">1:300,000</option>
+      <option value="500000">1:500,000</option>
+      <option value="1000000">1:1,000,000</option>
     </helper>
 
   </element>
