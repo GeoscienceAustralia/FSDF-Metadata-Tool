@@ -29,7 +29,9 @@ a coupledResource reference.
   <xsl:param name="protocol" select="'OGC:WMS'"/>
   <xsl:param name="url"/>
   <xsl:param name="desc"/>
-  <xsl:param name="siteUrl"/>
+  <xsl:param name="nodeUrl"/>
+  <!-- Remote record title -->
+  <xsl:param name="title" select="''"/>
 
 
   <xsl:variable name="mainLang"
@@ -88,37 +90,13 @@ a coupledResource reference.
                           <xsl:value-of select="."/>
                         </gco:ScopedName>
                       </srv:scopedName>
-                      <srv:resourceReference>
-                        <cit:CI_Citation>
-                          <cit:title>
-                            <gco:CharacterString><xsl:value-of select="."/></gco:CharacterString>
-
-                          </cit:title>
-                          <cit:onlineResource>
-                            <cit:CI_OnlineResource>
-                              <cit:linkage>
-                                <gco:CharacterString><xsl:value-of select="substring($siteUrl, 1, string-length($siteUrl)-4)"/>/api/records/<xsl:value-of select="$uuidref"/></gco:CharacterString>
-                              </cit:linkage>
-                              <cit:protocol gco:nilReason="missing">
-                                <gco:CharacterString/>
-                              </cit:protocol>
-                              <cit:name gco:nilReason="missing">
-                                <gco:CharacterString/>
-                              </cit:name>
-                              <cit:description>
-                                <gco:CharacterString>Metadata for <xsl:value-of select="."/></gco:CharacterString>
-                              </cit:description>
-                            </cit:CI_OnlineResource>
-                          </cit:onlineResource>
-                        </cit:CI_Citation>
-                      </srv:resourceReference>
-
+                      <srv:resourceReference uuidref="{$uuidref}"/>
                     </srv:SV_CoupledResource>
                   </srv:coupledResource>
                 </xsl:for-each>
               </xsl:variable>
 
-              <xsl:if test="$uuidref">
+              <xsl:if test="$uuidref and $title = ''">
                 <xsl:copy-of select="$coupledResource"/>
               </xsl:if>
 
@@ -129,10 +107,22 @@ a coupledResource reference.
                 mdb:identificationInfo/*/srv:containsOperations|
                 mdb:identificationInfo/*/srv:operatesOn[@uuidref != $uuidref]"/>
 
-              <xsl:if test="$uuidref">
-                <srv:operatesOn uuidref="{$uuidref}"
-                  xlink:href="{$siteUrl}/csw?service=CSW&amp;request=GetRecordById&amp;version=2.0.2&amp;outputSchema=http://www.isotc211.org/2005/gmd&amp;elementSetName=full&amp;id={$uuidref}"/>
-              </xsl:if>
+              <!--<xsl:if test="$uuidref">
+                <srv:operatesOn uuidref="{$uuidref}">
+                  <xsl:if test="$title != ''">
+                    <xsl:attribute name="xlink:title" select="$title"/>
+                  </xsl:if>
+                  <xsl:choose>
+                    <xsl:when test="$url != ''">
+                      <xsl:attribute name="xlink:href" select="$url"/>
+                    </xsl:when>
+                    <xsl:otherwise>
+                      <xsl:attribute name="xlink:href"
+                                     select="concat($nodeUrl, 'api/records/', $uuidref)"/>
+                    </xsl:otherwise>
+                  </xsl:choose>
+                </srv:operatesOn>
+              </xsl:if>-->
 
               <xsl:copy-of
                 select="mdb:identificationInfo/*/srv:containsChain"/>
@@ -177,13 +167,13 @@ a coupledResource reference.
               <mdb:distributionInfo>
                 <mrd:MD_Distribution>
                   <xsl:copy-of
-                    select="mdb:distributionInfo[1]/mrd:MD_Distribution/mrd:description"/>
+                    select="mdb:distributionInfo[1]/*/mrd:description"/>
                   <xsl:copy-of
-                    select="mdb:distributionInfo[1]/mrd:MD_Distribution/mrd:distributionFormat"/>
+                    select="mdb:distributionInfo[1]/*/mrd:distributionFormat"/>
                   <xsl:copy-of
-                    select="mdb:distributionInfo[1]/mrd:MD_Distribution/mrd:distributor"/>
+                    select="mdb:distributionInfo[1]/*/mrd:distributor"/>
                   <xsl:copy-of
-                    select="mdb:distributionInfo[1]/mrd:MD_Distribution/mrd:transferOptions"/>
+                    select="mdb:distributionInfo[1]/*/mrd:transferOptions"/>
 
                   <mrd:transferOptions>
                     <mrd:MD_DigitalTransferOptions>
@@ -217,26 +207,51 @@ a coupledResource reference.
 
 
   <xsl:template name="create-online">
-    <xsl:for-each select="tokenize($scopedName, ',')">
-      <mrd:onLine>
-        <cit:CI_OnlineResource>
-          <cit:linkage>
-            <xsl:copy-of
-              select="gn-fn-iso19115-3.2018:fillTextElement($url, $mainLang, $useOnlyPTFreeText)"/>
-          </cit:linkage>
-          <cit:protocol>
-            <gco:CharacterString>
-              <xsl:value-of select="$protocol"/>
-            </gco:CharacterString>
-          </cit:protocol>
-          <cit:name>
-            <gco:CharacterString>
-              <xsl:value-of select="."/>
-            </gco:CharacterString>
-          </cit:name>
-        </cit:CI_OnlineResource>
-      </mrd:onLine>
-    </xsl:for-each>
+    <xsl:choose>
+      <!-- Remote record -->
+      <xsl:when test="$title != ''">
+        <mrd:onLine>
+          <cit:CI_OnlineResource>
+            <cit:linkage>
+              <xsl:copy-of
+                select="gn-fn-iso19115-3.2018:fillTextElement($url, $mainLang, $useOnlyPTFreeText)"/>
+            </cit:linkage>
+            <cit:protocol>
+              <gco:CharacterString>
+                <xsl:value-of select="$protocol"/>
+              </gco:CharacterString>
+            </cit:protocol>
+            <cit:name>
+              <gco:CharacterString>
+                <xsl:value-of select="$title"/>
+              </gco:CharacterString>
+            </cit:name>
+          </cit:CI_OnlineResource>
+        </mrd:onLine>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:for-each select="tokenize($scopedName, ',')">
+          <mrd:onLine>
+            <cit:CI_OnlineResource>
+              <cit:linkage>
+                <xsl:copy-of
+                  select="gn-fn-iso19115-3.2018:fillTextElement($url, $mainLang, $useOnlyPTFreeText)"/>
+              </cit:linkage>
+              <cit:protocol>
+                <gco:CharacterString>
+                  <xsl:value-of select="$protocol"/>
+                </gco:CharacterString>
+              </cit:protocol>
+              <cit:name>
+                <gco:CharacterString>
+                  <xsl:value-of select="."/>
+                </gco:CharacterString>
+              </cit:name>
+            </cit:CI_OnlineResource>
+          </mrd:onLine>
+        </xsl:for-each>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:template>
 
   <!-- Do a copy of every nodes and attributes -->
@@ -248,5 +263,5 @@ a coupledResource reference.
 
   <!-- Remove geonet:* elements. -->
   <xsl:template match="gn:*"
-    priority="2"/>
+                priority="2"/>
 </xsl:stylesheet>
