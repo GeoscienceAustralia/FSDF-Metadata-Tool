@@ -107,7 +107,7 @@ a coupledResource reference.
                 mdb:identificationInfo/*/srv:containsOperations|
                 mdb:identificationInfo/*/srv:operatesOn[@uuidref != $uuidref]"/>
 
-              <!--<xsl:if test="$uuidref">
+              <xsl:if test="$uuidref">
                 <srv:operatesOn uuidref="{$uuidref}">
                   <xsl:if test="$title != ''">
                     <xsl:attribute name="xlink:title" select="$title"/>
@@ -122,7 +122,7 @@ a coupledResource reference.
                     </xsl:otherwise>
                   </xsl:choose>
                 </srv:operatesOn>
-              </xsl:if>-->
+              </xsl:if>
 
               <xsl:copy-of
                 select="mdb:identificationInfo/*/srv:containsChain"/>

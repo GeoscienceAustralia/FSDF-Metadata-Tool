@@ -287,6 +287,7 @@
     <name>mrl:source</name>
     <name>cit:CI_OnlineResource</name>
     <name>srv:connectPoint</name>
+    <name>srv:parameter</name>
   </fieldsWithFieldset>
 
   <multilingualFields>
@@ -427,11 +428,13 @@
     <table for="mrs:MD_ReferenceSystem">
       <header>
         <col label="mrs:referenceSystemType" />
+        <col label="mcc:code" />
         <col label="mcc:description" />
         <col />
       </header>
       <row>
         <col xpath="mrs:referenceSystemType" />
+        <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:code" />
         <col xpath="mrs:referenceSystemIdentifier/mcc:MD_Identifier/mcc:description" />
         <col del=".." />
       </row>
@@ -522,18 +525,6 @@
                  or="identifier" in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation" />
         </section>
       </tab>
-      <tab id="contactsIcsm" mode="flat">
-        <section name="resourceContactsIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:pointOfContact" or="pointOfContact"
-                 in="/mdb:MD_Metadata/mdb:identificationInfo/*"/>
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:citedResponsibleParty" or="citedResponsibleParty"
-                 in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation"/>
-        </section>
-        <section name="metadataContactsIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
-                 in="/mdb:MD_Metadata"/>
-        </section>
-      </tab>
       <tab id="serviceIcsm" mode="flat" displayIfRecord="count(mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification) > 0">
         <section name="serviceIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceType"/>
@@ -553,6 +544,18 @@
         <section name="serviceOperationsIcsm">
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations" or="containsOperations"
               in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
+        </section>
+      </tab>
+      <tab id="contactsIcsm" mode="flat">
+        <section name="resourceContactsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:pointOfContact" or="pointOfContact"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*"/>
+          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation/cit:citedResponsibleParty" or="citedResponsibleParty"
+                 in="/mdb:MD_Metadata/mdb:identificationInfo/*/mri:citation/cit:CI_Citation"/>
+        </section>
+        <section name="metadataContactsIcsm">
+          <field xpath="/mdb:MD_Metadata/mdb:contact" or="contact"
+                 in="/mdb:MD_Metadata"/>
         </section>
       </tab>
       <tab id="qualityLineageIcsm" mode="flat">
