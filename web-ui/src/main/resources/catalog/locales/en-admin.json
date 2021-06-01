@@ -426,7 +426,7 @@
     "groupLogo": "Logo",
     "groupLogoHelp": "Logo to use for representing the group.",
     "groups": "Groups",
-    "chooseOrDropResource": "Choose or drop resource here",
+    "chooseOrDropResource": "Upload to public datastore",
     "harvestedRecordPrivileges": "Privileges for harvested records",
     "harvester": "Harvester",
     "harvesterSetting": "Catalog harvesters",

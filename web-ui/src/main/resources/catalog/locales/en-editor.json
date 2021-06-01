@@ -95,7 +95,7 @@
     "linkToServiceError": "An error occurred when linking the dataset with the service",
     "chooseAProj": "Select the projection to use to display coordinates (note: coordinates are always saved in the metadata record in WGS84).",
     "chooseAType": "Choose a type",
-    "chooseOnlinesrc": "Choose or drop resource here",
+    "chooseOnlinesrc": "Upload to public datastore",
     "chooseRegion": "Choose a region",
     "clickToDrawABox": "Click once to enable control and draw a box. Click again to stop drawing.",
     "closeEditor": "Save & close",
