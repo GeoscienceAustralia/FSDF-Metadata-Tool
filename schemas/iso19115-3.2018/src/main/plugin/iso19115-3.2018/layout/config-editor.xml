@@ -101,10 +101,9 @@
 
     <for name="mdb:referenceSystemInfo" addDirective="data-gn-directory-entry-selector">
       <directiveAttributes
-        data-template-add-action="true"
         data-search-action="true"
         data-popup-action="true"
-        data-template-type="contact"
+        data-template-type="refsys"
         data-filter='{"_root": "mrs:MD_ReferenceSystem"}' />
     </for>
 
@@ -209,7 +208,8 @@
 
     <for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
       <directiveAttributes
-              data-transformation="to-iso19115-3.2018-keyword"/>
+              data-transformation="to-iso19115-3.2018-keyword"
+              data-selector-only="true"/>
     </for>
   </fields>
 
@@ -502,7 +502,7 @@
                    data-lang="lang"/>
         <!--<directive data-gn-suggestion-list=""/>-->
         <directive data-gn-validation-report=""/>
-        <directive data-gn-need-help="user-guide/describing-information/creating-metadata.html"/>
+        <directive data-gn-need-help="https://github.com/OpenWork-NZ/mdwg/wiki"/>
       </sidePanel>
 
       <tab id="default" default="true" mode="flat">
@@ -650,7 +650,7 @@
         <for name="mcc:code" />
         <for name="mrs:referenceSystemType" />
         <for name="mcc:description" />
-        <for name="mcc:codeSpace" />
+        <!--<for name="mcc:codeSpace" />-->
         <for name="mdb:referenceSystemInfo" />
         <for name="mco:useLimitation"/>
         <for name="mri:MD_Resolution" />

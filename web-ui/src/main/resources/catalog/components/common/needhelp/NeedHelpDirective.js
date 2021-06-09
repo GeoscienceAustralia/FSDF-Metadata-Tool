@@ -74,7 +74,8 @@
 
           scope.showHelp = function() {
             var page = attrs.gnNeedHelp;
-            var helpPageUrl = helpBaseUrl + gnGlobalSettings.lang + '/' + page;
+            var helpPageUrl = page.startsWith("https://") || page.startsWith("http://") ?
+                page : helpBaseUrl + gnGlobalSettings.lang + '/' + page;
             testAndOpen(helpPageUrl).then(function() {}, function() {
               testAndOpen( helpBaseUrl + 'en/' + page)
             });

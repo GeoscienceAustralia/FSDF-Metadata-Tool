@@ -6,9 +6,6 @@
         "group": "onlineDiscover",
         "label": "addOnlinesrc",
         "copyLabel": "name",
-        "sources": {
-          "filestore": true
-        },
         "icon": "fa gn-icon-onlinesrc",
         "process": "onlinesrc-add",
         "fields": {
