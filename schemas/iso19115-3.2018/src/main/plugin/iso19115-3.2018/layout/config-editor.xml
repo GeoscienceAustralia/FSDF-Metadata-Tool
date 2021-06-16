@@ -104,6 +104,7 @@
         data-search-action="true"
         data-popup-action="true"
         data-template-type="refsys"
+        data-insert-modes="text"
         data-filter='{"_root": "mrs:MD_ReferenceSystem"}' />
     </for>
 
@@ -168,6 +169,7 @@
               data-search-action="true"
               data-popup-action="false"
               data-template-type="logo"
+              data-insert-modes="text"
               data-filter='{"_root": "mcc:MD_BrowseGraphic"}'/>
     </for>
 
@@ -177,6 +179,7 @@
               data-search-action="true"
               data-popup-action="false"
               data-template-type="report"
+              data-insert-modes="text"
               data-filter='{"_root": "mdq:DQ_*"}'/>
     </for>
 
@@ -186,6 +189,7 @@
               data-search-action="true"
               data-popup-action="true"
               data-template-type="resourceConstraints"
+              data-insert-modes="text"
               data-filter='{"_root": "mco:MD_*"}'/>
     </for>
     <for name="mdb:metadataConstraints" addDirective="data-gn-directory-entry-selector">
@@ -194,6 +198,7 @@
         data-search-action="true"
         data-popup-action="true"
         data-template-type="resourceConstraints"
+        data-insert-modes="text"
         data-filter='{"_root": "mco:MD_*"}'/>
     </for>
 <!-- Issue with ServiceStandard insert - It places asrv:serviceStandard inside srv:serviceStamdard -->
@@ -208,8 +213,7 @@
 
     <for name="mri:descriptiveKeywords" addDirective="data-gn-thesaurus-selector">
       <directiveAttributes
-              data-transformation="to-iso19115-3.2018-keyword"
-              data-selector-only="true"/>
+              data-transformation="to-iso19115-3.2018-keyword" />
     </for>
   </fields>
 
@@ -400,13 +404,15 @@
     <table for="cit:CI_Responsibility">
       <header>
         <col label="cit:role"/>
-        <col label="cit:CI_Organisation"/>
+        <col label="cit:name"/>
+        <col label="cit:CI_Individual"/>
         <col label="cit:electronicMailAddress"/>
         <col/>
       </header>
       <row>
         <col xpath="cit:role"/>
-        <col xpath="cit:party/cit:CI_Organisation/cit:name"/>
+        <col xpath="cit:party/*/cit:name"/>
+        <col xpath="cit:party/cit:CI_Organisation/cit:individual/cit:CI_Individual/cit:name"/>
         <col xpath="cit:party/*/cit:contactInfo/*/cit:address/*/cit:electronicMailAddress"/>
         <col del=".."/>
       </row>
@@ -462,13 +468,13 @@
     </table>
     <table for="mco:MD_LegalConstraints">
       <header>
-        <col label="mco:constraintApplicationScope" />
         <col label="mco:MD_LegalConstraints" />
+        <col label="mco:constraintApplicationScope" />
         <col />
       </header>
       <row>
-        <col xpath="mco:constraintApplicationScope/mcc:MD_Scope/mcc:level" />
         <col xpath="mco:reference/cit:CI_Citation/cit:title" />
+        <col xpath="mco:constraintApplicationScope/mcc:MD_Scope/mcc:level" />
         <col del=".." />
       </row>
     </table>
@@ -502,7 +508,7 @@
                    data-lang="lang"/>
         <!--<directive data-gn-suggestion-list=""/>-->
         <directive data-gn-validation-report=""/>
-        <directive data-gn-need-help="https://github.com/OpenWork-NZ/mdwg/wiki"/>
+        <directive data-gn-need-help="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/"/>
       </sidePanel>
 
       <tab id="default" default="true" mode="flat">
@@ -541,10 +547,8 @@
           <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:serviceStandard" or="serviceStandard"
               in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
         </section>-->
-        <section name="serviceOperationsIcsm">
-          <field xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations" or="containsOperations"
-              in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
-        </section>
+        <section xpath="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/srv:containsOperations" or="containsOperations"
+            in="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification"/>
       </tab>
       <tab id="contactsIcsm" mode="flat">
         <section name="resourceContactsIcsm">

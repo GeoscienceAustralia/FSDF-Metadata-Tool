@@ -2,7 +2,7 @@
   <mdb:metadataIdentifier>
     <mcc:MD_Identifier>
       <mcc:code>
-        <gco:CharacterString>e4a23540-e93b-4f5c-bec5-bfcf6297f20f</gco:CharacterString>
+        <gco:CharacterString>ed6de5ac-530f-44a0-9582-f5ffbb5e296b</gco:CharacterString>
       </mcc:code>
       <mcc:codeSpace>
         <gco:CharacterString>urn:uuid</gco:CharacterString>
@@ -24,6 +24,9 @@
       <mdb:resourceScope>
         <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="service" />
       </mdb:resourceScope>
+      <mdb:name>
+        <gco:CharacterString>Geospatial Service</gco:CharacterString>
+      </mdb:name>
     </mdb:MD_MetadataScope>
   </mdb:metadataScope>
   <mdb:contact xmlns:geonet="http://www.fao.org/geonetwork">
@@ -64,7 +67,7 @@
   <mdb:dateInfo>
     <cit:CI_Date>
       <cit:date>
-        <gco:DateTime>2021-06-01T14:00:13</gco:DateTime>
+        <gco:DateTime>2021-06-14T14:08:21</gco:DateTime>
       </cit:date>
       <cit:dateType>
         <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision" />
@@ -124,31 +127,6 @@
     <mrs:MD_ReferenceSystem>
       <mrs:referenceSystemIdentifier>
         <mcc:MD_Identifier>
-          <mcc:authority>
-            <cit:CI_Citation>
-              <cit:title>
-                <gco:CharacterString>EPSG</gco:CharacterString>
-              </cit:title>
-              <cit:identifier />
-            </cit:CI_Citation>
-          </mcc:authority>
-          <mcc:code>
-            <gco:CharacterString>(epsg code e.g.4326)</gco:CharacterString>
-          </mcc:code>
-          <mcc:codeSpace>
-            <gco:CharacterString>EPSG</gco:CharacterString>
-          </mcc:codeSpace>
-        </mcc:MD_Identifier>
-      </mrs:referenceSystemIdentifier>
-      <mrs:referenceSystemType>
-        <mrs:MD_ReferenceSystemTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic2D" />
-      </mrs:referenceSystemType>
-    </mrs:MD_ReferenceSystem>
-  </mdb:referenceSystemInfo>
-  <mdb:referenceSystemInfo xmlns:geonet="http://www.fao.org/geonetwork">
-    <mrs:MD_ReferenceSystem>
-      <mrs:referenceSystemIdentifier>
-        <mcc:MD_Identifier>
           <mcc:code>
             <gco:CharacterString>xxxx.xx (decimal year)</gco:CharacterString>
           </mcc:code>
@@ -167,7 +145,7 @@
       <mri:citation>
         <cit:CI_Citation>
           <cit:title>
-            <gco:CharacterString>EMA Metadata Template - Service</gco:CharacterString>
+            <gco:CharacterString>Emergency Management Service Template</gco:CharacterString>
           </cit:title>
           <cit:date>
             <cit:CI_Date>
@@ -190,56 +168,6 @@
             </cit:CI_Date>
           </cit:date>
           <cit:identifier />
-          <cit:citedResponsibleParty>
-            <cit:CI_Responsibility>
-              <cit:role>
-                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="owner" />
-              </cit:role>
-              <cit:party>
-                <cit:CI_Organisation>
-                  <cit:name>
-                    <gco:CharacterString>(Jurisdiction)</gco:CharacterString>
-                  </cit:name>
-                  <cit:contactInfo>
-                    <cit:CI_Contact>
-                      <cit:address>
-                        <cit:CI_Address>
-                          <cit:electronicMailAddress gco:nilReason="missing">
-                            <gco:CharacterString />
-                          </cit:electronicMailAddress>
-                        </cit:CI_Address>
-                      </cit:address>
-                    </cit:CI_Contact>
-                  </cit:contactInfo>
-                </cit:CI_Organisation>
-              </cit:party>
-            </cit:CI_Responsibility>
-          </cit:citedResponsibleParty>
-          <cit:citedResponsibleParty>
-            <cit:CI_Responsibility>
-              <cit:role>
-                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="custodian" />
-              </cit:role>
-              <cit:party>
-                <cit:CI_Organisation>
-                  <cit:name>
-                    <gco:CharacterString>(Agency name)</gco:CharacterString>
-                  </cit:name>
-                  <cit:contactInfo>
-                    <cit:CI_Contact>
-                      <cit:address>
-                        <cit:CI_Address>
-                          <cit:electronicMailAddress>
-                            <gco:CharacterString>(Agency contact email)</gco:CharacterString>
-                          </cit:electronicMailAddress>
-                        </cit:CI_Address>
-                      </cit:address>
-                    </cit:CI_Contact>
-                  </cit:contactInfo>
-                </cit:CI_Organisation>
-              </cit:party>
-            </cit:CI_Responsibility>
-          </cit:citedResponsibleParty>
           <cit:onlineResource>
             <cit:CI_OnlineResource>
               <cit:linkage>
@@ -270,31 +198,6 @@
       <mri:status>
         <mcc:MD_ProgressCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ProgressCode" codeListValue="" />
       </mri:status>
-      <mri:pointOfContact>
-        <cit:CI_Responsibility>
-          <cit:role>
-            <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="owner" />
-          </cit:role>
-          <cit:party>
-            <cit:CI_Organisation>
-              <cit:name>
-                <gco:CharacterString>Vogan Department of Poetry</gco:CharacterString>
-              </cit:name>
-              <cit:contactInfo>
-                <cit:CI_Contact>
-                  <cit:address>
-                    <cit:CI_Address>
-                      <cit:electronicMailAddress>
-                        <gco:CharacterString>spam@govt.mw</gco:CharacterString>
-                      </cit:electronicMailAddress>
-                    </cit:CI_Address>
-                  </cit:address>
-                </cit:CI_Contact>
-              </cit:contactInfo>
-            </cit:CI_Organisation>
-          </cit:party>
-        </cit:CI_Responsibility>
-      </mri:pointOfContact>
       <mri:spatialResolution>
         <mri:MD_Resolution>
           <mri:equivalentScale>
@@ -341,15 +244,6 @@
               </gex:extent>
             </gex:EX_SpatialTemporalExtent>
           </gex:temporalElement>
-          <gex:temporalElement>
-            <gex:EX_TemporalExtent>
-              <gex:extent>
-                <gml:TimeInstant gml:id="d789e353a1052958">
-                  <gml:timePosition />
-                </gml:TimeInstant>
-              </gex:extent>
-            </gex:EX_TemporalExtent>
-          </gex:temporalElement>
         </gex:EX_Extent>
       </mri:extent>
       <mri:resourceMaintenance>
@@ -357,6 +251,16 @@
           <mmi:maintenanceAndUpdateFrequency>
             <mmi:MD_MaintenanceFrequencyCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_MaintenanceFrequencyCode" codeListValue="unknown" />
           </mmi:maintenanceAndUpdateFrequency>
+          <mmi:maintenanceDate>
+            <cit:CI_Date>
+              <cit:date>
+                <gco:Date />
+              </cit:date>
+              <cit:dateType>
+                <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="" />
+              </cit:dateType>
+            </cit:CI_Date>
+          </mmi:maintenanceDate>
           <mmi:maintenanceNote>
             <gco:CharacterString>Last maintained</gco:CharacterString>
           </mmi:maintenanceNote>
@@ -394,17 +298,17 @@
             <gco:CharacterString />
           </mri:keyword>
           <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="featureType" />
+            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="theme" />
           </mri:type>
           <mri:thesaurusName>
             <cit:CI_Citation>
               <cit:title>
-                <gcx:Anchor xlink:href="http://pid.geoscience.gov.au/def/voc/ga/associationtype">Association Type</gcx:Anchor>
+                <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService">ISO19119 Service Type</gcx:Anchor>
               </cit:title>
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:Date>2021-03-12</gco:Date>
+                    <gco:Date>2021-04-26</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
@@ -414,7 +318,7 @@
               <cit:identifier>
                 <mcc:MD_Identifier>
                   <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.featureType.ga_association-type_v1-2">geonetwork.thesaurus.external.featureType.ga_association-type_v1-2</gcx:Anchor>
+                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.theme.SpatialDataServiceCategory-2021-03-11-3-2">geonetwork.thesaurus.external.theme.SpatialDataServiceCategory-2021-03-11-3-2</gcx:Anchor>
                   </mcc:code>
                 </mcc:MD_Identifier>
               </cit:identifier>
@@ -422,19 +326,73 @@
           </mri:thesaurusName>
           <mri:MD_KeywordClass>
             <mri:className>
-              <gco:CharacterString>Association Type</gco:CharacterString>
+              <gco:CharacterString>ISO19119 Service Type</gco:CharacterString>
             </mri:className>
             <mri:conceptIdentifier>
-              <mcc:URI>http://pid.geoscience.gov.au/def/voc/ga/associationtype</mcc:URI>
+              <mcc:URI>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService</mcc:URI>
             </mri:conceptIdentifier>
             <mri:ontology>
               <cit:CI_Citation>
                 <cit:title>
-                  <gco:CharacterString>associationtype</gco:CharacterString>
+                  <gco:CharacterString>humanInteractionService</gco:CharacterString>
                 </cit:title>
                 <cit:onlineResource>
                   <cit:linkage>
-                    <gco:CharacterString>http://pid.geoscience.gov.au/def/voc/ga/associationtype</gco:CharacterString>
+                    <gco:CharacterString>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService</gco:CharacterString>
+                  </cit:linkage>
+                </cit:onlineResource>
+              </cit:CI_Citation>
+            </mri:ontology>
+          </mri:MD_KeywordClass>
+        </mri:MD_Keywords>
+      </mri:descriptiveKeywords>
+      <mri:descriptiveKeywords>
+        <mri:MD_Keywords>
+          <mri:keyword gco:nilReason="missing">
+            <gco:CharacterString />
+          </mri:keyword>
+          <mri:type>
+            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="service" />
+          </mri:type>
+          <mri:thesaurusName>
+            <cit:CI_Citation>
+              <cit:title>
+                <gcx:Anchor xlink:href="http://pid.geoscience.gov.au/def/voc/ga/servicetype">Service Keywords</gcx:Anchor>
+              </cit:title>
+              <cit:date>
+                <cit:CI_Date>
+                  <cit:date>
+                    <gco:Date>2021-06-14</gco:Date>
+                  </cit:date>
+                  <cit:dateType>
+                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
+                  </cit:dateType>
+                </cit:CI_Date>
+              </cit:date>
+              <cit:identifier>
+                <mcc:MD_Identifier>
+                  <mcc:code>
+                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.service.service keywords">geonetwork.thesaurus.external.service.service keywords</gcx:Anchor>
+                  </mcc:code>
+                </mcc:MD_Identifier>
+              </cit:identifier>
+            </cit:CI_Citation>
+          </mri:thesaurusName>
+          <mri:MD_KeywordClass>
+            <mri:className>
+              <gco:CharacterString>Service Keywords</gco:CharacterString>
+            </mri:className>
+            <mri:conceptIdentifier>
+              <mcc:URI>http://pid.geoscience.gov.au/def/voc/ga/servicetype</mcc:URI>
+            </mri:conceptIdentifier>
+            <mri:ontology>
+              <cit:CI_Citation>
+                <cit:title>
+                  <gco:CharacterString>servicetype</gco:CharacterString>
+                </cit:title>
+                <cit:onlineResource>
+                  <cit:linkage>
+                    <gco:CharacterString>http://pid.geoscience.gov.au/def/voc/ga/servicetype</gco:CharacterString>
                   </cit:linkage>
                 </cit:onlineResource>
               </cit:CI_Citation>
@@ -502,60 +460,6 @@
             <gco:CharacterString />
           </mri:keyword>
           <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="theme" />
-          </mri:type>
-          <mri:thesaurusName>
-            <cit:CI_Citation>
-              <cit:title>
-                <gcx:Anchor xlink:href="http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService">ISO19119 Service Type</gcx:Anchor>
-              </cit:title>
-              <cit:date>
-                <cit:CI_Date>
-                  <cit:date>
-                    <gco:Date>2021-04-26</gco:Date>
-                  </cit:date>
-                  <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
-                  </cit:dateType>
-                </cit:CI_Date>
-              </cit:date>
-              <cit:identifier>
-                <mcc:MD_Identifier>
-                  <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.theme.SpatialDataServiceCategory-2021-03-11-3-2">geonetwork.thesaurus.external.theme.SpatialDataServiceCategory-2021-03-11-3-2</gcx:Anchor>
-                  </mcc:code>
-                </mcc:MD_Identifier>
-              </cit:identifier>
-            </cit:CI_Citation>
-          </mri:thesaurusName>
-          <mri:MD_KeywordClass>
-            <mri:className>
-              <gco:CharacterString>ISO19119 Service Type</gco:CharacterString>
-            </mri:className>
-            <mri:conceptIdentifier>
-              <mcc:URI>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService</mcc:URI>
-            </mri:conceptIdentifier>
-            <mri:ontology>
-              <cit:CI_Citation>
-                <cit:title>
-                  <gco:CharacterString>humanInteractionService</gco:CharacterString>
-                </cit:title>
-                <cit:onlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>http://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceCategory/humanInteractionService</gco:CharacterString>
-                  </cit:linkage>
-                </cit:onlineResource>
-              </cit:CI_Citation>
-            </mri:ontology>
-          </mri:MD_KeywordClass>
-        </mri:MD_Keywords>
-      </mri:descriptiveKeywords>
-      <mri:descriptiveKeywords>
-        <mri:MD_Keywords>
-          <mri:keyword gco:nilReason="missing">
-            <gco:CharacterString />
-          </mri:keyword>
-          <mri:type>
             <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="place" />
           </mri:type>
           <mri:thesaurusName>
@@ -597,60 +501,6 @@
                 <cit:onlineResource>
                   <cit:linkage>
                     <gco:CharacterString>http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox</gco:CharacterString>
-                  </cit:linkage>
-                </cit:onlineResource>
-              </cit:CI_Citation>
-            </mri:ontology>
-          </mri:MD_KeywordClass>
-        </mri:MD_Keywords>
-      </mri:descriptiveKeywords>
-      <mri:descriptiveKeywords>
-        <mri:MD_Keywords>
-          <mri:keyword gco:nilReason="missing">
-            <gco:CharacterString />
-          </mri:keyword>
-          <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="service" />
-          </mri:type>
-          <mri:thesaurusName>
-            <cit:CI_Citation>
-              <cit:title>
-                <gcx:Anchor xlink:href="http://pid.geoscience.gov.au/def/voc/ga/servicetype">Service Type</gcx:Anchor>
-              </cit:title>
-              <cit:date>
-                <cit:CI_Date>
-                  <cit:date>
-                    <gco:Date>2021-03-12</gco:Date>
-                  </cit:date>
-                  <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
-                  </cit:dateType>
-                </cit:CI_Date>
-              </cit:date>
-              <cit:identifier>
-                <mcc:MD_Identifier>
-                  <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.service.ga_service-type_v1-1">geonetwork.thesaurus.external.service.ga_service-type_v1-1</gcx:Anchor>
-                  </mcc:code>
-                </mcc:MD_Identifier>
-              </cit:identifier>
-            </cit:CI_Citation>
-          </mri:thesaurusName>
-          <mri:MD_KeywordClass>
-            <mri:className>
-              <gco:CharacterString>Service Type</gco:CharacterString>
-            </mri:className>
-            <mri:conceptIdentifier>
-              <mcc:URI>http://pid.geoscience.gov.au/def/voc/ga/servicetype</mcc:URI>
-            </mri:conceptIdentifier>
-            <mri:ontology>
-              <cit:CI_Citation>
-                <cit:title>
-                  <gco:CharacterString>servicetype</gco:CharacterString>
-                </cit:title>
-                <cit:onlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>http://pid.geoscience.gov.au/def/voc/ga/servicetype</gco:CharacterString>
                   </cit:linkage>
                 </cit:onlineResource>
               </cit:CI_Citation>
@@ -714,26 +564,13 @@
       </mri:descriptiveKeywords>
       <mri:resourceConstraints>
         <mco:MD_Constraints>
-          <mco:useLimitation>
-            <gco:CharacterString>(Select the Webservice's use limitations - Public, Restricted)</gco:CharacterString>
+          <mco:useLimitation gco:nilReason="missing">
+            <gco:CharacterString />
           </mco:useLimitation>
         </mco:MD_Constraints>
       </mri:resourceConstraints>
-      <mri:resourceConstraints>
-        <mco:MD_LegalConstraints>
-          <mco:useLimitation>
-            <gco:CharacterString>(Outline any legal constraints aligned to this Webservice)</gco:CharacterString>
-          </mco:useLimitation>
-          <mco:accessConstraints>
-            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="" />
-          </mco:accessConstraints>
-          <mco:useConstraints>
-            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="" />
-          </mco:useConstraints>
-        </mco:MD_LegalConstraints>
-      </mri:resourceConstraints>
       <srv:serviceType>
-        <gco:ScopedName>view</gco:ScopedName>
+        <gco:ScopedName>W3C:HTML</gco:ScopedName>
       </srv:serviceType>
       <srv:serviceTypeVersion gco:nilReason="missing">
         <gco:CharacterString />
@@ -850,4 +687,103 @@
       </mrl:source>
     </mrl:LI_Lineage>
   </mdb:resourceLineage>
+  <mdb:metadataConstraints>
+    <mco:MD_SecurityConstraints>
+      <mco:useLimitation>
+        <gco:CharacterString>UNOFFICIAL</gco:CharacterString>
+      </mco:useLimitation>
+      <mco:reference>
+        <cit:CI_Citation>
+          <cit:title>
+            <gco:CharacterString>Protective Security Australia - UNOFFICIAL</gco:CharacterString>
+          </cit:title>
+          <cit:onlineResource>
+            <cit:CI_OnlineResource>
+              <cit:linkage>
+                <gco:CharacterString>https://www.protectivesecurity.gov.au/information/sensitive-classified-information/Pages/default.aspx</gco:CharacterString>
+              </cit:linkage>
+              <cit:protocol>
+                <gco:CharacterString>https</gco:CharacterString>
+              </cit:protocol>
+              <cit:name gco:nilReason="missing">
+                <gco:CharacterString />
+              </cit:name>
+              <cit:description gco:nilReason="missing">
+                <gco:CharacterString />
+              </cit:description>
+              <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
+              </cit:function>
+            </cit:CI_OnlineResource>
+          </cit:onlineResource>
+        </cit:CI_Citation>
+      </mco:reference>
+      <mco:classification>
+        <mco:MD_ClassificationCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ClassificationCode" codeListValue="unclassified" />
+      </mco:classification>
+      <mco:userNote>
+        <gco:CharacterString>No damage if compromised. Does not form part of official duty.</gco:CharacterString>
+      </mco:userNote>
+      <mco:classificationSystem>
+        <gco:CharacterString>Protective Security Australia</gco:CharacterString>
+      </mco:classificationSystem>
+    </mco:MD_SecurityConstraints>
+  </mdb:metadataConstraints>
+  <mdb:metadataConstraints>
+    <mco:MD_LegalConstraints>
+      <mco:useLimitation>
+        <gco:CharacterString>CC BY-SA</gco:CharacterString>
+      </mco:useLimitation>
+      <mco:constraintApplicationScope>
+        <mcc:MD_Scope>
+          <mcc:level>
+            <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="document" />
+          </mcc:level>
+        </mcc:MD_Scope>
+      </mco:constraintApplicationScope>
+      <mco:reference>
+        <cit:CI_Citation>
+          <cit:title>
+            <gco:CharacterString>Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</gco:CharacterString>
+          </cit:title>
+          <cit:onlineResource>
+            <cit:CI_OnlineResource>
+              <cit:linkage>
+                <gco:CharacterString>https://creativecommons.org/licenses/by-sa/4.0/</gco:CharacterString>
+              </cit:linkage>
+              <cit:protocol>
+                <gco:CharacterString>https</gco:CharacterString>
+              </cit:protocol>
+              <cit:name>
+                <gco:CharacterString>Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</gco:CharacterString>
+              </cit:name>
+              <cit:description>
+                <gco:CharacterString>Human readable summary of CC BY-SA</gco:CharacterString>
+              </cit:description>
+              <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
+              </cit:function>
+            </cit:CI_OnlineResource>
+          </cit:onlineResource>
+        </cit:CI_Citation>
+      </mco:reference>
+      <mco:releasability>
+        <mco:MD_Releasability>
+          <mco:addressee />
+          <mco:statement>
+            <gco:CharacterString>Creative Commons Attribution ShareAlike 4</gco:CharacterString>
+          </mco:statement>
+          <mco:disseminationConstraints>
+            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="license" />
+          </mco:disseminationConstraints>
+        </mco:MD_Releasability>
+      </mco:releasability>
+      <mco:accessConstraints>
+        <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="copyright" />
+      </mco:accessConstraints>
+      <mco:useConstraints>
+        <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="" />
+      </mco:useConstraints>
+    </mco:MD_LegalConstraints>
+  </mdb:metadataConstraints>
 </mdb:MD_Metadata>

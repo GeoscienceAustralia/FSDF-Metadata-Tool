@@ -1,15 +1,15 @@
-<mdb:MD_Metadata xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1" xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0" xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0" xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink">
+<mdb:MD_Metadata xmlns:mdb="http://standards.iso.org/iso/19115/-3/mdb/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cat="http://standards.iso.org/iso/19115/-3/cat/1.0" xmlns:gfc="http://standards.iso.org/iso/19110/gfc/1.1" xmlns:cit="http://standards.iso.org/iso/19115/-3/cit/2.0" xmlns:gcx="http://standards.iso.org/iso/19115/-3/gcx/1.0" xmlns:gex="http://standards.iso.org/iso/19115/-3/gex/1.0" xmlns:lan="http://standards.iso.org/iso/19115/-3/lan/1.0" xmlns:srv="http://standards.iso.org/iso/19115/-3/srv/2.1" xmlns:mas="http://standards.iso.org/iso/19115/-3/mas/1.0" xmlns:mcc="http://standards.iso.org/iso/19115/-3/mcc/1.0" xmlns:mco="http://standards.iso.org/iso/19115/-3/mco/1.0" xmlns:mda="http://standards.iso.org/iso/19115/-3/mda/1.0" xmlns:mds="http://standards.iso.org/iso/19115/-3/mds/2.0" xmlns:mdt="http://standards.iso.org/iso/19115/-3/mdt/2.0" xmlns:mex="http://standards.iso.org/iso/19115/-3/mex/1.0" xmlns:mmi="http://standards.iso.org/iso/19115/-3/mmi/1.0" xmlns:mpc="http://standards.iso.org/iso/19115/-3/mpc/1.0" xmlns:mrc="http://standards.iso.org/iso/19115/-3/mrc/2.0" xmlns:mrd="http://standards.iso.org/iso/19115/-3/mrd/1.0" xmlns:mri="http://standards.iso.org/iso/19115/-3/mri/1.0" xmlns:mrl="http://standards.iso.org/iso/19115/-3/mrl/2.0" xmlns:mrs="http://standards.iso.org/iso/19115/-3/mrs/1.0" xmlns:msr="http://standards.iso.org/iso/19115/-3/msr/2.0" xmlns:mdq="http://standards.iso.org/iso/19157/-2/mdq/1.0" xmlns:mac="http://standards.iso.org/iso/19115/-3/mac/2.0" xmlns:gco="http://standards.iso.org/iso/19115/-3/gco/1.0" xmlns:gml="http://www.opengis.net/gml/3.2" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:geonet="http://www.fao.org/geonetwork">
   <mdb:metadataIdentifier>
     <mcc:MD_Identifier>
       <mcc:code>
-        <gco:CharacterString>a29e3b02-a0c1-44b4-8a14-5f27f0502212</gco:CharacterString>
+        <gco:CharacterString>dbd97d9b-ffbe-4eb7-9041-3729e20587d8</gco:CharacterString>
       </mcc:code>
       <mcc:codeSpace>
         <gco:CharacterString>urn:uuid</gco:CharacterString>
       </mcc:codeSpace>
     </mcc:MD_Identifier>
   </mdb:metadataIdentifier>
-  <mdb:defaultLocale xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:defaultLocale>
     <lan:PT_Locale id="EN">
       <lan:language>
         <lan:LanguageCode codeList="http://www.loc.gov/standards/iso639-2/" codeListValue="eng" />
@@ -19,20 +19,23 @@
       </lan:characterEncoding>
     </lan:PT_Locale>
   </mdb:defaultLocale>
-  <mdb:metadataScope xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:metadataScope>
     <mdb:MD_MetadataScope>
       <mdb:resourceScope>
         <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="dataset" />
       </mdb:resourceScope>
+      <mdb:name gco:nilReason="missing">
+        <gco:CharacterString />
+      </mdb:name>
     </mdb:MD_MetadataScope>
   </mdb:metadataScope>
-  <mdb:contact xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:contact>
     <cit:CI_Responsibility>
       <cit:role>
         <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="pointOfContact" />
       </cit:role>
       <cit:party>
-        <cit:CI_Organisation>
+        <cit:CI_Individual>
           <cit:name gco:nilReason="missing">
             <gco:CharacterString />
           </cit:name>
@@ -47,31 +50,21 @@
               </cit:address>
             </cit:CI_Contact>
           </cit:contactInfo>
-          <cit:individual>
-            <cit:CI_Individual>
-              <cit:name gco:nilReason="missing">
-                <gco:CharacterString />
-              </cit:name>
-              <cit:positionName gco:nilReason="missing">
-                <gco:CharacterString />
-              </cit:positionName>
-            </cit:CI_Individual>
-          </cit:individual>
-        </cit:CI_Organisation>
+        </cit:CI_Individual>
       </cit:party>
     </cit:CI_Responsibility>
   </mdb:contact>
   <mdb:dateInfo>
     <cit:CI_Date>
       <cit:date>
-        <gco:DateTime>2021-05-20T15:38:37</gco:DateTime>
+        <gco:DateTime>2021-06-14T08:51:09</gco:DateTime>
       </cit:date>
       <cit:dateType>
         <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision" />
       </cit:dateType>
     </cit:CI_Date>
   </mdb:dateInfo>
-  <mdb:dateInfo xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:dateInfo>
     <cit:CI_Date>
       <cit:date>
         <gco:DateTime>2021-04-11T17:10:34</gco:DateTime>
@@ -81,7 +74,7 @@
       </cit:dateType>
     </cit:CI_Date>
   </mdb:dateInfo>
-  <mdb:metadataStandard xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:metadataStandard>
     <cit:CI_Citation>
       <cit:title>
         <gco:CharacterString>ISO 19115-1</gco:CharacterString>
@@ -91,7 +84,7 @@
       </cit:edition>
     </cit:CI_Citation>
   </mdb:metadataStandard>
-  <mdb:metadataLinkage xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:metadataLinkage>
     <cit:CI_OnlineResource>
       <cit:linkage>
         <gco:CharacterString>http://localhost:8080/geonetwork/srv/api/records/a29e3b02-a0c1-44b4-8a14-5f27f0502212</gco:CharacterString>
@@ -101,24 +94,7 @@
       </cit:function>
     </cit:CI_OnlineResource>
   </mdb:metadataLinkage>
-  <mdb:referenceSystemInfo xmlns:geonet="http://www.fao.org/geonetwork">
-    <mrs:MD_ReferenceSystem>
-      <mrs:referenceSystemIdentifier>
-        <mcc:MD_Identifier>
-          <mcc:code>
-            <gco:CharacterString>(epsg code e.g. 4326)</gco:CharacterString>
-          </mcc:code>
-          <mcc:codeSpace>
-            <gco:CharacterString>EPSG</gco:CharacterString>
-          </mcc:codeSpace>
-        </mcc:MD_Identifier>
-      </mrs:referenceSystemIdentifier>
-      <mrs:referenceSystemType>
-        <mrs:MD_ReferenceSystemTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="geodeticGeographic2D" />
-      </mrs:referenceSystemType>
-    </mrs:MD_ReferenceSystem>
-  </mdb:referenceSystemInfo>
-  <mdb:referenceSystemInfo xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:referenceSystemInfo>
     <mrs:MD_ReferenceSystem>
       <mrs:referenceSystemIdentifier>
         <mcc:MD_Identifier>
@@ -135,61 +111,12 @@
       </mrs:referenceSystemType>
     </mrs:MD_ReferenceSystem>
   </mdb:referenceSystemInfo>
-  <mdb:referenceSystemInfo xmlns:gmx="http://www.isotc211.org/2005/gmx" xmlns:geonet="http://www.fao.org/geonetwork">
-    <mrs:MD_ReferenceSystem>
-      <mrs:referenceSystemIdentifier>
-        <mcc:MD_Identifier>
-          <mcc:authority>
-            <cit:CI_Citation>
-              <cit:title>
-                <gco:CharacterString>European Petroleum Survey Group</gco:CharacterString>
-              </cit:title>
-              <cit:onlineResource>
-                <cit:CI_OnlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>https://epsg.org/</gco:CharacterString>
-                  </cit:linkage>
-                  <cit:protocol>
-                    <gco:CharacterString>https</gco:CharacterString>
-                  </cit:protocol>
-                  <cit:name gco:nilReason="missing">
-                    <gco:CharacterString />
-                  </cit:name>
-                  <cit:description gco:nilReason="missing">
-                    <gco:CharacterString />
-                  </cit:description>
-                  <cit:function>
-                    <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
-                  </cit:function>
-                </cit:CI_OnlineResource>
-              </cit:onlineResource>
-            </cit:CI_Citation>
-          </mcc:authority>
-          <mcc:code>
-            <gmx:Anchor xlink:href="http://www.opengis.net/def/crs/EPSG/0/2193">EPSG:2193</gmx:Anchor>
-          </mcc:code>
-          <mcc:codeSpace>
-            <gco:CharacterString>EPSG</gco:CharacterString>
-          </mcc:codeSpace>
-          <mcc:version>
-            <gco:CharacterString>8.6</gco:CharacterString>
-          </mcc:version>
-          <mcc:description>
-            <gco:CharacterString>NZGD2000 / New Zealand Transverse Mercator 2000 (EPSG:2193)</gco:CharacterString>
-          </mcc:description>
-        </mcc:MD_Identifier>
-      </mrs:referenceSystemIdentifier>
-      <mrs:referenceSystemType>
-        <mrs:MD_ReferenceSystemTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ReferenceSystemTypeCode" codeListValue="undefined" />
-      </mrs:referenceSystemType>
-    </mrs:MD_ReferenceSystem>
-  </mdb:referenceSystemInfo>
-  <mdb:identificationInfo xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:identificationInfo>
     <mri:MD_DataIdentification>
       <mri:citation>
         <cit:CI_Citation>
           <cit:title>
-            <gco:CharacterString>EMA Metadata Template - Dataset</gco:CharacterString>
+            <gco:CharacterString>Emergency Management Dataset Template</gco:CharacterString>
           </cit:title>
           <cit:date>
             <cit:CI_Date>
@@ -217,39 +144,11 @@
               <mcc:code gco:nilReason="missing">
                 <gco:CharacterString />
               </mcc:code>
-              <mcc:codeSpace gco:nilReason="missing">
-                <gco:CharacterString />
-              </mcc:codeSpace>
               <mcc:description gco:nilReason="missing">
                 <gco:CharacterString />
               </mcc:description>
             </mcc:MD_Identifier>
           </cit:identifier>
-          <cit:citedResponsibleParty>
-            <cit:CI_Responsibility>
-              <cit:role>
-                <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="custodian" />
-              </cit:role>
-              <cit:party>
-                <cit:CI_Organisation>
-                  <cit:name>
-                    <gco:CharacterString>Custodian Agency of this dataset (full name)</gco:CharacterString>
-                  </cit:name>
-                  <cit:contactInfo>
-                    <cit:CI_Contact>
-                      <cit:address>
-                        <cit:CI_Address>
-                          <cit:electronicMailAddress gco:nilReason="missing">
-                            <gco:CharacterString />
-                          </cit:electronicMailAddress>
-                        </cit:CI_Address>
-                      </cit:address>
-                    </cit:CI_Contact>
-                  </cit:contactInfo>
-                </cit:CI_Organisation>
-              </cit:party>
-            </cit:CI_Responsibility>
-          </cit:citedResponsibleParty>
           <cit:presentationForm>
             <cit:CI_PresentationFormCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_PresentationFormCode" codeListValue="" />
           </cit:presentationForm>
@@ -264,63 +163,6 @@
       <mri:status>
         <mcc:MD_ProgressCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ProgressCode" codeListValue="" />
       </mri:status>
-      <mri:pointOfContact>
-        <cit:CI_Responsibility>
-          <cit:role>
-            <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="custodian" />
-          </cit:role>
-          <cit:party>
-            <cit:CI_Organisation>
-              <cit:name>
-                <gco:CharacterString>Custodian Agency of this dataset (full name)</gco:CharacterString>
-              </cit:name>
-              <cit:contactInfo>
-                <cit:CI_Contact>
-                  <cit:address>
-                    <cit:CI_Address>
-                      <cit:electronicMailAddress gco:nilReason="missing">
-                        <gco:CharacterString />
-                      </cit:electronicMailAddress>
-                    </cit:CI_Address>
-                  </cit:address>
-                </cit:CI_Contact>
-              </cit:contactInfo>
-            </cit:CI_Organisation>
-          </cit:party>
-        </cit:CI_Responsibility>
-      </mri:pointOfContact>
-      <mri:pointOfContact>
-        <cit:CI_Responsibility>
-          <cit:role>
-            <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="owner" />
-          </cit:role>
-          <cit:party>
-            <cit:CI_Organisation>
-              <cit:name>
-                <gco:CharacterString>NSW</gco:CharacterString>
-              </cit:name>
-              <cit:contactInfo>
-                <cit:CI_Contact>
-                  <cit:address>
-                    <cit:CI_Address>
-                      <cit:electronicMailAddress gco:nilReason="missing">
-                        <gco:CharacterString />
-                      </cit:electronicMailAddress>
-                    </cit:CI_Address>
-                  </cit:address>
-                </cit:CI_Contact>
-              </cit:contactInfo>
-            </cit:CI_Organisation>
-          </cit:party>
-        </cit:CI_Responsibility>
-      </mri:pointOfContact>
-      <mri:pointOfContact>
-        <cit:CI_Responsibility>
-          <cit:role>
-            <cit:CI_RoleCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_RoleCode" codeListValue="pointOfContact" />
-          </cit:role>
-        </cit:CI_Responsibility>
-      </mri:pointOfContact>
       <mri:spatialRepresentationType>
         <mcc:MD_SpatialRepresentationTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_SpatialRepresentationTypeCode" codeListValue="" />
       </mri:spatialRepresentationType>
@@ -622,109 +464,10 @@
       </mri:descriptiveKeywords>
       <mri:resourceConstraints>
         <mco:MD_Constraints>
-          <mco:useLimitation>
-            <gco:CharacterString>Select the dataset's use limitations (Public, Restricted)</gco:CharacterString>
+          <mco:useLimitation gco:nilReason="missing">
+            <gco:CharacterString />
           </mco:useLimitation>
         </mco:MD_Constraints>
-      </mri:resourceConstraints>
-      <mri:resourceConstraints>
-        <mco:MD_LegalConstraints>
-          <mco:useLimitation>
-            <gco:CharacterString>CC BY-ND</gco:CharacterString>
-          </mco:useLimitation>
-          <mco:constraintApplicationScope>
-            <mcc:MD_Scope>
-              <mcc:level>
-                <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="document" />
-              </mcc:level>
-            </mcc:MD_Scope>
-          </mco:constraintApplicationScope>
-          <mco:reference>
-            <cit:CI_Citation>
-              <cit:title>
-                <gco:CharacterString>Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</gco:CharacterString>
-              </cit:title>
-              <cit:onlineResource>
-                <cit:CI_OnlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>https://creativecommons.org/licenses/by-nd/4.0/</gco:CharacterString>
-                  </cit:linkage>
-                  <cit:protocol>
-                    <gco:CharacterString>https</gco:CharacterString>
-                  </cit:protocol>
-                  <cit:name>
-                    <gco:CharacterString>Attribution-NoDerivatives 4.0 International (CC BY-ND 4.0)</gco:CharacterString>
-                  </cit:name>
-                  <cit:description>
-                    <gco:CharacterString>Human readable summary of CC BY-ND</gco:CharacterString>
-                  </cit:description>
-                  <cit:function>
-                    <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
-                  </cit:function>
-                </cit:CI_OnlineResource>
-              </cit:onlineResource>
-            </cit:CI_Citation>
-          </mco:reference>
-          <mco:releasability>
-            <mco:MD_Releasability>
-              <mco:addressee />
-              <mco:statement>
-                <gco:CharacterString>Attribution-NoDerivatives 4.0</gco:CharacterString>
-              </mco:statement>
-              <mco:disseminationConstraints>
-                <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="license" />
-              </mco:disseminationConstraints>
-            </mco:MD_Releasability>
-          </mco:releasability>
-          <mco:accessConstraints>
-            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="copyright" />
-          </mco:accessConstraints>
-          <mco:useConstraints>
-            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="" />
-          </mco:useConstraints>
-        </mco:MD_LegalConstraints>
-      </mri:resourceConstraints>
-      <mri:resourceConstraints>
-        <mco:MD_SecurityConstraints>
-          <mco:useLimitation>
-            <gco:CharacterString>UNOFFICIAL</gco:CharacterString>
-          </mco:useLimitation>
-          <mco:reference>
-            <cit:CI_Citation>
-              <cit:title>
-                <gco:CharacterString>Protective Security Australia - UNOFFICIAL</gco:CharacterString>
-              </cit:title>
-              <cit:onlineResource>
-                <cit:CI_OnlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>https://www.protectivesecurity.gov.au/information/sensitive-classified-information/Pages/default.aspx</gco:CharacterString>
-                  </cit:linkage>
-                  <cit:protocol>
-                    <gco:CharacterString>https</gco:CharacterString>
-                  </cit:protocol>
-                  <cit:name gco:nilReason="missing">
-                    <gco:CharacterString />
-                  </cit:name>
-                  <cit:description gco:nilReason="missing">
-                    <gco:CharacterString />
-                  </cit:description>
-                  <cit:function>
-                    <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
-                  </cit:function>
-                </cit:CI_OnlineResource>
-              </cit:onlineResource>
-            </cit:CI_Citation>
-          </mco:reference>
-          <mco:classification>
-            <mco:MD_ClassificationCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ClassificationCode" codeListValue="unclassified" />
-          </mco:classification>
-          <mco:userNote>
-            <gco:CharacterString>No damage if compromised. Does not form part of official duty.</gco:CharacterString>
-          </mco:userNote>
-          <mco:classificationSystem>
-            <gco:CharacterString>Protective Security Australia</gco:CharacterString>
-          </mco:classificationSystem>
-        </mco:MD_SecurityConstraints>
       </mri:resourceConstraints>
       <mri:defaultLocale>
         <lan:PT_Locale>
@@ -744,7 +487,7 @@
       </mri:supplementalInformation>
     </mri:MD_DataIdentification>
   </mdb:identificationInfo>
-  <mdb:distributionInfo xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:distributionInfo>
     <mrd:MD_Distribution>
       <mrd:distributionFormat>
         <mrd:MD_Format>
@@ -753,7 +496,7 @@
       </mrd:distributionFormat>
     </mrd:MD_Distribution>
   </mdb:distributionInfo>
-  <mdb:dataQualityInfo xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:dataQualityInfo>
     <mdq:DQ_DataQuality>
       <mdq:scope>
         <mcc:MD_Scope>
@@ -782,7 +525,7 @@
       </mdq:report>
     </mdq:DQ_DataQuality>
   </mdb:dataQualityInfo>
-  <mdb:resourceLineage xmlns:geonet="http://www.fao.org/geonetwork">
+  <mdb:resourceLineage>
     <mrl:LI_Lineage>
       <mrl:statement>
         <gco:CharacterString>Information that lets the user understand how the dataset was created over time.</gco:CharacterString>
@@ -803,4 +546,103 @@
       </mrl:source>
     </mrl:LI_Lineage>
   </mdb:resourceLineage>
+  <mdb:metadataConstraints>
+    <mco:MD_LegalConstraints>
+      <mco:useLimitation>
+        <gco:CharacterString>CC BY-SA</gco:CharacterString>
+      </mco:useLimitation>
+      <mco:constraintApplicationScope>
+        <mcc:MD_Scope>
+          <mcc:level>
+            <mcc:MD_ScopeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ScopeCode" codeListValue="document" />
+          </mcc:level>
+        </mcc:MD_Scope>
+      </mco:constraintApplicationScope>
+      <mco:reference>
+        <cit:CI_Citation>
+          <cit:title>
+            <gco:CharacterString>Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</gco:CharacterString>
+          </cit:title>
+          <cit:onlineResource>
+            <cit:CI_OnlineResource>
+              <cit:linkage>
+                <gco:CharacterString>https://creativecommons.org/licenses/by-sa/4.0/</gco:CharacterString>
+              </cit:linkage>
+              <cit:protocol>
+                <gco:CharacterString>https</gco:CharacterString>
+              </cit:protocol>
+              <cit:name>
+                <gco:CharacterString>Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</gco:CharacterString>
+              </cit:name>
+              <cit:description>
+                <gco:CharacterString>Human readable summary of CC BY-SA</gco:CharacterString>
+              </cit:description>
+              <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
+              </cit:function>
+            </cit:CI_OnlineResource>
+          </cit:onlineResource>
+        </cit:CI_Citation>
+      </mco:reference>
+      <mco:releasability>
+        <mco:MD_Releasability>
+          <mco:addressee />
+          <mco:statement>
+            <gco:CharacterString>Creative Commons Attribution ShareAlike 4</gco:CharacterString>
+          </mco:statement>
+          <mco:disseminationConstraints>
+            <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="license" />
+          </mco:disseminationConstraints>
+        </mco:MD_Releasability>
+      </mco:releasability>
+      <mco:accessConstraints>
+        <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="copyright" />
+      </mco:accessConstraints>
+      <mco:useConstraints>
+        <mco:MD_RestrictionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_RestrictionCode" codeListValue="" />
+      </mco:useConstraints>
+    </mco:MD_LegalConstraints>
+  </mdb:metadataConstraints>
+  <mdb:metadataConstraints>
+    <mco:MD_SecurityConstraints>
+      <mco:useLimitation>
+        <gco:CharacterString>UNOFFICIAL</gco:CharacterString>
+      </mco:useLimitation>
+      <mco:reference>
+        <cit:CI_Citation>
+          <cit:title>
+            <gco:CharacterString>Protective Security Australia - UNOFFICIAL</gco:CharacterString>
+          </cit:title>
+          <cit:onlineResource>
+            <cit:CI_OnlineResource>
+              <cit:linkage>
+                <gco:CharacterString>https://www.protectivesecurity.gov.au/information/sensitive-classified-information/Pages/default.aspx</gco:CharacterString>
+              </cit:linkage>
+              <cit:protocol>
+                <gco:CharacterString>https</gco:CharacterString>
+              </cit:protocol>
+              <cit:name gco:nilReason="missing">
+                <gco:CharacterString />
+              </cit:name>
+              <cit:description gco:nilReason="missing">
+                <gco:CharacterString />
+              </cit:description>
+              <cit:function>
+                <cit:CI_OnLineFunctionCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_OnLineFunctionCode" codeListValue="" />
+              </cit:function>
+            </cit:CI_OnlineResource>
+          </cit:onlineResource>
+        </cit:CI_Citation>
+      </mco:reference>
+      <mco:classification>
+        <mco:MD_ClassificationCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_ClassificationCode" codeListValue="unclassified" />
+      </mco:classification>
+      <mco:userNote>
+        <gco:CharacterString>No damage if compromised. Does not form part of official duty.</gco:CharacterString>
+      </mco:userNote>
+      <mco:classificationSystem>
+        <gco:CharacterString>Protective Security Australia</gco:CharacterString>
+      </mco:classificationSystem>
+    </mco:MD_SecurityConstraints>
+  </mdb:metadataConstraints>
 </mdb:MD_Metadata>

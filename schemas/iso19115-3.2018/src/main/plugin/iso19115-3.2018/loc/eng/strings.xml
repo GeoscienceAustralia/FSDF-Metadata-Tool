@@ -31,7 +31,7 @@
   <resourceLineageTab>Lineage</resourceLineageTab>
 
   <advanced>Advanced</advanced>
-  <icsm>ICSM</icsm>
+  <icsm>ANZLIC</icsm>
   <default>General</default>
   <simple>Basic</simple>
   <inspire>INSPIRE</inspire>
@@ -53,7 +53,7 @@
   <metadataConstraintsIcsm>Md. Constraints</metadataConstraintsIcsm>
   <metadataMaintenanceIcsm>Md. Maintenance</metadataMaintenanceIcsm>
   <applicationSchemaInfoIcsm>Schema Info</applicationSchemaInfoIcsm>
-  <generalIcsm>General</generalIcsm>
+  <generalIcsm>General Information</generalIcsm>
   <datesIcsm>Key Dates</datesIcsm>
   <abstractPurposeIcsm>Abstract &amp; Purpose</abstractPurposeIcsm>
   <contactsIcsm>Contacts</contactsIcsm>

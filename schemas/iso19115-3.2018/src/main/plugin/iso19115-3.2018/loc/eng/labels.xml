@@ -412,12 +412,12 @@
     </description>
     <condition></condition>
   </element>
-  <element name="mdb:MD_MetadataScope" id="39.0">
+  <!--<element name="mdb:MD_MetadataScope" id="39.0">
     <label>Resource scope</label>
     <description iso="true">Information about the scope of the resource.
     </description>
     <condition></condition>
-  </element>
+  </element>-->
   <element name="mdb:resourceScope" id="40.0">
     <label>Resource scope</label>
     <description iso="true">Code for the scope.</description>
@@ -1132,7 +1132,7 @@
       compoundGeographic2DParametric
     </description>
     <_condition>optional</_condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/SpatialReferenceSystem">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#reference-system-information">Help</a>]]></help>
   </element>
   <element name="mrc:includedWithDataset" id="186.0">
     <label>Included with dataset</label>
@@ -1301,13 +1301,13 @@
   </element>
   <element name="cit:role" id="377.0">
     <label>Role</label>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-CI_Responsibility">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata">Help</a>]]></help>
   </element>
   <element name="cit:role" id="377.0" context="cit:CI_Responsibility">
     <label>Role</label>
     <description>Function performed by the responsible party</description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-CI_Responsibility">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata">Help</a>]]></help>
   </element>
   <element name="cit:party" id="379.0" context="cit:CI_Responsibility">
     <label>Party</label>
@@ -1635,6 +1635,7 @@
   <element name="gex:EX_GeographicBoundingBox" id="343.0">
     <label>Geographic bounding box</label>
     <description>Geographic position of the dataset</description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#geographic-bounding-box">Help</a>]]></help>
   </element>
   <element name="gex:EX_GeographicDescription" id="348.0">
     <label>Geographic description</label>
@@ -1809,9 +1810,10 @@
     </description>
   </element>
   <element name="mmi:MD_MaintenanceInformation" id="142.0">
-    <label>Maintenance information</label>
+    <label>Maintenance Information</label>
     <description>Information about the scope and frequency of updating
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#maintenance-information">Help</a>]]></help>
   </element>
   <element name="mrd:MD_Medium" id="291.0">
     <label>Medium</label>
@@ -1923,7 +1925,7 @@
     <label>Abstract</label>
     <description>Brief narrative summary of the content of the resource(s)
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/Abstract.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#abstract">Help</a>]]></help>
     <condition>mandatory</condition>
   </element>
   <element name="cit:identifier" id="25.5">
@@ -2119,7 +2121,7 @@
     <description>Name and position information for an individual or organization
       that is responsible for the resource
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceResponsibleParty">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata">Help</a>]]></help>
   </element>
   <element name="cit:city" id="390.0">
     <label>City</label>
@@ -2156,7 +2158,7 @@
       namespace. NOTE Avoid characters that are not legal in URLs.
     </description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-MD_Identifier">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata.html#reference-system">Help</a>]]></help>
   </element>
   <element name="mri:code" id="547.0" context="mri:MD_CodeValue">
     <label>Code</label>
@@ -2173,7 +2175,7 @@
     <!--<helper>
       <option value="EPSG">EPSG</option>
     </helper>-->
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-MD_Identifier">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata.html#reference-system">Help</a>]]></help>
   </element>
   <element name="mri:collectiveTitle" id="371.0">
     <label>Collective title</label>
@@ -2214,7 +2216,7 @@
     <condition>mandatory</condition>
     <label>Contact</label>
     <description>Party responsible for the metadata information</description>
-    <help><![CDATA[<a target="docs" target="https://icsm-au.github.io/metadata-working-group/defs/MetadataContact">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata">Help</a>]]></help>
   </element>
   <element name="mmi:contact" id="148.1"
            context="mmi:MD_MaintenanceInformation">
@@ -2348,7 +2350,7 @@
     <label>Date</label>
     <description>Reference date for the cited resource</description>
     <_condition>M</_condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceDate">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#key-dates">Help</a>]]></help>
   </element>
   <element name="cit:date" id="403.0" context="cit:CI_Date">
     <condition>mandatory</condition>
@@ -2419,7 +2421,7 @@
       <option value="500000">1:500,000</option>
       <option value="1000000">1:1,000,000</option>
     </helper>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/SpatialResolution">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#resolution">Help</a>]]></help>
 
   </element>
   <element name="mrd:density" id="293.0">
@@ -2455,7 +2457,7 @@
     <description iso="true">natural language description of the meaning of the
       code value.
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-MD_Identifier">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#description">Help</a>]]></help>
   </element>
   <element name="mri:description" id="561.0" context="mri:MD_AbstractClass">
     <label>Description</label>
@@ -2473,7 +2475,7 @@
     <description>Detailed description of the level of the source data
     </description>
     <_condition>Conditional / sourceExtent not provided?</_condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceLineage">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Linage-Metadata#source-description">Help</a>]]></help>
   </element>
   <element name="mrl:sourceMetadata" id="133.0">
     <label>Source Metadata</label>
@@ -2505,7 +2507,7 @@
       verticalElement not
       documented?
     </_condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ExtentGeographicDescription">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#description">Help</a>]]></help>
   </element>
   <element name="cit:description" id="410.0" context="cit:CI_OnlineResource">
     <label>Description</label>
@@ -2564,9 +2566,10 @@
     <condition>mandatory</condition>
   </element>
   <element name="mri:descriptiveKeywords" id="33.0">
-    <label>Descriptive keywords</label>
-    <description>Provides category keywords, their type, and reference source
+    <label>Descriptive keywords (click for help)</label>
+    <description>Provides textual description of category keywords, their type, and reference source
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Keyword-Metadata">Help</a>]]></help>
   </element>
   <element name="mri:descriptor" id="258.0">
     <label>Descriptor</label>
@@ -2600,6 +2603,7 @@
       <option value="30" title="m">30 m</option>
       <option value="100" title="m">100 m</option>
     </helper>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#resolution">Help</a>]]></help>
   </element>
   <element name="mrd:distributionFormat" id="271.0">
     <label>Distribution format</label>
@@ -2681,7 +2685,7 @@
     <description>Address of the electronic mailbox of the responsible
       organization or individual
     </description>
-    <help><![CDATA[<a href="https://icsm-au.github.io/metadata-working-group/defs/class-CI_Responsibility">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata">Help</a>]]></help>
   </element>
   <element name="mri:environmentDescription" id="44.0">
     <label>Environment description</label>
@@ -2696,6 +2700,7 @@
       map or chart
     </description>
     <_condition>Conditional / distance not documented?</_condition>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#equivalent-scale">Help</a>]]></help>
   </element>
   <element name="mri:errorStatistic" id="136.0">
     <label>Error statistic</label>
@@ -2864,7 +2869,7 @@
     <label>Function</label>
     <description>Code for function performed by the online resource
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#connect-point">Help</a>]]></help>
   </element>
   <element name="gex:geographicElement" id="336.0">
     <label>Geographic extent</label>
@@ -2959,10 +2964,12 @@
     <description>Unique identifier for the resource. EXAMPLE: Universal Product
       Code (UPC), National Stock Number (NSN)
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata.html#identifier">Help</a>]]></help>
   </element>
   <element name="cit:identifier" id="573.0" context="cit:CI_Citation">
     <label>Citation identifier</label>
     <description>Identifier of the citation</description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata.html#resource-identification">Help</a>]]></help>
   </element>
   <element name="mri:identifier" id="575.0" context="mri:MD_Authority">
     <label>Identifier</label>
@@ -3042,7 +3049,7 @@
     <description>Hierarchical level of the data specified by the scope
     </description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-MD_LegalConstraints">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Constraints-Metadata#legal-constraints">Help</a>]]></help>
   </element>
   <element name="mcc:levelDescription" id="141.0">
     <label>Level description</label>
@@ -3065,7 +3072,7 @@
       Locator address or similar addressing scheme such as http://www.statkart.no/isotc211
     </description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#connect-point">Help</a>]]></help>
   </element>
   <element name="mcc:linkage" id="442.0" context="mcc:MD_BrowseGraphic">
     <label>Linkage</label>
@@ -3078,14 +3085,14 @@
       resource after the initial resource is completed
     </description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/Maintenance">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#maintenance-and-update-frequency">Help</a>]]></help>
   </element>
   <element name="mmi:maintenanceNote" id="148.0">
     <label>Maintenance note</label>
     <description>Information regarding specific requirements for maintaining the
       resource
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/Maintenance">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#maintenance-note">Help</a>]]></help>
   </element>
   <element name="mrc:maxValue" id="260.0">
     <label>Maximum value</label>
@@ -3120,6 +3127,7 @@
     <label>Metadata constraints</label>
     <description>Provides restrictions on the access and use of metadata
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Constraints-Metadata">Help</a>]]></help>
   </element>
   <element name="mdb:metadataExtensionInfo" id="14.0">
     <description>Information describing metadata extensions</description>
@@ -3208,7 +3216,6 @@
   <element name="cit:name" context="cit:CI_OnlineResource" id="409.0">
     <label>Name of the resource</label>
     <description>Name or title of the online resource</description>
-    <help><![CDATA[<a href="docs" href="https://icsm-au.github.io/metadata-working-group/defs/class-CI_OnlineResource">ICSM Guidance</a>]]></help>
   </element>
   <element name="cit:name" context="cit:CI_Series" id="414.0">
     <label>Name</label>
@@ -3243,7 +3250,7 @@
   </element>
   <element name="cit:name">
     <label>Name</label>
-    <description/>
+    <description>Name of the responsible person, organisation, etc.</description>
   </element>
   <element name="mri:nameOfMeasure" id="100.0">
     <label>Name of measure</label>
@@ -3723,7 +3730,7 @@
     <description>Identification of, and means of communication with, person(s)
       and organizations(s) associated with the resource(s)
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourcePointOfContact">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Contacts-Metadata#point-of-contact">Help</a>]]></help>
   </element>
   <element name="gex:polygon" id="342.0">
     <label>Polygon</label>
@@ -3830,11 +3837,11 @@
       <option value="RBNB:DATATURBINE">Data Turbine</option>
       <option value="UKST">Unknown Service Type</option>
     </helper>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#contains-operation">Help</a>]]></help>
   </element>
   <element name="mri:purpose" id="26.0">
     <label>Purpose</label>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/Purpose">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#purpose">Help</a>]]></help>
     <description>Summary of the intentions with which the resource(s) was
       developed
     </description>
@@ -3865,7 +3872,7 @@
     <description>Description of the spatial and temporal reference systems used
       in the dataset
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/SpatialReferenceSystem">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Spatial-Metadata#reference-system">Help</a>]]></help>
   </element>
   <element name="mco:reference" id="102.0">
     <label>Reference</label>
@@ -3961,6 +3968,7 @@
     <description>Provides information about constraints which apply to the
       resource(s)
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Constraints-Metadata">Help</a>]]></help>
   </element>
   <element name="mri:resourceFormat" id="32.0">
     <label>Resource format</label>
@@ -4150,18 +4158,18 @@
       lineage of a dataset
     </description>
     <condition>conditional</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceLineage">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Linage-Metadata#statement">Help</a>]]></help>
   </element>
   <element name="mri:status" id="28.0">
     <label>Status</label>
     <description>Status of the resource(s)</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/Status">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#status">Help</a>]]></help>
   </element>
   <element name="mri:supplementalInformation" id="46.0">
     <label>Supplemental Information</label>
     <description>Any other descriptive information about the dataset
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/DataIdentification.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#status">Help</a>]]></help>
   </element>
   <element name="gex:temporalElement" id="337.0">
     <label>Temporal extent</label>
@@ -4304,13 +4312,15 @@
            context="/mdb:MD_Metadata/mdb:identificationInfo/mri:MD_DataIdentification/mri:citation/cit:CI_Citation/cit:title">
     <label>Title</label>
     <description>Name by which the cited resource is known</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceTitle">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#title">Help</a>]]></help>
+    <condition>mandatory</condition>
+
   </element>
 
-  <element name="cit:title" id="360.0">
+  <element name="cit:title" id="360.0" context="/mdb:MD_Metadata/mdb:identificationInfo/srv:SV_ServiceIdentification/mri:citation/cit:CI_Citation/cit:title">
     <label>Title</label>
     <description>Name by which the cited resource is known</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceTitle"]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#title">Help</a>]]></help>
     <condition>mandatory</condition>
   </element>
   <element name="mri:title" id="507.0" context="mri:MD_Legislation">
@@ -4326,7 +4336,7 @@
     <label>Topic category</label>
     <description>Main theme(s) of the datset</description>
     <condition>mandatory</condition>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/TopicCategory">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/General-Metadata#topic-category">Help</a>]]></help>
   </element>
   <element name="mri:MD_TopicCategoryCode">
     <label>Topic category code</label>
@@ -4443,7 +4453,7 @@
            context="/mdb:MD_Metadata/mdb:identificationInfo/mri:MD_DataIdentification/mri:resourceConstraints/mco:MD_Constraints/mco:useLimitation">
     <label>Resource use limitation</label>
     <description>Assign an overall product quality score with respect to the objectives and explain why.</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ResourceOtherConstraints">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Constraints-Metadata#use-limitation">Help</a>]]></help>
   </element>
   <element name="mco:useLimitation" id="99.0">
     <label>Use limitation</label>
@@ -4792,7 +4802,7 @@
       <option value="W3C:download">Download</option>
       <option value="W3C:HTML">HTML Information</option>
     </helper>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ServiceType.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#service-type">Help</a>]]></help>
   </element>
   <element name="srv:serviceTypeVersion">
     <label>Service Type Version</label>
@@ -4801,7 +4811,7 @@
       maintained as a separate attribute, users can easily search for all services of a type
       regardless of the version
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ServiceTypeVersion.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#service-type-version">Help</a>]]></help>
   </element>
   <element name="srv:accessProperties">
     <label>Access Properties</label>
@@ -4816,10 +4826,11 @@
     </description>
   </element>
   <element name="srv:containsOperations">
-    <label>Contains Operations</label>
-    <description>Provides information about the operations that comprise the
-      service
+    <label>Contains Operation</label>
+    <description>Each Contains Operation instance describes one and only one
+      method provided by the service
     </description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#contains-operation">Help</a>]]></help>
   </element>
   <element name="srv:operatesOn">
     <label>Operates On</label>
@@ -4830,7 +4841,7 @@
   <element name="srv:operationName">
     <label>Operation Name</label>
     <description>A unique identifier for this interface</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#operation-name">Help</a>]]></help>
   </element>
   <element name="srv:operation">
     <label>Operation</label>
@@ -4845,14 +4856,14 @@
     <description>Distributed computing platforms on which the operation has been
       implemented
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#distributed-computing-platform-dcp">Help</a>]]></help>
   </element>
   <element name="srv:operationDescription">
     <label>Operation Description</label>
     <description>Free text description of the intent of the operation and the
       results of the operation
     </description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#operation-description">Help</a>]]></help>
   </element>
   <element name="srv:invocationName">
     <label>Invocation Name</label>
@@ -4879,6 +4890,7 @@
   <element name="srv:connectPoint">
     <label>Connect point</label>
     <description>Handle for accessing the service interface</description>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#connect-point">Help</a>]]></help>
   </element>
   <element name="srv:dependsOn">
     <label>Depends on</label>
@@ -4938,12 +4950,12 @@
   <element name="srv:couplingType">
     <label>Coupling Type</label>
     <description>Type of Coupling</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/CouplingType">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#coupling-type">Help</a>]]></help>
   </element>
   <element name="srv:SV_CouplingType">
     <label>Coupling Type</label>
     <description>Type of Coupling</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/CouplingType">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#coupling-type">Help</a>]]></help>
   </element>
   <element name="srv:scopedName">
     <label>Scoped Name</label>
@@ -4976,7 +4988,7 @@
   <element name="srv:distributedComputingPlatform">
     <label>Distributed computing platform (DCP)</label>
     <description>DCP on which the operation has been implemented</description>
-    <help><![CDATA[<a target="docs" href="https://icsm-au.github.io/metadata-working-group/defs/ContainsOperations.html">ICSM Guidance</a>]]></help>
+    <help><![CDATA[<a target="docs" href="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/Service-Metadata#distributed-computing-platform-dcp---dcp-on-which-the-operation-has-been-implemented">Help</a>]]></help>
   </element>
   <element name="srv:parameter">
     <label>Parameter</label>
