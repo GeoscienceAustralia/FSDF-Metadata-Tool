@@ -2,7 +2,7 @@
   <mdb:metadataIdentifier>
     <mcc:MD_Identifier>
       <mcc:code>
-        <gco:CharacterString>dbd97d9b-ffbe-4eb7-9041-3729e20587d8</gco:CharacterString>
+        <gco:CharacterString>4b103e4c-4adb-4283-b2a9-7bb2dd943df7</gco:CharacterString>
       </mcc:code>
       <mcc:codeSpace>
         <gco:CharacterString>urn:uuid</gco:CharacterString>
@@ -57,7 +57,7 @@
   <mdb:dateInfo>
     <cit:CI_Date>
       <cit:date>
-        <gco:DateTime>2021-06-14T08:51:09</gco:DateTime>
+        <gco:DateTime>2021-06-18T11:15:45</gco:DateTime>
       </cit:date>
       <cit:dateType>
         <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="revision" />
@@ -67,7 +67,7 @@
   <mdb:dateInfo>
     <cit:CI_Date>
       <cit:date>
-        <gco:DateTime>2021-04-11T17:10:34</gco:DateTime>
+        <gco:DateTime>2021-06-18T11:13:24</gco:DateTime>
       </cit:date>
       <cit:dateType>
         <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="creation" />
@@ -116,7 +116,7 @@
       <mri:citation>
         <cit:CI_Citation>
           <cit:title>
-            <gco:CharacterString>Emergency Management Dataset Template</gco:CharacterString>
+            <gco:CharacterString>ANZMet Lite Dataset Template</gco:CharacterString>
           </cit:title>
           <cit:date>
             <cit:CI_Date>
@@ -252,60 +252,6 @@
             <gco:CharacterString />
           </mri:keyword>
           <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="subTopicCategory" />
-          </mri:type>
-          <mri:thesaurusName>
-            <cit:CI_Citation>
-              <cit:title>
-                <gcx:Anchor xlink:href="http://custom.shared.obj.ch/concept#">Hazard Type</gcx:Anchor>
-              </cit:title>
-              <cit:date>
-                <cit:CI_Date>
-                  <cit:date>
-                    <gco:Date>2021-04-13</gco:Date>
-                  </cit:date>
-                  <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
-                  </cit:dateType>
-                </cit:CI_Date>
-              </cit:date>
-              <cit:identifier>
-                <mcc:MD_Identifier>
-                  <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=local.subTopicCategory.hazards">geonetwork.thesaurus.local.subTopicCategory.hazards</gcx:Anchor>
-                  </mcc:code>
-                </mcc:MD_Identifier>
-              </cit:identifier>
-            </cit:CI_Citation>
-          </mri:thesaurusName>
-          <mri:MD_KeywordClass>
-            <mri:className>
-              <gco:CharacterString>Hazard Type</gco:CharacterString>
-            </mri:className>
-            <mri:conceptIdentifier>
-              <mcc:URI>http://custom.shared.obj.ch/concept#</mcc:URI>
-            </mri:conceptIdentifier>
-            <mri:ontology>
-              <cit:CI_Citation>
-                <cit:title>
-                  <gco:CharacterString>concept#</gco:CharacterString>
-                </cit:title>
-                <cit:onlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>http://custom.shared.obj.ch/concept#</gco:CharacterString>
-                  </cit:linkage>
-                </cit:onlineResource>
-              </cit:CI_Citation>
-            </mri:ontology>
-          </mri:MD_KeywordClass>
-        </mri:MD_Keywords>
-      </mri:descriptiveKeywords>
-      <mri:descriptiveKeywords>
-        <mri:MD_Keywords>
-          <mri:keyword gco:nilReason="missing">
-            <gco:CharacterString />
-          </mri:keyword>
-          <mri:type>
             <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="place" />
           </mri:type>
           <mri:thesaurusName>
@@ -347,114 +293,6 @@
                 <cit:onlineResource>
                   <cit:linkage>
                     <gco:CharacterString>http://geonetwork-opensource.org/thesaurus/naturalearth-and-seavox</gco:CharacterString>
-                  </cit:linkage>
-                </cit:onlineResource>
-              </cit:CI_Citation>
-            </mri:ontology>
-          </mri:MD_KeywordClass>
-        </mri:MD_Keywords>
-      </mri:descriptiveKeywords>
-      <mri:descriptiveKeywords>
-        <mri:MD_Keywords>
-          <mri:keyword gco:nilReason="missing">
-            <gco:CharacterString />
-          </mri:keyword>
-          <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="process" />
-          </mri:type>
-          <mri:thesaurusName>
-            <cit:CI_Citation>
-              <cit:title>
-                <gcx:Anchor xlink:href="http://custom.shared.obj.ch/concept#">Dataset Type</gcx:Anchor>
-              </cit:title>
-              <cit:date>
-                <cit:CI_Date>
-                  <cit:date>
-                    <gco:Date>2021-04-13</gco:Date>
-                  </cit:date>
-                  <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
-                  </cit:dateType>
-                </cit:CI_Date>
-              </cit:date>
-              <cit:identifier>
-                <mcc:MD_Identifier>
-                  <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=local.process.datasettype">geonetwork.thesaurus.local.process.datasettype</gcx:Anchor>
-                  </mcc:code>
-                </mcc:MD_Identifier>
-              </cit:identifier>
-            </cit:CI_Citation>
-          </mri:thesaurusName>
-          <mri:MD_KeywordClass>
-            <mri:className>
-              <gco:CharacterString>Dataset Type</gco:CharacterString>
-            </mri:className>
-            <mri:conceptIdentifier>
-              <mcc:URI>http://custom.shared.obj.ch/concept#</mcc:URI>
-            </mri:conceptIdentifier>
-            <mri:ontology>
-              <cit:CI_Citation>
-                <cit:title>
-                  <gco:CharacterString>concept#</gco:CharacterString>
-                </cit:title>
-                <cit:onlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>http://custom.shared.obj.ch/concept#</gco:CharacterString>
-                  </cit:linkage>
-                </cit:onlineResource>
-              </cit:CI_Citation>
-            </mri:ontology>
-          </mri:MD_KeywordClass>
-        </mri:MD_Keywords>
-      </mri:descriptiveKeywords>
-      <mri:descriptiveKeywords>
-        <mri:MD_Keywords>
-          <mri:keyword gco:nilReason="missing">
-            <gco:CharacterString />
-          </mri:keyword>
-          <mri:type>
-            <mri:MD_KeywordTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#MD_KeywordTypeCode" codeListValue="process" />
-          </mri:type>
-          <mri:thesaurusName>
-            <cit:CI_Citation>
-              <cit:title>
-                <gcx:Anchor xlink:href="http://custom.shared.obj.ch/concept#">CAP-AU Compliance</gcx:Anchor>
-              </cit:title>
-              <cit:date>
-                <cit:CI_Date>
-                  <cit:date>
-                    <gco:Date>2021-05-20</gco:Date>
-                  </cit:date>
-                  <cit:dateType>
-                    <cit:CI_DateTypeCode codeList="http://standards.iso.org/iso/19115/resources/Codelists/cat/codelists.xml#CI_DateTypeCode" codeListValue="publication" />
-                  </cit:dateType>
-                </cit:CI_Date>
-              </cit:date>
-              <cit:identifier>
-                <mcc:MD_Identifier>
-                  <mcc:code>
-                    <gcx:Anchor xlink:href="http://localhost:8080/geonetwork/srv/eng/thesaurus.download?ref=external.process.capau">geonetwork.thesaurus.external.process.capau</gcx:Anchor>
-                  </mcc:code>
-                </mcc:MD_Identifier>
-              </cit:identifier>
-            </cit:CI_Citation>
-          </mri:thesaurusName>
-          <mri:MD_KeywordClass>
-            <mri:className>
-              <gco:CharacterString>CAP-AU Compliance</gco:CharacterString>
-            </mri:className>
-            <mri:conceptIdentifier>
-              <mcc:URI>http://custom.shared.obj.ch/concept#</mcc:URI>
-            </mri:conceptIdentifier>
-            <mri:ontology>
-              <cit:CI_Citation>
-                <cit:title>
-                  <gco:CharacterString>concept#</gco:CharacterString>
-                </cit:title>
-                <cit:onlineResource>
-                  <cit:linkage>
-                    <gco:CharacterString>http://custom.shared.obj.ch/concept#</gco:CharacterString>
                   </cit:linkage>
                 </cit:onlineResource>
               </cit:CI_Citation>
