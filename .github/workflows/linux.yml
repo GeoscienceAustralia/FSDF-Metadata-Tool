@@ -24,10 +24,12 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: ${{ matrix.jdk }}
+        distribution: "adopt"
+        cache: maven
     - name: Set up Maven
-      uses: stCarolas/setup-maven@v4
+      uses: stCarolas/setup-maven@v4.2
       with:
-        maven-version: 3.6.3
+        maven-version: 3.8.2
     - name: Maven repository caching
       uses: actions/cache@v2
       with:
@@ -58,34 +60,3 @@ jobs:
       run: |
         aws s3 cp target/spring-action.war s3://inapp-war-files/    
         
-  QA:
-    runs-on: ubuntu-18.04
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        # 500 commits, set to 0 to get all
-        fetch-depth: 500
-        submodules: 'recursive'
-    - name: Set up JDK
-      uses: actions/setup-java@v1
-      with:
-        java-version: 8
-    - name: Set up Maven
-      uses: stCarolas/setup-maven@v4
-      with:
-        maven-version: 3.6.3
-    - name: Maven repository caching
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-    - name: Test with maven
-      run: mvn -B -V -fae install
-    - name: Remove SNAPSHOT jars from repository
-      run: |
-        find ~/.m2/repository -name "*SNAPSHOT*" -type d | xargs rm -rf {}
-    - name: Remove Schema 3.8 jars from repository
-      run: |
-        find ~/.m2/repository -name "*3.8*" -type d | xargs rm -rf {}
