@@ -61,5 +61,5 @@ jobs:
         aws-region: ap-southeast-2
     - name: Copy files to the test website with the AWS CLI
       run: |
-        aws s3 cp target/spring-action.war s3://inapp-war-files/    
+        aws s3 cp target/geonetwork.war s3://inapp-war-files/    
         
