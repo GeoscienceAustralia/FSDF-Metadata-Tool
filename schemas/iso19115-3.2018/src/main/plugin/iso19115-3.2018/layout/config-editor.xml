@@ -508,7 +508,7 @@
                    data-lang="lang"/>
         <!--<directive data-gn-suggestion-list=""/>-->
         <directive data-gn-validation-report=""/>
-        <directive data-gn-need-help="https://openwork-nz.github.io/ANZLIC-Metadata-Tool-help/"/>
+        <directive data-gn-need-help="https://openwork-nz.github.io/ANZLIC-Metadata-tool---EMA-edition/"/>
       </sidePanel>
 
       <tab id="default" default="true" mode="flat">
