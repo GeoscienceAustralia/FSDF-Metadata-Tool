@@ -52,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: create war file
-        path: target/geonetwork.war
+        path: web/target/geonetwork.war
     - name: "Configure AWS Credentials"
       uses: aws-actions/configure-aws-credentials@master
       with:
@@ -61,5 +61,5 @@ jobs:
         aws-region: ap-southeast-2
     - name: Copy files to the test website with the AWS CLI
       run: |
-        aws s3 cp target/geonetwork.war s3://inapp-war-files/    
+        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/    
         
