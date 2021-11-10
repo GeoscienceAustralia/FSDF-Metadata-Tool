@@ -69,14 +69,14 @@ jobs:
         
     - name: Copy files to the test website with the AWS CLI
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${{ BRANCH }}/
+        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
       if: startsWith(github.ref, 'refs/heads/dev-')
       env:
         BRANCH: "nonprod"
         
     - name: Copy files to the test website with the AWS CLI
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${{ BRANCH }}/
+        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
       if: github.ref == 'refs/heads/prod'
       env:
         BRANCH: "prod"  
