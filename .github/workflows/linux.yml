@@ -67,14 +67,14 @@ jobs:
         role-session-name: GithubActionDeployment
         aws-region: ap-southeast-2
         
-    - name: Copy files to the test website with the AWS CLI
+    - name: Copy development war to S3 bucket 
       run: |
         aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
       if: startsWith(github.ref, 'refs/heads/dev-')
       env:
         BRANCH: "nonprod"
         
-    - name: Copy files to the test website with the AWS CLI
+    - name: Copy production war to S3 bucket 
       run: |
         aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
       if: github.ref == 'refs/heads/prod'
