@@ -14,6 +14,8 @@ Ex: given bucket-name as atlas-war-files
 
    - Provider URL: https://token.actions.githubusercontent.com
    - Audience: https://github.com/GeoscienceAustralia
+   - Click 'Generate Thumbprint'
+   - Click 'Add Provider'
 
 3. Create Role in AWS IAM and attach above created Policy; IAM > Roles > Create Role
 
