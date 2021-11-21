@@ -23,42 +23,16 @@ jobs:
           - os: ubuntu-latest
             jdk: 8
     steps:
-    - uses: actions/checkout@v2
-      with:
-        # 500 commits, set to 0 to get all
-        fetch-depth: 500
-        submodules: 'recursive'
-        
-    - name: Set up JDK
-      uses: actions/setup-java@v2
-      with:
-        java-version: ${{ matrix.jdk }}
-        distribution: "adopt"
-        cache: maven
-    - name: Set up Maven
-      uses: stCarolas/setup-maven@v4.2
-      with:
-        maven-version: 3.8.2
-    - name: Maven repository caching
-      uses: actions/cache@v2
-      with:
-        path: ~/.m2/repository
-        key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-        restore-keys: |
-          ${{ runner.os }}-maven-
-    - name: Build with Maven
-      run: mvn -B -V install -DskipTests=true -Dmaven.javadoc.skip=true
-    - name: Remove SNAPSHOT jars from repository
-      run: |
-        find ~/.m2/repository -name "*SNAPSHOT*" -type d | xargs rm -rf {}
-    - name: Remove Schema 3.8 jars from repository
-      run: |
-        find ~/.m2/repository -name "*3.8*" -type d | xargs rm -rf {}
+    - uses: "finnp/create-file-action@master"
+      env:
+        FILE_NAME: "dir/fileName.txt"
+        FILE_DATA: "file content"
+    
     - name: create maven artifacts
       uses: actions/upload-artifact@v2
       with:
         name: create war file
-        path: web/target/geonetwork.war
+        path: dir/fileName.txt
         
     - name: "Configure AWS Credentials"
       uses: aws-actions/configure-aws-credentials@master
@@ -69,14 +43,14 @@ jobs:
         
     - name: Copy development war to S3 bucket 
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
+        aws s3 cp dir/fileName.txt s3://inapp-war-files/${BRANCH}/
       if: startsWith(github.ref, 'refs/heads/dev-')
       env:
         BRANCH: "nonprod"
         
     - name: Copy production war to S3 bucket 
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
+        aws s3 cp dir/fileName.txt s3://inapp-war-files/${BRANCH}/
       if: github.ref == 'refs/heads/prod'
       env:
         BRANCH: "prod"  
