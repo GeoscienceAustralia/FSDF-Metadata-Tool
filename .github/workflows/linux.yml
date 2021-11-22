@@ -69,14 +69,14 @@ jobs:
         
     - name: Copy development war to S3 bucket
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
+        aws s3 cp web/target/geonetwork.war s3://atlas-metadata-war/${BRANCH}/
       if: startsWith(github.ref, 'refs/heads/dev-')
       env:
         BRANCH: "nonprod"
         
     - name: Copy production war to S3 bucket
       run: |
-        aws s3 cp web/target/geonetwork.war s3://inapp-war-files/${BRANCH}/
+        aws s3 cp web/target/geonetwork.war s3://atlas-metadata-war/${BRANCH}/
       if: github.ref == 'refs/heads/prod'
       env:
         BRANCH: "prod"  
